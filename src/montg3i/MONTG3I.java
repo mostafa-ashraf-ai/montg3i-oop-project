@@ -28,6 +28,9 @@ public class MONTG3I  {
         System.out.println("ana tmam");
         System.out.println("ya mosahel");
         System.out.println("fe haga zhrt");
+         System.out.println("ysta mfesh haga btzhr");
+        
+        
     } 
             
 }
