@@ -24,6 +24,7 @@ public class MONTG3I  {
         
         System.out.println("montg3i.MONTG3I.main()");
         System.out.println("a7laaaa mesaa 3aliik");
+        System.out.println("teslm ya 42ee2");
     } 
             
 }
