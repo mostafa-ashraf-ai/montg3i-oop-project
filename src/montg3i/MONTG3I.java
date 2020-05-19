@@ -22,8 +22,9 @@ public class MONTG3I  {
      */
     public static void main(String[] args) throws Exception {
         
+        System.out.print("hiii");
         
-        
+       
         
     } 
             
