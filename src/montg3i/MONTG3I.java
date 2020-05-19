@@ -26,6 +26,7 @@ public class MONTG3I  {
         System.out.println("a7laaaa mesaa 3aliik");
         System.out.println("teslm ya 42ee2");
         System.out.println("ana tmam");
+        System.out.println("ya mosahel");
     } 
             
 }
