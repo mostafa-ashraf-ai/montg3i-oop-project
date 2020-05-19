@@ -22,13 +22,7 @@ public class MONTG3I  {
      */
     public static void main(String[] args) throws Exception {
         
-        System.out.println("montg3i.MONTG3I.main()");
-        System.out.println("a7laaaa mesaa 3aliik");
-        System.out.println("teslm ya 42ee2");
-        System.out.println("ana tmam");
-        System.out.println("ya mosahel");
-        System.out.println("fe haga zhrt");
-         System.out.println("ysta mfesh haga btzhr");
+        
         
         
     } 
