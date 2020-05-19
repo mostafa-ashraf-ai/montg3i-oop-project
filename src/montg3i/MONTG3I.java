@@ -23,6 +23,7 @@ public class MONTG3I  {
     public static void main(String[] args) throws Exception {
         
         System.out.println("montg3i.MONTG3I.main()");
+        System.out.println("a7laaaa mesaa 3aliik");
     } 
             
 }
