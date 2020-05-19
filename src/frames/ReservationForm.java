@@ -1,3 +1,5 @@
+package frames;
+
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
