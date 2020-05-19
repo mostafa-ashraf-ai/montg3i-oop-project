@@ -21,6 +21,7 @@ public class MONTG3I  {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
+        System.out.println("hellooooooooooooooooooooooooo");
         // TODO code application logic here
         Scanner scan = new Scanner(System.in);
         
