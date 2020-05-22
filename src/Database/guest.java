@@ -7,6 +7,7 @@ package Database;
 
 import static Database.db.setConnection;
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -16,20 +17,21 @@ import java.sql.Statement;
  */
 public class guest extends db {
     
-    public static void Add(String ColumnName, String value)
+    public static ResultSet Select()
     {
+        ResultSet rs = null;
         try
         {
             setConnection();
-            Statement stmt = con.createStatement();
-            String str = "INSERT INTO guest (" + ColumnName + ") VALUES ('" + value + "')";
-            stmt.executeQuery(str);
-            con.close();
+            stmt = con.createStatement();
+            String str = "SELECT FirstName,SecondName,LastName,NationalID,age,phone,national,NumbersOfRooms,RoomNo,arrival,nights,departure,TotalAmount,deposit,PassCode FROM guest";
+            rs = stmt.executeQuery(str);
         }
         catch(SQLException ex)
         {
-            System.out.println("the add method is wrong");
+            System.out.println("the select method is wrong");
         }
+        return rs;
     }
     
     public static void Add(String FirstName, String SecondName,String LastName,String NationalID,int age,String phone,String national,int NumbersOfRooms,String RoomNo,Date arrival,int nights,Date departure,double TotalAmount,double deposit,String PassCode)
@@ -37,7 +39,7 @@ public class guest extends db {
         try
         {
             setConnection();
-            Statement stmt = con.createStatement();
+            stmt = con.createStatement();
             String str = "INSERT INTO guest VALUES (" + FirstName + ",'" + SecondName + "','" + LastName + "','" + NationalID + "'," + age + ",'" + phone + "','" + national + "'," + NumbersOfRooms + ",'" + RoomNo + "'," + arrival + "," + nights + "," + departure + "," + TotalAmount + "," + deposit + ",'" + PassCode + "')";
             stmt.executeQuery(str);
             con.close();
@@ -53,9 +55,9 @@ public class guest extends db {
         try
         {
             setConnection();
-            Statement stmt = con.createStatement();
+            stmt = con.createStatement();
             String str = "UPDARE guest SET " + ColumnName + " = '" + value + "' WHERE PassCode = " + PassCode;
-            stmt.executeQuery(str);
+            stmt.executeLargeUpdate(str);
             con.close();
         }
         catch(SQLException ex)
@@ -69,7 +71,7 @@ public class guest extends db {
         try
         {
             setConnection();
-            Statement stmt = con.createStatement();
+            stmt = con.createStatement();
             String str = "DELETE FROM guest WHERE PassCode = " + PassCode;
             stmt.executeQuery(str);
             con.close();
