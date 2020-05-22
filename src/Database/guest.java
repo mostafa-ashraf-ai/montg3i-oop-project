@@ -17,14 +17,14 @@ import java.sql.Statement;
  */
 public class guest extends db {
     
-    public static ResultSet Select()
+    public static ResultSet Select(String PassCode)
     {
         ResultSet rs = null;
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "SELECT FirstName,SecondName,LastName,NationalID,age,phone,national,NumbersOfRooms,RoomNo,arrival,nights,departure,TotalAmount,deposit,PassCode FROM guest";
+            String str = "SELECT * FROM guest WHERE PassCode = '" + PassCode + "'";
             rs = stmt.executeQuery(str);
         }
         catch(SQLException ex)

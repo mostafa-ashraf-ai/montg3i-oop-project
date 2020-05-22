@@ -39,14 +39,14 @@ public class staff extends db{
         
     }
     
-    public static ResultSet Select(String table)
+    public static ResultSet Select(String table,int id)
     {
         ResultSet rs = null;
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "SELECT ID,username,pass,FirstName,LastName,email FROM" + table;
+            String str = "SELECT * FROM" + table + "WHERE ID = " + id;
             rs = stmt.executeQuery(str);
         }
         catch(SQLException ex)

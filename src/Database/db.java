@@ -7,6 +7,7 @@ package Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -14,7 +15,7 @@ import java.sql.Statement;
  *
  * @author mostafa
  */
-public abstract class db {
+abstract class db {
     private static String url = "";
     private static String dbName = "montag3i";
     static Connection con;
@@ -53,5 +54,38 @@ public abstract class db {
         }
     }
     
+    public static ResultSet Select(String table)
+    {
+        ResultSet rs = null;
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "SELECT * FROM" + table;
+            rs = stmt.executeQuery(str);
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the select method is wrong");
+        }
+        return rs;
+    }
+    
+    public static ResultSet Select(String table,String ColumnName, String value)
+    {
+        ResultSet rs = null;
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "SELECT * FROM" + table + "WHERE " + ColumnName + "=" + "'" + value +"'";
+            rs = stmt.executeQuery(str);
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the select method is wrong");
+        }
+        return rs;
+    }
     
 }
