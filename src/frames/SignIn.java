@@ -28,20 +28,20 @@ public class SignIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        Username = new javax.swing.JTextField();
+        Username = new javax.swing.JLabel();
+        Password = new javax.swing.JLabel();
+        UsernamBox = new javax.swing.JTextField();
         btnSignIn = new javax.swing.JButton();
-        Password = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        PasswordBox = new javax.swing.JPasswordField();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign In");
         setLocation(new java.awt.Point(700, 300));
 
-        jLabel1.setText("Username:");
+        Username.setText("Username:");
 
-        jLabel2.setText("Password:");
+        Password.setText("Password:");
 
         btnSignIn.setText("Sign In");
         btnSignIn.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +50,7 @@ public class SignIn extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Back");
+        btnBack.setText("Back");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,18 +61,18 @@ public class SignIn extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
+                            .addComponent(Username)
+                            .addComponent(Password))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Username)
-                            .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)))
+                            .addComponent(UsernamBox)
+                            .addComponent(PasswordBox, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(161, 161, 161)
                         .addComponent(btnSignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(140, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -80,16 +80,16 @@ public class SignIn extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Username)
+                    .addComponent(UsernamBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Password)
+                    .addComponent(PasswordBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addComponent(btnSignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -97,38 +97,27 @@ public class SignIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-       String username=Username.getText();
-       String password=Password.getText();
-        if( ( "m".equals(username) ) && ("1".equals(password) ) )
+       String username=UsernamBox.getText();
+       String password=PasswordBox.getText();
+        if( ( "m".equals(username) ) && ("m".equals(password) ) )
         {
             new Manager().setVisible(true);
             this.setVisible(false);
 
         }
-        else if( ( "r".equals(username) ) && ("2".equals(password) ) )
+        else if( ( "r".equals(username) ) && ("r".equals(password) ) )
         {
             new Receiption().setVisible(true);
             this.setVisible(false);
 
         }
-        else if( ( "g".equals(username) ) && ("3".equals(password) ) )
+        else if( ( "g".equals(username) ) && ("g".equals(password) ) )
         {
             new Guest().setVisible(true);
             this.setVisible(false);
 
         }
-        else if( ( "c".equals(username) ) && ("4".equals(password) ) )
-        {
-            new Cleaner().setVisible(true);
-            this.setVisible(false);
-
-        }
-        else if( ( "ch".equals(username) ) && ("5".equals(password) ) )
-        {
-            new Cleaner().setVisible(true);
-            this.setVisible(false);
-
-        }
+       
         
     }//GEN-LAST:event_btnSignInActionPerformed
 
@@ -168,11 +157,11 @@ public class SignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Password;
-    private javax.swing.JTextField Username;
+    private javax.swing.JLabel Password;
+    private javax.swing.JPasswordField PasswordBox;
+    private javax.swing.JTextField UsernamBox;
+    private javax.swing.JLabel Username;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSignIn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
