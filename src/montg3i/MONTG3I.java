@@ -22,10 +22,6 @@ public class MONTG3I  {
      */
     public static void main(String[] args) throws Exception {
         
-        system.out.print("ginius abuhashim");
-        
-       
-        
     } 
             
 }
