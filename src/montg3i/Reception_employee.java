@@ -31,7 +31,7 @@ public Reception_employee(int id,String Username ,String pass, String firstname 
     LastName =lastname ;
     email = mail ;
     Salary = salary ;
-    Database.staff.Add("reception", id, username, pass, FirstName, LastName, email,Salary);
+//    Database.staff.Add("reception", id, username, pass, FirstName, LastName, email,Salary);
     NoOfEmployee++;
     
 }
