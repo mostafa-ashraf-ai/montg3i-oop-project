@@ -54,6 +54,38 @@ abstract class db {
         }
     }
     
+    public static void Add(String table,String ColumnName, int value)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "INSERT INTO " + table + " (" + ColumnName + ") VALUES (" + value + ")";
+            stmt.executeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the add method is wrong");
+        }
+    }
+    
+    public static void Add(String table,String ColumnName, double value)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "INSERT INTO " + table + " (" + ColumnName + ") VALUES (" + value + ")";
+            stmt.executeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the add method is wrong");
+        }
+    }
+    
     public static ResultSet Select(String table)
     {
         ResultSet rs = null;

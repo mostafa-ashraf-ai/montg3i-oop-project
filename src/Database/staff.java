@@ -88,6 +88,22 @@ public class staff extends db{
         }
     }
     
+    public static void Update(String table,String ColumnName, double value, int id)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "UPDARE " + table + " SET " + ColumnName + " = " + value + " WHERE ID = " + id;
+            stmt.executeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the update method is wrong");
+        }
+    }
+    
     public static void Delete(String table,int id)
     {
         try

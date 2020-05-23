@@ -34,6 +34,22 @@ public class guest extends db {
         return rs;
     }
     
+    public static void Add(String table,String ColumnName, Date value)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "INSERT INTO " + table + " (" + ColumnName + ") VALUES (" + value + ")";
+            stmt.executeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the add method is wrong");
+        }
+    }
+    
     public static void Add(String FirstName, String SecondName,String LastName,String NationalID,int age,String phone,String national,int NumbersOfRooms,String RoomNo,Date arrival,int nights,Date departure,double TotalAmount,double deposit,String PassCode)
     {
         try
@@ -57,6 +73,54 @@ public class guest extends db {
             setConnection();
             stmt = con.createStatement();
             String str = "UPDARE guest SET " + ColumnName + " = '" + value + "' WHERE PassCode = " + PassCode;
+            stmt.executeLargeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the update method is wrong");
+        }
+    }
+    
+    public static void Update(String ColumnName, int value, int PassCode)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
+            stmt.executeLargeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the update method is wrong");
+        }
+    }
+    
+    public static void Update(String ColumnName, double value, int PassCode)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
+            stmt.executeLargeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the update method is wrong");
+        }
+    }
+    
+    public static void Update(String ColumnName, Date value, int PassCode)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
             stmt.executeLargeUpdate(str);
             con.close();
         }
