@@ -22,7 +22,7 @@ public class staff extends db{
         try {
             setConnection();
             stmt = con.createStatement();
-            String strCheck = "SELECT username,pass FROM" + table + "WHERE username = '" + username + "' and pass = '" + password + "'";
+            String strCheck = "SELECT username,pass FROM " + table + " WHERE username = '" + username + "' and pass = '" + password + "'";
             stmt.executeQuery(strCheck);
             while(stmt.getResultSet().next())
             {

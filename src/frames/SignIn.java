@@ -1,5 +1,9 @@
 package frames;
 
+
+
+import montg3i.Reception_employee;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -34,6 +38,7 @@ public class SignIn extends javax.swing.JFrame {
         btnSignIn = new javax.swing.JButton();
         PasswordBox = new javax.swing.JPasswordField();
         btnBack = new javax.swing.JButton();
+        MessageLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign In");
@@ -74,6 +79,10 @@ public class SignIn extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(140, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(MessageLabel)
+                .addGap(199, 199, 199))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +95,9 @@ public class SignIn extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Password)
                     .addComponent(PasswordBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
+                .addComponent(MessageLabel)
+                .addGap(14, 14, 14)
                 .addComponent(btnSignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -105,19 +116,19 @@ public class SignIn extends javax.swing.JFrame {
             this.setVisible(false);
 
         }
-        else if( ( "r".equals(username) ) && ("r".equals(password) ) )
+        else if( Reception_employee.login(username, password) )
         {
             new Receiption().setVisible(true);
             this.setVisible(false);
 
         }
-        else if( ( "g".equals(username) ) && ("g".equals(password) ) )
+        else
         {
-            new Guest().setVisible(true);
-            this.setVisible(false);
-
+            MessageLabel.setText("username or password is incorrect");
+            UsernamBox.setText("");
+            PasswordBox.setText("");
+            UsernamBox.requestFocus();
         }
-       
         
     }//GEN-LAST:event_btnSignInActionPerformed
 
@@ -157,6 +168,7 @@ public class SignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel MessageLabel;
     private javax.swing.JLabel Password;
     private javax.swing.JPasswordField PasswordBox;
     private javax.swing.JTextField UsernamBox;

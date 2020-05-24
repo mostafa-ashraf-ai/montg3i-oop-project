@@ -5,6 +5,8 @@
  */
 package montg3i;
 
+import frames.ResortHomePage;
+import frames.SignIn;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ public class MONTG3I  {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
-        
+        new ResortHomePage().setVisible(true);
     } 
             
 }
