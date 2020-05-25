@@ -74,12 +74,12 @@ public class ResortHomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStaffActionPerformed
-        new SignIn().setVisible(true);
+        new Login().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnStaffActionPerformed
 
     private void btnGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestActionPerformed
-       new SignIn().setVisible(true);
+       new Login().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGuestActionPerformed
 

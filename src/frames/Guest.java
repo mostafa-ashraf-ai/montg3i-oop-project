@@ -33,9 +33,9 @@ public class Guest extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         RoomNo = new javax.swing.JTextField();
-        btnGuestLogIn = new javax.swing.JButton();
+        btnGuestLogin = new javax.swing.JButton();
         Passcode = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         PasscodeBox = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,19 +50,19 @@ public class Guest extends javax.swing.JFrame {
             }
         });
 
-        btnGuestLogIn.setText("Log in");
-        btnGuestLogIn.addActionListener(new java.awt.event.ActionListener() {
+        btnGuestLogin.setText("Login");
+        btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuestLogInActionPerformed(evt);
+                btnGuestLoginActionPerformed(evt);
             }
         });
 
         Passcode.setText("Passcode:");
 
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -79,12 +79,12 @@ public class Guest extends javax.swing.JFrame {
                             .addComponent(Passcode))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnGuestLogIn)
+                            .addComponent(btnGuestLogin)
                             .addComponent(RoomNo, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
                             .addComponent(PasscodeBox)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(jButton2)))
+                        .addComponent(btnBack)))
                 .addContainerGap(271, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -99,9 +99,9 @@ public class Guest extends javax.swing.JFrame {
                     .addComponent(Passcode)
                     .addComponent(PasscodeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(98, 98, 98)
-                .addComponent(btnGuestLogIn)
+                .addComponent(btnGuestLogin)
                 .addGap(44, 44, 44)
-                .addComponent(jButton2)
+                .addComponent(btnBack)
                 .addContainerGap(107, Short.MAX_VALUE))
         );
 
@@ -112,12 +112,12 @@ public class Guest extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RoomNoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         new ResortHomePage().setVisible(true);
             this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnGuestLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestLogInActionPerformed
+    private void btnGuestLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestLoginActionPerformed
         
        String room=RoomNo.getText();
        String passcode=PasscodeBox.getText();
@@ -130,7 +130,7 @@ public class Guest extends javax.swing.JFrame {
            
 
         }
-    }//GEN-LAST:event_btnGuestLogInActionPerformed
+    }//GEN-LAST:event_btnGuestLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,8 +172,8 @@ public class Guest extends javax.swing.JFrame {
     private javax.swing.JLabel Passcode;
     private javax.swing.JPasswordField PasscodeBox;
     private javax.swing.JTextField RoomNo;
-    private javax.swing.JButton btnGuestLogIn;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnGuestLogin;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

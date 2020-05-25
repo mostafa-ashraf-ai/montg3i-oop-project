@@ -23,9 +23,9 @@ public class GuestProfile extends javax.swing.JFrame {
     }
     public GuestProfile(String x,String y,String r,String e) {
         initComponents();
-        GuestName.setText(x);
-        GuestRoomNo.setText(y);
-        GuestFloor.setText(r);
+        NameLabel.setText(x);
+        RoomNoLabel.setText(y);
+        FloorLabel.setText(r);
         
         btnGuestPayment.isSelected();
         //jTextArea1.append("hi");
@@ -41,38 +41,38 @@ public class GuestProfile extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        GuestName = new javax.swing.JLabel();
-        RoomNoO = new javax.swing.JLabel();
-        GuestRoomNo = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        GuestFloor = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Name = new javax.swing.JLabel();
+        NameLabel = new javax.swing.JLabel();
+        RoomNo = new javax.swing.JLabel();
+        RoomNoLabel = new javax.swing.JLabel();
+        Floor = new javax.swing.JLabel();
+        FloorLabel = new javax.swing.JLabel();
+        btnEntertainment = new javax.swing.JButton();
         btnUpdateTheReservation = new javax.swing.JButton();
         btnGuestPayment = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
         setLocation(new java.awt.Point(700, 300));
 
-        jLabel1.setText("Name:");
+        Name.setText("Name:");
 
-        GuestName.setText("jLabel2");
+        NameLabel.setText("jLabel2");
 
-        RoomNoO.setText("Room/s No.:");
+        RoomNo.setText("Room/s No.:");
 
-        GuestRoomNo.setText("jLabel4");
+        RoomNoLabel.setText("jLabel4");
 
-        jLabel7.setText("Floor:");
+        Floor.setText("Floor:");
 
-        GuestFloor.setText("jLabel8");
+        FloorLabel.setText("jLabel8");
 
-        jButton1.setText("Entertainment");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEntertainment.setText("Entertainment");
+        btnEntertainment.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEntertainment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEntertainmentActionPerformed(evt);
             }
         });
 
@@ -92,10 +92,10 @@ public class GuestProfile extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Logout");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
@@ -107,26 +107,26 @@ public class GuestProfile extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(Floor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GuestFloor))
+                        .addComponent(FloorLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
+                            .addComponent(btnLogout)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(Name)
                                 .addGap(18, 18, 18)
-                                .addComponent(GuestName)))
+                                .addComponent(NameLabel)))
                         .addGap(68, 68, 68)
-                        .addComponent(RoomNoO)
+                        .addComponent(RoomNo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GuestRoomNo)))
+                        .addComponent(RoomNoLabel)))
                 .addContainerGap(171, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnUpdateTheReservation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEntertainment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnGuestPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(163, 163, 163))
         );
@@ -135,22 +135,22 @@ public class GuestProfile extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(GuestName)
-                    .addComponent(RoomNoO)
-                    .addComponent(GuestRoomNo))
+                    .addComponent(Name)
+                    .addComponent(NameLabel)
+                    .addComponent(RoomNo)
+                    .addComponent(RoomNoLabel))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(GuestFloor))
+                    .addComponent(Floor)
+                    .addComponent(FloorLabel))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnEntertainment)
                 .addGap(35, 35, 35)
                 .addComponent(btnUpdateTheReservation)
                 .addGap(28, 28, 28)
                 .addComponent(btnGuestPayment)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(btnLogout)
                 .addContainerGap())
         );
 
@@ -159,7 +159,7 @@ public class GuestProfile extends javax.swing.JFrame {
 
     private void btnGuestPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestPaymentActionPerformed
 
-        if(GuestName.getText()=="she5 L 3arab")
+        if(NameLabel.getText()=="she5 L 3arab")
         {
             int x=8,y=9;
             showMessageDialog(null,"Payed: "+x+"\n"+"Rest Amount: "+y);
@@ -172,15 +172,15 @@ public class GuestProfile extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateTheReservationActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnEntertainmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntertainmentActionPerformed
         new Entertainment().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnEntertainmentActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         new Guest().setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
     
     /**
      * @param args the command line arguments
@@ -219,15 +219,15 @@ public class GuestProfile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel GuestFloor;
-    private javax.swing.JLabel GuestName;
-    private javax.swing.JLabel GuestRoomNo;
-    private javax.swing.JLabel RoomNoO;
+    private javax.swing.JLabel Floor;
+    private javax.swing.JLabel FloorLabel;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel NameLabel;
+    private javax.swing.JLabel RoomNo;
+    private javax.swing.JLabel RoomNoLabel;
+    private javax.swing.JButton btnEntertainment;
     private javax.swing.JButton btnGuestPayment;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnUpdateTheReservation;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

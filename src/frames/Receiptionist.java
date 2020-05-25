@@ -39,11 +39,11 @@ public class Receiptionist extends javax.swing.JFrame {
         ComplainsBox = new javax.swing.JTextArea();
         Name = new javax.swing.JLabel();
         btnSalary = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        NameLabel = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        IDLabel = new javax.swing.JLabel();
         btnVacation = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        PositionLabel = new javax.swing.JLabel();
         Position = new javax.swing.JLabel();
         btnFeaturesandOffers = new javax.swing.JButton();
 
@@ -80,15 +80,15 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Zatona");
+        NameLabel.setText("Zatona");
 
         ID.setText("ID:");
 
-        jLabel7.setText("996778899");
+        IDLabel.setText("996778899");
 
         btnVacation.setText("Vacation");
 
-        jLabel8.setText("Receiptionist Class A");
+        PositionLabel.setText("Receiptionist Class A");
 
         Position.setText("Position:");
 
@@ -109,7 +109,7 @@ public class Receiptionist extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
+                                    .addComponent(NameLabel)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(btnInsurance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -118,18 +118,18 @@ public class Receiptionist extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(btnSalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(btnVacation, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8))))
+                                    .addComponent(IDLabel)
+                                    .addComponent(PositionLabel))))
                         .addGap(43, 43, 43)
                         .addComponent(btnSend, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ID)
-                            .addComponent(Name))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Position)))
+                            .addComponent(Name)
+                            .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Position))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,15 +137,15 @@ public class Receiptionist extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Name)
-                    .addComponent(jLabel6))
+                    .addComponent(NameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ID)
-                    .addComponent(jLabel7))
+                    .addComponent(IDLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Position)
-                    .addComponent(jLabel8))
+                    .addComponent(PositionLabel))
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInsurance)
@@ -173,7 +173,7 @@ public class Receiptionist extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSendActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        new SignIn().setVisible(true);
+        new Login().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
@@ -221,17 +221,17 @@ public class Receiptionist extends javax.swing.JFrame {
     private javax.swing.JLabel Complains;
     private javax.swing.JTextArea ComplainsBox;
     private javax.swing.JLabel ID;
+    private javax.swing.JLabel IDLabel;
     private javax.swing.JLabel Name;
+    private javax.swing.JLabel NameLabel;
     private javax.swing.JLabel Position;
+    private javax.swing.JLabel PositionLabel;
     private javax.swing.JButton btnFeaturesandOffers;
     private javax.swing.JButton btnInsurance;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnSalary;
     private javax.swing.JButton btnSend;
     private javax.swing.JButton btnVacation;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
