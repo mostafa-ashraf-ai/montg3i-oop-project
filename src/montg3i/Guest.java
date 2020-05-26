@@ -10,32 +10,11 @@ package montg3i;
  * @author Muhammed Abuhashim
  */
 public class Guest {
+    private String FirstName ;
     
     
-     private int Room_Number;
-     private String Pass_Code;
-
+    Database.guest
     
-     
-    public void setRoom_Number(int Room_Number) {
-        this.Room_Number = Room_Number;
-    }
-
-    public void setPass_Code(String Pass_Code) {
-        this.Pass_Code = Pass_Code;
-    }
-
-    public int getRoom_Number() {
-        return Room_Number;
-    }
-
-    public String getPass_Code() {
-        return Pass_Code;
-    }
-
-    public Guest(int Room_Number, String Pass_Code) {
-        this.Room_Number = Room_Number;
-        this.Pass_Code = Pass_Code;
-    }
     
+   
 }

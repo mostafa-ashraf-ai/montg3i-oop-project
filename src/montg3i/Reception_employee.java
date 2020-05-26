@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package montg3i;
 
 import java.sql.ResultSet;
@@ -31,7 +27,7 @@ public Reception_employee(int id,String Username ,String pass, String firstname 
     LastName =lastname ;
     email = mail ;
     Salary = salary ;
-//    Database.staff.Add("reception", id, username, pass, FirstName, LastName, email,Salary);
+    Database.staff.Add("reception", ID, username, Pass, FirstName, LastName,Salary, email);
     NoOfEmployee++;
     
 }
@@ -43,7 +39,6 @@ public Reception_employee(int id,String Username ,String pass, String firstname 
     public void setID(int ID) {
         this.ID = ID;
          Database.staff.Add("reception","ID",ID);
-        
     }
 
     public void setusername(String Username) {
@@ -123,6 +118,7 @@ public Reception_employee(int id,String Username ,String pass, String firstname 
     public static ResultSet Select(int id)
     {
        return Database.staff.Select("reception",id);
+      // Database.staff.Add(table, id, username, pass, FirstName, LastName, id, email);
     }
     
     
@@ -131,5 +127,6 @@ public Reception_employee(int id,String Username ,String pass, String firstname 
        return Database.staff.Select("reception");
        
     }
+    
 }
 
