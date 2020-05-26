@@ -1,15 +1,7 @@
 package frames;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.awt.Color;
 
-/**
- *
- * @author hp
- */
 public class ResortHomePage extends javax.swing.JFrame {
 
     /**
@@ -17,6 +9,14 @@ public class ResortHomePage extends javax.swing.JFrame {
      */
     public ResortHomePage() {
         initComponents();
+        
+        
+        jPanel1.setBackground(new Color(0,0,0,50));
+        btnGuest.setForeground(Color.WHITE);
+        btnStaff.setForeground(Color.WHITE);
+        btnStaff.setBackground(new Color(0,0,0,0));
+        btnGuest.setBackground(new Color(0,0,0,0));
+        
     }
 
     /**
@@ -28,47 +28,81 @@ public class ResortHomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnStaff = new javax.swing.JButton();
         btnGuest = new javax.swing.JButton();
+        btnStaff = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
-        setLocation(new java.awt.Point(700, 300));
+        setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1950, 1050));
+        setPreferredSize(new java.awt.Dimension(1285, 853));
+        setSize(new java.awt.Dimension(1200, 700));
+        getContentPane().setLayout(null);
 
-        btnStaff.setText("Staff");
-        btnStaff.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStaffActionPerformed(evt);
+        btnGuest.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnGuest.setText("Guest");
+        btnGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnGuestMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnGuestMouseExited(evt);
             }
         });
-
-        btnGuest.setText("Guest");
         btnGuest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuestActionPerformed(evt);
             }
         });
+        getContentPane().add(btnGuest);
+        btnGuest.setBounds(380, 20, 110, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(btnGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113)
-                .addComponent(btnStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(124, 124, 124))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuest, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnStaff, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(468, 468, 468))
-        );
+        btnStaff.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnStaff.setText("Staff");
+        btnStaff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnStaff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnStaffMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnStaffMouseExited(evt);
+            }
+        });
+        btnStaff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStaffActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnStaff);
+        btnStaff.setBounds(820, 20, 100, 40);
+
+        jPanel1.setLayout(null);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_user_50px_9.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(310, 10, 50, 50);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_user_groups_50px_2.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(750, 10, 60, 50);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1280, 80);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\hp\\Desktop\\montg3iii.JPG")); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1280, 853);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,6 +116,26 @@ public class ResortHomePage extends javax.swing.JFrame {
        new Login().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGuestActionPerformed
+
+    private void btnStaffMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffMouseExited
+        btnStaff.setForeground(Color.white);       
+    }//GEN-LAST:event_btnStaffMouseExited
+
+    private void btnStaffMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffMouseEntered
+        btnStaff.setForeground(Color.GRAY);
+    }//GEN-LAST:event_btnStaffMouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        
+    }//GEN-LAST:event_jLabel1MouseExited
+
+    private void btnGuestMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestMouseEntered
+        btnGuest.setForeground(Color.GRAY);
+    }//GEN-LAST:event_btnGuestMouseEntered
+
+    private void btnGuestMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestMouseExited
+           btnGuest.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnGuestMouseExited
 
     /**
      * @param args the command line arguments
@@ -121,5 +175,9 @@ public class ResortHomePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuest;
     private javax.swing.JButton btnStaff;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
