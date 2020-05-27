@@ -4,6 +4,10 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="com.toedter.components.JLocaleChooser" name="jLocaleChooser1">
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -35,161 +39,217 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
+                      <Component id="jLabel8" min="-2" pref="320" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnBook" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Nationality" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="NationalID" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="MobileNumber" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FirstName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Age" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="FirstName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="LastName" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="RestAmountLabel" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnBook" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="MobileNumber" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="MobileNumberBox" min="-2" pref="195" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Age" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="AgeBox" min="-2" pref="195" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="MiddleName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LastName" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="NationalID" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Nationality" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="FirstNameBox" min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Component id="NationalIDBox" min="-2" pref="195" max="-2" attributes="0"/>
+                                  <Component id="MiddleNameBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Component id="LastNameBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                                  <Component id="NationalityBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="AgeBox" min="-2" pref="195" max="-2" attributes="0"/>
-                                  <Component id="MiddleNameBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <Component id="FirstNameBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <Component id="MobileNumberBox" min="-2" pref="195" max="-2" attributes="0"/>
-                                  <Component id="NationalIDBox" min="-2" pref="195" max="-2" attributes="0"/>
-                                  <Component id="NationalityBox" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <Component id="LastNameBox" min="-2" pref="129" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="AvailableRooms" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Departure" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Nights" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  <Component id="Arrivals" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="RestAmount" alignment="1" min="-2" pref="115" max="-2" attributes="0"/>
-                                      <Component id="Deposit" min="-2" pref="115" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="TotalPayments" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="TotalPaymentsLabel" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="TotalPayments" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="RoomsNumbers" min="-2" pref="123" max="-2" attributes="0"/>
-                                  <Component id="ArrivalsBoxDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="NightsBox" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                                  <Component id="DepartureBoxDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="DepositBox" alignment="1" min="-2" pref="123" max="-2" attributes="0"/>
-                                      <Component id="RestAmountLabel" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Departure" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AvailableRooms" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="RoomsNumbers" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="53" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="TotalPaymentsLabel" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jLabel8" min="-2" pref="320" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Arrivals" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                          <Component id="Nights" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                          <Component id="Deposit" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="NightsBox" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <Component id="DepositBox" min="-2" pref="123" max="-2" attributes="0"/>
+                                          <Component id="ArrivalsBoxDate" min="-2" pref="141" max="-2" attributes="0"/>
+                                          <Component id="DepartureBoxDate" alignment="0" min="-2" pref="141" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="RestAmount" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <Component id="btnDeparture" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="MiddleName" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnNights" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
-              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel8" min="-2" pref="41" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FirstNameBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel8" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ArrivalsBoxDate" alignment="1" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="FirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="FirstNameBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Arrivals" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="MiddleName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="MiddleNameBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LastName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LastNameBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Nights" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NightsBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Nationality" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="NationalityBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="NationalID" min="-2" max="-2" attributes="0"/>
-                          <Component id="NationalIDBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="MobileNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="MobileNumberBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Age" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="AgeBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DepartureBoxDate" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="LastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="LastNameBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Departure" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="ArrivalsBoxDate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="NightsBox" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="DepartureBoxDate" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnNights" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="RoomsNumbers" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="TotalPaymentsLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                      <Component id="RestAmountLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDeparture" min="-2" max="-2" attributes="0"/>
                   </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="Arrivals" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      <Component id="Nights" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="Departure" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="AvailableRooms" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="TotalPayments" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="AvailableRooms" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="RoomsNumbers" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="11" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Deposit" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="DepositBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="RestAmount" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Nationality" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NationalityBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="NationalIDBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NationalID" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="RestAmountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MobileNumberBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MobileNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RestAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Age" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AgeBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TotalPaymentsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TotalPayments" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Component id="btnBook" min="-2" pref="37" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnBack" min="-2" pref="45" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,6 +303,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="NightsBox">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NightsBoxActionPerformed"/>
+      </Events>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="ArrivalsBoxDate">
     </Component>
@@ -342,6 +405,22 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel21"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnNights">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="get nights"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNightsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDeparture">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="get departure"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDepartureActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
