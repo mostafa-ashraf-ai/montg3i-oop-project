@@ -41,9 +41,9 @@ public class Guest$ extends Person$ {
         Nights = nights ;
         Departure = departure ; 
         Deposite = deposite ;
-        TotalAmount = getTotalAmount() ;
+        //TotalAmount = getTotalAmount() ;
         NoofRooms_taken++ ;
-        Database.guest.Add(firstname, secondname, lastname, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, Totalamount, deposite, passcode);
+        //Database.guest.Add(firstname, secondname, lastname, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, Totalamount, deposite, passcode);
       //  Database.guest.Add(firstname, secondname, lastname, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, deposite, deposite, passcode);
     }
     public static int getNoofRooms_taken()
@@ -55,12 +55,12 @@ public class Guest$ extends Person$ {
     return (getNoofRooms_taken()-AllRooms) ;
     }
     
-     public static boolean login(String Username ,String pass)
+    /* public static boolean login(String Username ,String pass)
     { 
       
       return Database.guest.checkUserAndPass("guest", Username, pass) ;
       
-    }
+    }*/
     public static void delete (int id)
     {
         //Database.guest.Delete("guest", 0);
