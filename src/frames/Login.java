@@ -24,7 +24,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         btnLogin.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(0,0,0,0));
-        //jPanel1.setBackground(new Color(204,204,204,99));
+        jPanel1.setBackground(new Color(255,255,255,99));
     }
 
     /**
@@ -56,15 +56,14 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel1.setLayout(null);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(51, 204, 255));
-        btnBack.setText("Back");
+        btnBack.setText("< Back");
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnBack);
-        btnBack.setBounds(40, 610, 90, 38);
+        btnBack.setBounds(40, 610, 120, 38);
 
         btnLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(51, 204, 255));
@@ -125,7 +124,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(930, 50, 380, 690);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\hp\\Desktop\\all pics\\mnnnn.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p1.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1900, 1000));
         jLabel1.setMinimumSize(new java.awt.Dimension(1900, 1000));
         getContentPane().add(jLabel1);

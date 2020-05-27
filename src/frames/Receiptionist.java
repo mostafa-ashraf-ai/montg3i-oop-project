@@ -1,6 +1,7 @@
 package frames;
 
 
+import java.awt.Color;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 /*
@@ -20,6 +21,13 @@ public class Receiptionist extends javax.swing.JFrame {
      */
     public Receiptionist() {
         initComponents();
+        btnSend.setBackground(new Color(0,0,0,0));
+        btnLogout.setBackground(new Color(0,0,0,0));
+        btnSalary.setBackground(new Color(0,0,0,0));
+        btnVacation.setBackground(new Color(0,0,0,0));
+        btnInsurance.setBackground(new Color(0,0,0,0));
+        btnFeaturesAndOffers.setBackground(new Color(0,0,0,0));
+        jPanel2.setBackground(new Color(0,204,255,90));
     }
 
     /**
@@ -31,13 +39,16 @@ public class Receiptionist extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         btnInsurance = new javax.swing.JButton();
-        btnSend = new javax.swing.JButton();
-        Complains = new javax.swing.JLabel();
-        btnLogout = new javax.swing.JButton();
+        btnFeaturesAndOffers = new javax.swing.JButton();
+        Name = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ComplainsBox = new javax.swing.JTextArea();
-        Name = new javax.swing.JLabel();
+        btnLogout = new javax.swing.JButton();
+        Complains = new javax.swing.JLabel();
+        btnSend = new javax.swing.JButton();
         btnSalary = new javax.swing.JButton();
         NameLabel = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
@@ -45,122 +56,161 @@ public class Receiptionist extends javax.swing.JFrame {
         btnVacation = new javax.swing.JButton();
         PositionLabel = new javax.swing.JLabel();
         Position = new javax.swing.JLabel();
-        btnFeaturesandOffers = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        btnInsurance.setText("Insurance");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        btnSend.setText("Send");
-        btnSend.addActionListener(new java.awt.event.ActionListener() {
+        jPanel2.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        btnInsurance.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnInsurance.setForeground(new java.awt.Color(255, 255, 255));
+        btnInsurance.setText("> Insurance");
+        btnInsurance.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInsurance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendActionPerformed(evt);
+                btnInsuranceActionPerformed(evt);
             }
         });
+        jPanel2.add(btnInsurance);
+        btnInsurance.setBounds(120, 300, 140, 35);
 
-        Complains.setText("Complains:");
-
-        btnLogout.setText("Logout");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btnFeaturesAndOffers.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnFeaturesAndOffers.setForeground(new java.awt.Color(255, 255, 255));
+        btnFeaturesAndOffers.setText("> Features and Offers");
+        btnFeaturesAndOffers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnFeaturesAndOffers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btnFeaturesAndOffersActionPerformed(evt);
             }
         });
+        jPanel2.add(btnFeaturesAndOffers);
+        btnFeaturesAndOffers.setBounds(120, 260, 240, 35);
+
+        Name.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Name.setForeground(new java.awt.Color(255, 255, 255));
+        Name.setText("Name:");
+        jPanel2.add(Name);
+        Name.setBounds(20, 110, 57, 26);
 
         ComplainsBox.setColumns(20);
         ComplainsBox.setRows(5);
         jScrollPane1.setViewportView(ComplainsBox);
 
-        Name.setText("Name:");
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(110, 440, 220, 137);
 
-        btnSalary.setText("Salary");
+        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("< Logout");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLogout);
+        btnLogout.setBounds(20, 670, 110, 43);
+
+        Complains.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Complains.setForeground(new java.awt.Color(255, 255, 255));
+        Complains.setText("Complains:");
+        jPanel2.add(Complains);
+        Complains.setBounds(20, 440, 90, 26);
+
+        btnSend.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnSend.setForeground(new java.awt.Color(255, 255, 255));
+        btnSend.setText("Send");
+        btnSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSendActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnSend);
+        btnSend.setBounds(140, 590, 130, 40);
+
+        btnSalary.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnSalary.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalary.setText("> Salary");
+        btnSalary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSalary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalaryActionPerformed(evt);
             }
         });
+        jPanel2.add(btnSalary);
+        btnSalary.setBounds(120, 380, 110, 35);
 
+        NameLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        NameLabel.setForeground(new java.awt.Color(255, 255, 255));
         NameLabel.setText("Zatona");
+        jPanel2.add(NameLabel);
+        NameLabel.setBounds(110, 110, 80, 20);
 
+        ID.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        ID.setForeground(new java.awt.Color(255, 255, 255));
         ID.setText("ID:");
+        jPanel2.add(ID);
+        ID.setBounds(20, 150, 31, 26);
 
+        IDLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        IDLabel.setForeground(new java.awt.Color(255, 255, 255));
         IDLabel.setText("996778899");
+        jPanel2.add(IDLabel);
+        IDLabel.setBounds(110, 150, 120, 20);
 
-        btnVacation.setText("Vacation");
+        btnVacation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnVacation.setForeground(new java.awt.Color(255, 255, 255));
+        btnVacation.setText("> Vacation");
+        btnVacation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(btnVacation);
+        btnVacation.setBounds(120, 340, 130, 35);
 
+        PositionLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        PositionLabel.setForeground(new java.awt.Color(255, 255, 255));
         PositionLabel.setText("Receiptionist Class A");
+        jPanel2.add(PositionLabel);
+        PositionLabel.setBounds(110, 190, 190, 20);
 
+        Position.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Position.setForeground(new java.awt.Color(255, 255, 255));
         Position.setText("Position:");
+        jPanel2.add(Position);
+        Position.setBounds(20, 190, 72, 26);
 
-        btnFeaturesandOffers.setText("Features and Offers");
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Profile");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(180, 30, 160, 31);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(204, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Complains)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1))
-                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ID)
-                            .addComponent(Name)
-                            .addComponent(Position))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NameLabel)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btnInsurance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnFeaturesandOffers))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnSalary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnVacation, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(IDLabel)
-                            .addComponent(PositionLabel))))
-                .addGap(93, 93, 93)
-                .addComponent(btnSend, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Name)
-                    .addComponent(NameLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ID)
-                    .addComponent(IDLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Position)
-                    .addComponent(PositionLabel))
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnInsurance)
-                    .addComponent(btnVacation))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnFeaturesandOffers)
-                    .addComponent(btnSalary))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnSend, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Complains))
-                .addGap(18, 18, 18)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(159, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_contacts_64px_1.png"))); // NOI18N
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(110, 10, 70, 70);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1);
+        jSeparator1.setBounds(20, 230, 360, 20);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(50, 0, 400, 730);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(500, 40, 500, 730);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p4.jpg"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1500, 790);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -178,6 +228,14 @@ public class Receiptionist extends javax.swing.JFrame {
         double salary=7000;
         showMessageDialog(null,"Your Salary is "+salary+" $");
     }//GEN-LAST:event_btnSalaryActionPerformed
+
+    private void btnFeaturesAndOffersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFeaturesAndOffersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFeaturesAndOffersActionPerformed
+
+    private void btnInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsuranceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInsuranceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,12 +281,18 @@ public class Receiptionist extends javax.swing.JFrame {
     private javax.swing.JLabel NameLabel;
     private javax.swing.JLabel Position;
     private javax.swing.JLabel PositionLabel;
-    private javax.swing.JButton btnFeaturesandOffers;
+    private javax.swing.JButton btnFeaturesAndOffers;
     private javax.swing.JButton btnInsurance;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnSalary;
     private javax.swing.JButton btnSend;
     private javax.swing.JButton btnVacation;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

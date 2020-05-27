@@ -1,6 +1,7 @@
 package frames;
 
 
+import java.awt.Color;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,6 +26,11 @@ public class ReservationForm extends javax.swing.JFrame {
      */
     public ReservationForm() {
         initComponents();
+        btnBook.setBackground(new Color(0,0,0,0));
+        btnBack.setBackground(new Color(0,0,0,0));
+        btnDeparture.setBackground(new Color(0,0,0,0));
+        btnNights.setBackground(new Color(0,0,0,0));
+        jPanel2.setBackground(new Color(51,204,255,90));
             //SuiteRooms.setVisible(false);
             //DoubleRooms.setVisible(false);
             //SingleRooms.setVisible(false);
@@ -46,293 +52,275 @@ public class ReservationForm extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLocaleChooser1 = new com.toedter.components.JLocaleChooser();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        btnBook = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        btnBack = new javax.swing.JButton();
+        Age = new javax.swing.JLabel();
         FirstName = new javax.swing.JLabel();
         MiddleName = new javax.swing.JLabel();
         LastName = new javax.swing.JLabel();
-        FirstNameBox = new javax.swing.JTextField();
-        MiddleNameBox = new javax.swing.JTextField();
+        Nationality = new javax.swing.JLabel();
+        NationalID = new javax.swing.JLabel();
+        MobileNumber = new javax.swing.JLabel();
+        MobileNumberBox = new javax.swing.JTextField();
+        AgeBox = new javax.swing.JTextField();
+        NationalIDBox = new javax.swing.JTextField();
+        NationalityBox = new javax.swing.JTextField();
         LastNameBox = new javax.swing.JTextField();
+        MiddleNameBox = new javax.swing.JTextField();
+        FirstNameBox = new javax.swing.JTextField();
+        btnNights = new javax.swing.JButton();
+        btnDeparture = new javax.swing.JButton();
         Arrivals = new javax.swing.JLabel();
         Nights = new javax.swing.JLabel();
         Departure = new javax.swing.JLabel();
+        AvailableRooms = new javax.swing.JLabel();
+        TotalPayments = new javax.swing.JLabel();
+        Deposit = new javax.swing.JLabel();
+        RestAmount = new javax.swing.JLabel();
+        DepositBox = new javax.swing.JTextField();
+        RestAmountLabel = new javax.swing.JLabel();
+        TotalPaymentsLabel = new javax.swing.JLabel();
+        RoomsNumbers = new javax.swing.JComboBox<>();
+        DepartureBoxDate = new com.toedter.calendar.JDateChooser();
         NightsBox = new javax.swing.JTextField();
         ArrivalsBoxDate = new com.toedter.calendar.JDateChooser();
-        DepartureBoxDate = new com.toedter.calendar.JDateChooser();
-        NationalID = new javax.swing.JLabel();
-        NationalIDBox = new javax.swing.JTextField();
-        AvailableRooms = new javax.swing.JLabel();
-        RoomsNumbers = new javax.swing.JComboBox<>();
-        btnBack = new javax.swing.JButton();
+        btnBook = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        MobileNumber = new javax.swing.JLabel();
-        MobileNumberBox = new javax.swing.JTextField();
-        Age = new javax.swing.JLabel();
-        AgeBox = new javax.swing.JTextField();
-        Nationality = new javax.swing.JLabel();
-        NationalityBox = new javax.swing.JTextField();
-        Deposit = new javax.swing.JLabel();
-        DepositBox = new javax.swing.JTextField();
-        TotalPayments = new javax.swing.JLabel();
-        TotalPaymentsLabel = new javax.swing.JLabel();
-        RestAmount = new javax.swing.JLabel();
-        RestAmountLabel = new javax.swing.JLabel();
-        btnNights = new javax.swing.JButton();
-        btnDeparture = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reservation Form");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(400, 100));
+        getContentPane().setLayout(null);
 
-        btnBook.setText("Book");
-        btnBook.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(51, 204, 255));
+        btnBack.setText("< Back");
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBookActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(50, 480, 120, 45);
 
+        Age.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Age.setForeground(new java.awt.Color(51, 204, 255));
+        Age.setText("Age:");
+        jPanel1.add(Age);
+        Age.setBounds(50, 400, 34, 20);
+
+        FirstName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        FirstName.setForeground(new java.awt.Color(51, 204, 255));
         FirstName.setText("First Name:");
+        jPanel1.add(FirstName);
+        FirstName.setBounds(50, 130, 82, 20);
 
+        MiddleName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        MiddleName.setForeground(new java.awt.Color(51, 204, 255));
         MiddleName.setText("Middle Name:");
+        jPanel1.add(MiddleName);
+        MiddleName.setBounds(50, 180, 98, 20);
 
+        LastName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        LastName.setForeground(new java.awt.Color(51, 204, 255));
         LastName.setText("Last Name:");
+        jPanel1.add(LastName);
+        LastName.setBounds(50, 220, 80, 20);
+
+        Nationality.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nationality.setForeground(new java.awt.Color(51, 204, 255));
+        Nationality.setText("Nationality:");
+        jPanel1.add(Nationality);
+        Nationality.setBounds(50, 260, 81, 20);
+
+        NationalID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        NationalID.setForeground(new java.awt.Color(51, 204, 255));
+        NationalID.setText("National ID:");
+        jPanel1.add(NationalID);
+        NationalID.setBounds(50, 300, 86, 20);
+
+        MobileNumber.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        MobileNumber.setForeground(new java.awt.Color(51, 204, 255));
+        MobileNumber.setText("Mobile Number:");
+        jPanel1.add(MobileNumber);
+        MobileNumber.setBounds(50, 350, 114, 20);
+        jPanel1.add(MobileNumberBox);
+        MobileNumberBox.setBounds(190, 340, 195, 26);
+        jPanel1.add(AgeBox);
+        AgeBox.setBounds(190, 390, 195, 26);
+        jPanel1.add(NationalIDBox);
+        NationalIDBox.setBounds(190, 300, 195, 26);
+        jPanel1.add(NationalityBox);
+        NationalityBox.setBounds(190, 260, 129, 26);
+        jPanel1.add(LastNameBox);
+        LastNameBox.setBounds(190, 220, 129, 26);
+        jPanel1.add(MiddleNameBox);
+        MiddleNameBox.setBounds(190, 170, 129, 26);
 
         FirstNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FirstNameBoxActionPerformed(evt);
             }
         });
+        jPanel1.add(FirstNameBox);
+        FirstNameBox.setBounds(190, 120, 129, 26);
 
-        Arrivals.setText("Arrivals:");
-
-        Nights.setText("Nights:");
-
-        Departure.setText("Departure:");
-
-        NightsBox.addActionListener(new java.awt.event.ActionListener() {
+        btnNights.setForeground(new java.awt.Color(51, 204, 255));
+        btnNights.setText("> get nights");
+        btnNights.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NightsBoxActionPerformed(evt);
+                btnNightsActionPerformed(evt);
             }
         });
+        jPanel1.add(btnNights);
+        btnNights.setBounds(733, 160, 130, 29);
 
-        NationalID.setText("National ID:");
+        btnDeparture.setForeground(new java.awt.Color(51, 204, 255));
+        btnDeparture.setText("> get departure");
+        btnDeparture.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDeparture.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDepartureActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnDeparture);
+        btnDeparture.setBounds(730, 210, 160, 29);
 
+        Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Arrivals.setForeground(new java.awt.Color(51, 204, 255));
+        Arrivals.setText("Arrivals:");
+        jPanel1.add(Arrivals);
+        Arrivals.setBounds(410, 120, 76, 20);
+
+        Nights.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nights.setForeground(new java.awt.Color(51, 204, 255));
+        Nights.setText("Nights:");
+        jPanel1.add(Nights);
+        Nights.setBounds(410, 170, 76, 20);
+
+        Departure.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Departure.setForeground(new java.awt.Color(51, 204, 255));
+        Departure.setText("Departure:");
+        jPanel1.add(Departure);
+        Departure.setBounds(410, 210, 76, 20);
+
+        AvailableRooms.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        AvailableRooms.setForeground(new java.awt.Color(51, 204, 255));
         AvailableRooms.setText("Available Rooms:");
+        jPanel1.add(AvailableRooms);
+        AvailableRooms.setBounds(410, 260, 124, 20);
 
+        TotalPayments.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        TotalPayments.setForeground(new java.awt.Color(51, 204, 255));
+        TotalPayments.setText("Total Payments:");
+        jPanel1.add(TotalPayments);
+        TotalPayments.setBounds(410, 290, 115, 20);
+
+        Deposit.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Deposit.setForeground(new java.awt.Color(51, 204, 255));
+        Deposit.setText("Deposit:");
+        jPanel1.add(Deposit);
+        Deposit.setBounds(410, 330, 115, 20);
+
+        RestAmount.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        RestAmount.setForeground(new java.awt.Color(51, 204, 255));
+        RestAmount.setText("Rest Amount:");
+        jPanel1.add(RestAmount);
+        RestAmount.setBounds(410, 360, 115, 20);
+        jPanel1.add(DepositBox);
+        DepositBox.setBounds(550, 320, 123, 26);
+
+        RestAmountLabel.setText("jLabel21");
+        jPanel1.add(RestAmountLabel);
+        RestAmountLabel.setBounds(560, 360, 80, 20);
+
+        TotalPaymentsLabel.setText("jLabel19");
+        jPanel1.add(TotalPaymentsLabel);
+        TotalPaymentsLabel.setBounds(560, 290, 80, 20);
+
+        RoomsNumbers.setForeground(new java.awt.Color(51, 204, 255));
         RoomsNumbers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103" }));
         RoomsNumbers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RoomsNumbersActionPerformed(evt);
             }
         });
+        jPanel1.add(RoomsNumbers);
+        RoomsNumbers.setBounds(550, 250, 123, 26);
+        jPanel1.add(DepartureBoxDate);
+        DepartureBoxDate.setBounds(550, 210, 141, 28);
 
-        btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        NightsBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                NightsBoxActionPerformed(evt);
             }
         });
+        jPanel1.add(NightsBox);
+        NightsBox.setBounds(550, 170, 102, 26);
+        jPanel1.add(ArrivalsBoxDate);
+        ArrivalsBoxDate.setBounds(550, 120, 141, 24);
+
+        btnBook.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnBook.setForeground(new java.awt.Color(51, 204, 255));
+        btnBook.setText("~< Book >~");
+        btnBook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBookActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBook);
+        btnBook.setBounds(350, 430, 240, 50);
+
+        jPanel2.setBackground(new java.awt.Color(51, 204, 255));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_new_file_32px.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("New Reservation");
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        MobileNumber.setText("Mobile Number:");
-
-        Age.setText("Age:");
-
-        Nationality.setText("Nationality:");
-
-        Deposit.setText("Deposit:");
-
-        TotalPayments.setText("Total Payments:");
-
-        TotalPaymentsLabel.setText("jLabel19");
-
-        RestAmount.setText("Rest Amount:");
-
-        RestAmountLabel.setText("jLabel21");
-
-        btnNights.setText("get nights");
-        btnNights.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNightsActionPerformed(evt);
-            }
-        });
-
-        btnDeparture.setText("get departure");
-        btnDeparture.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDepartureActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(btnBack))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(305, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addGap(291, 291, 291))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FirstName)
-                            .addComponent(LastName))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(RestAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(MobileNumber)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MobileNumberBox, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Age)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(AgeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(NationalID)
-                                        .addGap(50, 50, 50))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(Nationality)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(FirstNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NationalIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(MiddleNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(LastNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NationalityBox, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TotalPayments)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(TotalPaymentsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Departure)
-                                            .addComponent(AvailableRooms))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(RoomsNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 53, Short.MAX_VALUE)))
-                                .addGap(22, 22, 22))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Arrivals, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Nights, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(Deposit, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(NightsBox, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(DepositBox, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ArrivalsBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(DepartureBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(RestAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addComponent(btnDeparture)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MiddleName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnNights)
-                        .addContainerGap())))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ArrivalsBoxDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(FirstName)
-                                .addComponent(FirstNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Arrivals)))
-                        .addGap(23, 23, 23)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(MiddleName)
-                            .addComponent(MiddleNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Nights)
-                            .addComponent(NightsBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DepartureBoxDate, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(LastName)
-                                .addComponent(LastNameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Departure))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNights)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDeparture)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(AvailableRooms))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(RoomsNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Deposit)
-                            .addComponent(DepositBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(142, 142, 142))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Nationality)
-                                    .addComponent(NationalityBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(NationalIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(NationalID)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(118, 118, 118)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RestAmountLabel)
-                                    .addComponent(MobileNumberBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(MobileNumber)
-                                    .addComponent(RestAmount))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Age)
-                                    .addComponent(AgeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TotalPaymentsLabel)
-                                    .addComponent(TotalPayments))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(btnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 910, 70);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(300, 120, 910, 550);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1500, 790);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -472,7 +460,11 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JButton btnNights;
     private javax.swing.ButtonGroup buttonGroup1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private com.toedter.components.JLocaleChooser jLocaleChooser1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

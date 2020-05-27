@@ -9,14 +9,14 @@ public class ResortHomePage extends javax.swing.JFrame {
      */
     public ResortHomePage() {
         initComponents();
-        
+       
         
         jPanel1.setBackground(new Color(0,0,0,50));
         btnGuest.setForeground(Color.WHITE);
         btnStaff.setForeground(Color.WHITE);
         btnStaff.setBackground(new Color(0,0,0,0));
         btnGuest.setBackground(new Color(0,0,0,0));
-        
+      
     }
 
     /**
@@ -95,14 +95,14 @@ public class ResortHomePage extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1280, 80);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\hp\\Desktop\\montg3iii.JPG")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/montg3iii.JPG"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel1MouseExited(evt);
             }
         });
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 853);
+        jLabel1.setBounds(0, 0, 1280, 860);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

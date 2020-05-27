@@ -1,5 +1,7 @@
 package frames;
 
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +19,11 @@ public class Manager extends javax.swing.JFrame {
      */
     public Manager() {
         initComponents();
+       btnBalanceAndReservations.setBackground(new Color(0,0,0,0));
+        btnCameras.setBackground(new Color(0,0,0,0));
+        btnEmployee.setBackground(new Color(0,0,0,0));
+        btnLogout.setBackground(new Color(0,0,0,0));
+        btnNewEmployee.setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -28,81 +35,83 @@ public class Manager extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBalanceAndReservations = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        btnNewEmployee = new javax.swing.JButton();
         btnEmployee = new javax.swing.JButton();
-        btnNewemployee = new javax.swing.JButton();
         btnCameras = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        btnBalanceAndReservations = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manager");
         setLocation(new java.awt.Point(700, 300));
+        getContentPane().setLayout(null);
 
-        btnBalanceAndReservations.setText("Balance and Reservations");
-        btnBalanceAndReservations.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        btnNewEmployee.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnNewEmployee.setForeground(new java.awt.Color(255, 255, 255));
+        btnNewEmployee.setText("New Employees");
+        btnNewEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNewEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBalanceAndReservationsActionPerformed(evt);
+                btnNewEmployeeActionPerformed(evt);
             }
         });
+        jPanel1.add(btnNewEmployee);
+        btnNewEmployee.setBounds(130, 360, 280, 40);
 
+        btnEmployee.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnEmployee.setText("Employee");
+        btnEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEmployeeActionPerformed(evt);
             }
         });
+        jPanel1.add(btnEmployee);
+        btnEmployee.setBounds(170, 240, 190, 51);
 
-        btnNewemployee.setText("New Employees");
-        btnNewemployee.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNewemployeeActionPerformed(evt);
-            }
-        });
-
+        btnCameras.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnCameras.setForeground(new java.awt.Color(255, 255, 255));
         btnCameras.setText("Cameras");
+        btnCameras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnCameras);
+        btnCameras.setBounds(180, 480, 180, 40);
 
-        btnLogout.setText("Logout");
+        btnLogout.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("<  Logout");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
+        jPanel1.add(btnLogout);
+        btnLogout.setBounds(180, 600, 180, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(428, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnBalanceAndReservations, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnNewemployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                    .addComponent(btnCameras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(47, 47, 47))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnBalanceAndReservations, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addComponent(btnNewemployee, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnCameras, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-        );
+        btnBalanceAndReservations.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnBalanceAndReservations.setForeground(new java.awt.Color(255, 255, 255));
+        btnBalanceAndReservations.setText("Balance and Reservations");
+        btnBalanceAndReservations.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBalanceAndReservations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBalanceAndReservationsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBalanceAndReservations);
+        btnBalanceAndReservations.setBounds(40, 130, 430, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(250, 0, 520, 800);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p10.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1500, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,9 +126,9 @@ public class Manager extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnBalanceAndReservationsActionPerformed
 
-    private void btnNewemployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewemployeeActionPerformed
+    private void btnNewEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewEmployeeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnNewemployeeActionPerformed
+    }//GEN-LAST:event_btnNewEmployeeActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         new Login().setVisible(true);
@@ -167,6 +176,8 @@ public class Manager extends javax.swing.JFrame {
     private javax.swing.JButton btnCameras;
     private javax.swing.JButton btnEmployee;
     private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnNewemployee;
+    private javax.swing.JButton btnNewEmployee;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
