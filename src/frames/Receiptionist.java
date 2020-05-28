@@ -27,7 +27,7 @@ public class Receiptionist extends javax.swing.JFrame {
         btnVacation.setBackground(new Color(0,0,0,0));
         btnInsurance.setBackground(new Color(0,0,0,0));
         btnFeaturesAndOffers.setBackground(new Color(0,0,0,0));
-        jPanel2.setBackground(new Color(0,204,255,90));
+       
     }
 
     /**
@@ -39,7 +39,6 @@ public class Receiptionist extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnInsurance = new javax.swing.JButton();
         btnFeaturesAndOffers = new javax.swing.JButton();
@@ -62,12 +61,10 @@ public class Receiptionist extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
-
-        jPanel2.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
@@ -81,7 +78,7 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnInsurance);
-        btnInsurance.setBounds(120, 300, 140, 35);
+        btnInsurance.setBounds(180, 310, 140, 35);
 
         btnFeaturesAndOffers.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnFeaturesAndOffers.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,24 +90,25 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnFeaturesAndOffers);
-        btnFeaturesAndOffers.setBounds(120, 260, 240, 35);
+        btnFeaturesAndOffers.setBounds(180, 270, 240, 35);
 
         Name.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
         jPanel2.add(Name);
-        Name.setBounds(20, 110, 57, 26);
+        Name.setBounds(80, 120, 57, 26);
 
         ComplainsBox.setColumns(20);
         ComplainsBox.setRows(5);
         jScrollPane1.setViewportView(ComplainsBox);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(110, 440, 220, 137);
+        jScrollPane1.setBounds(170, 450, 220, 137);
 
         btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("< Logout");
+        btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,17 +116,18 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnLogout);
-        btnLogout.setBounds(20, 670, 110, 43);
+        btnLogout.setBounds(80, 680, 110, 43);
 
         Complains.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Complains.setForeground(new java.awt.Color(255, 255, 255));
         Complains.setText("Complains:");
         jPanel2.add(Complains);
-        Complains.setBounds(20, 440, 90, 26);
+        Complains.setBounds(80, 450, 90, 26);
 
         btnSend.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnSend.setForeground(new java.awt.Color(255, 255, 255));
         btnSend.setText("Send");
+        btnSend.setBorder(null);
         btnSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +135,7 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnSend);
-        btnSend.setBounds(140, 590, 130, 40);
+        btnSend.setBounds(200, 600, 130, 40);
 
         btnSalary.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSalary.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,66 +147,63 @@ public class Receiptionist extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnSalary);
-        btnSalary.setBounds(120, 380, 110, 35);
+        btnSalary.setBounds(180, 390, 110, 35);
 
         NameLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         NameLabel.setForeground(new java.awt.Color(255, 255, 255));
         NameLabel.setText("Zatona");
         jPanel2.add(NameLabel);
-        NameLabel.setBounds(110, 110, 80, 20);
+        NameLabel.setBounds(170, 120, 80, 20);
 
         ID.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
         ID.setText("ID:");
         jPanel2.add(ID);
-        ID.setBounds(20, 150, 31, 26);
+        ID.setBounds(80, 160, 31, 26);
 
         IDLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         IDLabel.setForeground(new java.awt.Color(255, 255, 255));
         IDLabel.setText("996778899");
         jPanel2.add(IDLabel);
-        IDLabel.setBounds(110, 150, 120, 20);
+        IDLabel.setBounds(170, 160, 120, 20);
 
         btnVacation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnVacation.setForeground(new java.awt.Color(255, 255, 255));
         btnVacation.setText("> Vacation");
         btnVacation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(btnVacation);
-        btnVacation.setBounds(120, 340, 130, 35);
+        btnVacation.setBounds(180, 350, 130, 35);
 
         PositionLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         PositionLabel.setForeground(new java.awt.Color(255, 255, 255));
         PositionLabel.setText("Receiptionist Class A");
         jPanel2.add(PositionLabel);
-        PositionLabel.setBounds(110, 190, 190, 20);
+        PositionLabel.setBounds(170, 200, 190, 20);
 
         Position.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Position.setForeground(new java.awt.Color(255, 255, 255));
         Position.setText("Position:");
         jPanel2.add(Position);
-        Position.setBounds(20, 190, 72, 26);
+        Position.setBounds(80, 200, 72, 26);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Profile");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(180, 30, 160, 31);
+        jLabel2.setBounds(240, 40, 160, 31);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_contacts_64px_1.png"))); // NOI18N
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(110, 10, 70, 70);
+        jLabel3.setBounds(160, 20, 70, 70);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(20, 230, 360, 20);
+        jSeparator1.setBounds(80, 240, 360, 20);
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(50, 0, 400, 730);
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(480, 0, 510, 790);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(500, 40, 500, 730);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p4.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/6.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1500, 790);
@@ -290,7 +286,6 @@ public class Receiptionist extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;

@@ -1,6 +1,7 @@
 package frames;
 
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -21,6 +22,7 @@ public class Cashiering extends javax.swing.JFrame {
      */
     public Cashiering() {
         initComponents();
+        btnBack.setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -33,8 +35,8 @@ public class Cashiering extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         ReservationID = new javax.swing.JLabel();
-        ReservationIDBox = new javax.swing.JTextField();
         Clinic = new javax.swing.JLabel();
         Restaurant = new javax.swing.JLabel();
         ClinicLabel = new javax.swing.JLabel();
@@ -46,134 +48,135 @@ public class Cashiering extends javax.swing.JFrame {
         RestAmount = new javax.swing.JLabel();
         RestAmountLabel = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        btnCheckOut = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        ReservationIDBox = new javax.swing.JTextField();
+        btnCheckOut = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(700, 300));
+        setMinimumSize(new java.awt.Dimension(1499, 801));
+        getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel1.setLayout(null);
+
+        ReservationID.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        ReservationID.setForeground(new java.awt.Color(255, 255, 255));
         ReservationID.setText("Reservation ID:");
+        jPanel1.add(ReservationID);
+        ReservationID.setBounds(80, 50, 200, 34);
 
+        Clinic.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Clinic.setForeground(new java.awt.Color(255, 255, 255));
         Clinic.setText("Clinic:");
+        jPanel1.add(Clinic);
+        Clinic.setBounds(80, 110, 130, 34);
 
+        Restaurant.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Restaurant.setForeground(new java.awt.Color(255, 255, 255));
         Restaurant.setText("Restaurant:");
+        jPanel1.add(Restaurant);
+        Restaurant.setBounds(80, 170, 170, 34);
 
+        ClinicLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        ClinicLabel.setForeground(new java.awt.Color(255, 255, 255));
         ClinicLabel.setText("jLabel4");
+        jPanel1.add(ClinicLabel);
+        ClinicLabel.setBounds(280, 120, 100, 26);
 
+        RestaurantLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        RestaurantLabel.setForeground(new java.awt.Color(255, 255, 255));
         RestaurantLabel.setText("jLabel5");
+        jPanel1.add(RestaurantLabel);
+        RestaurantLabel.setBounds(280, 180, 170, 26);
 
+        Services.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Services.setForeground(new java.awt.Color(255, 255, 255));
         Services.setText("Services:");
+        jPanel1.add(Services);
+        Services.setBounds(80, 230, 150, 34);
 
+        ServicesLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        ServicesLabel.setForeground(new java.awt.Color(255, 255, 255));
         ServicesLabel.setText("jLabel7");
+        jPanel1.add(ServicesLabel);
+        ServicesLabel.setBounds(280, 240, 70, 26);
 
+        Cash.setBackground(new java.awt.Color(0, 102, 153));
         buttonGroup.add(Cash);
+        Cash.setForeground(new java.awt.Color(255, 255, 255));
         Cash.setText("Cash");
+        jPanel1.add(Cash);
+        Cash.setBounds(120, 430, 67, 29);
 
+        CreditCard.setBackground(new java.awt.Color(0, 102, 153));
         buttonGroup.add(CreditCard);
+        CreditCard.setForeground(new java.awt.Color(255, 255, 255));
         CreditCard.setText("Credit Card");
+        jPanel1.add(CreditCard);
+        CreditCard.setBounds(120, 480, 113, 29);
 
+        RestAmount.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        RestAmount.setForeground(new java.awt.Color(255, 255, 255));
         RestAmount.setText("Rest Amount:");
+        jPanel1.add(RestAmount);
+        RestAmount.setBounds(80, 300, 180, 34);
 
+        RestAmountLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        RestAmountLabel.setForeground(new java.awt.Color(255, 255, 255));
         RestAmountLabel.setText("jLabel9");
+        jPanel1.add(RestAmountLabel);
+        RestAmountLabel.setBounds(280, 310, 80, 26);
 
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Check Out Method:");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(80, 380, 230, 34);
 
-        btnCheckOut.setText("Check Out");
-
-        btnBack.setText("Back");
+        btnBack.setBackground(new java.awt.Color(0, 102, 153));
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(50, 710, 120, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnCheckOut)
-                .addGap(57, 57, 57))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CreditCard)
-                                    .addComponent(Cash)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(RestAmount)
-                                .addGap(22, 22, 22)
-                                .addComponent(RestAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Restaurant)
-                                .addGap(39, 39, 39)
-                                .addComponent(RestaurantLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(197, 197, 197)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Clinic)
-                                    .addComponent(Services)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(ReservationID)))
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ServicesLabel)
-                            .addComponent(ClinicLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(91, 91, 91))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(btnBack)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReservationID)
-                    .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Clinic)
-                    .addComponent(ClinicLabel))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
-                        .addComponent(btnBack)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Restaurant)
-                            .addComponent(RestaurantLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ServicesLabel)
-                            .addComponent(Services))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RestAmount)
-                            .addComponent(RestAmountLabel))
-                        .addGap(53, 53, 53)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Cash)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CreditCard)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                        .addComponent(btnCheckOut)
-                        .addGap(51, 51, 51))))
-        );
+        ReservationIDBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReservationIDBoxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ReservationIDBox);
+        ReservationIDBox.setBounds(280, 60, 190, 26);
+
+        btnCheckOut.setBackground(new java.awt.Color(0, 102, 153));
+        btnCheckOut.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnCheckOut.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckOut.setText("Check Out");
+        btnCheckOut.setBorder(null);
+        btnCheckOut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCheckOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCheckOutActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCheckOut);
+        btnCheckOut.setBounds(290, 540, 170, 60);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(210, 0, 540, 800);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/e.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1500, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,6 +185,14 @@ public class Cashiering extends javax.swing.JFrame {
         new Receiption().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void ReservationIDBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservationIDBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ReservationIDBoxActionPerformed
+
+    private void btnCheckOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckOutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCheckOutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,8 +245,10 @@ public class Cashiering extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCheckOut;
     private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    // End of variables declaration                       void btnSignInActionPerformed(ActionEvent evt, Login signIn) {//GEN-END:variables
+    private javax.swing.JPanel jPanel1;
+    // End of variables declaration//GEN-END:variables
        /* String username = signIn.Username.getText();
         String password = signIn.Password.getText();
         if (("a".equals(username)) && ("1".equals(password))) {

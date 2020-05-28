@@ -45,7 +45,8 @@ public class Manager extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manager");
-        setLocation(new java.awt.Point(700, 300));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -54,6 +55,7 @@ public class Manager extends javax.swing.JFrame {
         btnNewEmployee.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnNewEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnNewEmployee.setText("New Employees");
+        btnNewEmployee.setBorder(null);
         btnNewEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNewEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +68,7 @@ public class Manager extends javax.swing.JFrame {
         btnEmployee.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnEmployee.setText("Employee");
+        btnEmployee.setBorder(null);
         btnEmployee.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,11 +76,12 @@ public class Manager extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEmployee);
-        btnEmployee.setBounds(170, 240, 190, 51);
+        btnEmployee.setBounds(170, 240, 190, 43);
 
         btnCameras.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnCameras.setForeground(new java.awt.Color(255, 255, 255));
         btnCameras.setText("Cameras");
+        btnCameras.setBorder(null);
         btnCameras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnCameras);
         btnCameras.setBounds(180, 480, 180, 40);
@@ -85,6 +89,7 @@ public class Manager extends javax.swing.JFrame {
         btnLogout.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("<  Logout");
+        btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +102,7 @@ public class Manager extends javax.swing.JFrame {
         btnBalanceAndReservations.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnBalanceAndReservations.setForeground(new java.awt.Color(255, 255, 255));
         btnBalanceAndReservations.setText("Balance and Reservations");
+        btnBalanceAndReservations.setBorder(null);
         btnBalanceAndReservations.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBalanceAndReservations.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

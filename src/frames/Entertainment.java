@@ -1,5 +1,7 @@
 package frames;
 
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +19,8 @@ public class Entertainment extends javax.swing.JFrame {
      */
     public Entertainment() {
         initComponents();
+        btnBack.setBackground(new Color(0,0,0,0));
+        
     }
 
     /**
@@ -28,123 +32,120 @@ public class Entertainment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         WiFi = new javax.swing.JLabel();
         PasswordOfWiFi = new javax.swing.JLabel();
         FloorOfThePool = new javax.swing.JLabel();
         FloorOfTheGym = new javax.swing.JLabel();
         Club = new javax.swing.JLabel();
         Market = new javax.swing.JLabel();
-        WiFiLabel = new javax.swing.JLabel();
-        PasswordOfWiFiLabel = new javax.swing.JLabel();
-        FloorOfThePoolLabel = new javax.swing.JLabel();
-        FloorOfTheGymLabel = new javax.swing.JLabel();
-        ClubLabel = new javax.swing.JLabel();
         MarketLabel = new javax.swing.JLabel();
+        ClubLabel = new javax.swing.JLabel();
+        FloorOfTheGymLabel = new javax.swing.JLabel();
+        FloorOfThePoolLabel = new javax.swing.JLabel();
+        PasswordOfWiFiLabel = new javax.swing.JLabel();
+        WiFiLabel = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(700, 300));
+        setMinimumSize(new java.awt.Dimension(1070, 709));
+        getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setLayout(null);
+
+        WiFi.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        WiFi.setForeground(new java.awt.Color(255, 255, 255));
         WiFi.setText("WiFi:");
+        jPanel1.add(WiFi);
+        WiFi.setBounds(90, 140, 64, 34);
 
+        PasswordOfWiFi.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        PasswordOfWiFi.setForeground(new java.awt.Color(255, 255, 255));
         PasswordOfWiFi.setText("Password Of WiFi:");
+        jPanel1.add(PasswordOfWiFi);
+        PasswordOfWiFi.setBounds(90, 180, 220, 34);
 
+        FloorOfThePool.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        FloorOfThePool.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfThePool.setText("Floor Of The Pool:");
+        jPanel1.add(FloorOfThePool);
+        FloorOfThePool.setBounds(90, 220, 221, 34);
 
+        FloorOfTheGym.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        FloorOfTheGym.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfTheGym.setText("Floor Of The Gym:");
+        jPanel1.add(FloorOfTheGym);
+        FloorOfTheGym.setBounds(90, 260, 223, 34);
 
+        Club.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Club.setForeground(new java.awt.Color(255, 255, 255));
         Club.setText("Club:");
+        jPanel1.add(Club);
+        Club.setBounds(90, 310, 58, 34);
 
+        Market.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Market.setForeground(new java.awt.Color(255, 255, 255));
         Market.setText("Market:");
+        jPanel1.add(Market);
+        Market.setBounds(90, 350, 93, 34);
 
-        WiFiLabel.setText("jLabel7");
-
-        PasswordOfWiFiLabel.setText("jLabel8");
-
-        FloorOfThePoolLabel.setText("jLabel9");
-
-        FloorOfTheGymLabel.setText("jLabel10");
-
-        ClubLabel.setText("jLabel11");
-
+        MarketLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        MarketLabel.setForeground(new java.awt.Color(255, 255, 255));
         MarketLabel.setText("jLabel12");
+        jPanel1.add(MarketLabel);
+        MarketLabel.setBounds(330, 360, 210, 23);
 
-        btnBack.setText("Back");
+        ClubLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        ClubLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ClubLabel.setText("jLabel11");
+        jPanel1.add(ClubLabel);
+        ClubLabel.setBounds(330, 320, 210, 23);
+
+        FloorOfTheGymLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        FloorOfTheGymLabel.setForeground(new java.awt.Color(255, 255, 255));
+        FloorOfTheGymLabel.setText("jLabel10");
+        jPanel1.add(FloorOfTheGymLabel);
+        FloorOfTheGymLabel.setBounds(330, 270, 210, 23);
+
+        FloorOfThePoolLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        FloorOfThePoolLabel.setForeground(new java.awt.Color(255, 255, 255));
+        FloorOfThePoolLabel.setText("jLabel9");
+        jPanel1.add(FloorOfThePoolLabel);
+        FloorOfThePoolLabel.setBounds(330, 230, 206, 23);
+
+        PasswordOfWiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        PasswordOfWiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
+        PasswordOfWiFiLabel.setText("jLabel8");
+        jPanel1.add(PasswordOfWiFiLabel);
+        PasswordOfWiFiLabel.setBounds(330, 190, 208, 23);
+
+        WiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        WiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
+        WiFiLabel.setText("jLabel7");
+        jPanel1.add(WiFiLabel);
+        WiFiLabel.setBounds(330, 150, 209, 23);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(50, 499, 160, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(FloorOfTheGym)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(FloorOfTheGymLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(FloorOfThePool)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(FloorOfThePoolLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(PasswordOfWiFi)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(PasswordOfWiFiLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(WiFi)
-                                .addGap(108, 108, 108)
-                                .addComponent(WiFiLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(Market)
-                                .addGap(90, 90, 90)
-                                .addComponent(MarketLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Club)
-                                .addGap(105, 105, 105)
-                                .addComponent(ClubLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnBack)))
-                .addContainerGap(202, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WiFi)
-                    .addComponent(WiFiLabel))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PasswordOfWiFi)
-                    .addComponent(PasswordOfWiFiLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FloorOfThePool)
-                    .addComponent(FloorOfThePoolLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FloorOfTheGym)
-                    .addComponent(FloorOfTheGymLabel))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Club)
-                    .addComponent(ClubLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Market)
-                    .addComponent(MarketLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 540, 710);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/8.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(540, 0, 530, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -204,5 +205,7 @@ public class Entertainment extends javax.swing.JFrame {
     private javax.swing.JLabel WiFi;
     private javax.swing.JLabel WiFiLabel;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

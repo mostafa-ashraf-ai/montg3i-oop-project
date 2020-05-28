@@ -31,19 +31,48 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("List Of Current Guests");
-        setLocation(new java.awt.Point(700, 300));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1498, 799));
         getContentPane().setLayout(null);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnBack.setText("<  Back");
+        btnBack.setBorder(null);
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBack);
+        btnBack.setBounds(60, 720, 100, 27);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(70, 760, 80, 10);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -79,23 +108,9 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(220, 120, 1040, 520);
+        jScrollPane1.setBounds(360, 0, 760, 800);
 
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnBack.setText("<  Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnBack);
-        btnBack.setBounds(60, 720, 100, 35);
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(70, 760, 80, 10);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p8.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/7.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1500, 800);
 

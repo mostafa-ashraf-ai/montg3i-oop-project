@@ -30,7 +30,7 @@ public class ReservationForm extends javax.swing.JFrame {
         btnBack.setBackground(new Color(0,0,0,0));
         btnDeparture.setBackground(new Color(0,0,0,0));
         btnNights.setBackground(new Color(0,0,0,0));
-        jPanel2.setBackground(new Color(51,204,255,90));
+      // jPanel2.setBackground(new Color(51,204,255,90));
             //SuiteRooms.setVisible(false);
             //DoubleRooms.setVisible(false);
             //SingleRooms.setVisible(false);
@@ -93,15 +93,17 @@ public class ReservationForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reservation Form");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(400, 100));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(51, 204, 255));
         btnBack.setText("< Back");
+        btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +111,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBack);
-        btnBack.setBounds(50, 480, 120, 45);
+        btnBack.setBounds(20, 740, 120, 45);
 
         Age.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Age.setForeground(new java.awt.Color(51, 204, 255));
@@ -175,6 +177,7 @@ public class ReservationForm extends javax.swing.JFrame {
 
         btnNights.setForeground(new java.awt.Color(51, 204, 255));
         btnNights.setText("> get nights");
+        btnNights.setBorder(null);
         btnNights.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,10 +185,11 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnNights);
-        btnNights.setBounds(733, 160, 130, 29);
+        btnNights.setBounds(380, 490, 130, 21);
 
         btnDeparture.setForeground(new java.awt.Color(51, 204, 255));
         btnDeparture.setText("> get departure");
+        btnDeparture.setBorder(null);
         btnDeparture.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDeparture.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,59 +197,61 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDeparture);
-        btnDeparture.setBounds(730, 210, 160, 29);
+        btnDeparture.setBounds(370, 540, 160, 21);
 
         Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Arrivals.setForeground(new java.awt.Color(51, 204, 255));
         Arrivals.setText("Arrivals:");
         jPanel1.add(Arrivals);
-        Arrivals.setBounds(410, 120, 76, 20);
+        Arrivals.setBounds(50, 440, 76, 20);
 
         Nights.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nights.setForeground(new java.awt.Color(51, 204, 255));
         Nights.setText("Nights:");
         jPanel1.add(Nights);
-        Nights.setBounds(410, 170, 76, 20);
+        Nights.setBounds(50, 490, 76, 20);
 
         Departure.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Departure.setForeground(new java.awt.Color(51, 204, 255));
         Departure.setText("Departure:");
         jPanel1.add(Departure);
-        Departure.setBounds(410, 210, 76, 20);
+        Departure.setBounds(50, 530, 76, 20);
 
         AvailableRooms.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         AvailableRooms.setForeground(new java.awt.Color(51, 204, 255));
         AvailableRooms.setText("Available Rooms:");
         jPanel1.add(AvailableRooms);
-        AvailableRooms.setBounds(410, 260, 124, 20);
+        AvailableRooms.setBounds(50, 580, 124, 20);
 
         TotalPayments.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         TotalPayments.setForeground(new java.awt.Color(51, 204, 255));
         TotalPayments.setText("Total Payments:");
         jPanel1.add(TotalPayments);
-        TotalPayments.setBounds(410, 290, 115, 20);
+        TotalPayments.setBounds(50, 610, 115, 20);
 
         Deposit.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Deposit.setForeground(new java.awt.Color(51, 204, 255));
         Deposit.setText("Deposit:");
         jPanel1.add(Deposit);
-        Deposit.setBounds(410, 330, 115, 20);
+        Deposit.setBounds(50, 650, 115, 20);
 
         RestAmount.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         RestAmount.setForeground(new java.awt.Color(51, 204, 255));
         RestAmount.setText("Rest Amount:");
         jPanel1.add(RestAmount);
-        RestAmount.setBounds(410, 360, 115, 20);
+        RestAmount.setBounds(50, 680, 115, 20);
         jPanel1.add(DepositBox);
-        DepositBox.setBounds(550, 320, 123, 26);
+        DepositBox.setBounds(190, 640, 123, 26);
 
+        RestAmountLabel.setForeground(new java.awt.Color(51, 204, 255));
         RestAmountLabel.setText("jLabel21");
         jPanel1.add(RestAmountLabel);
-        RestAmountLabel.setBounds(560, 360, 80, 20);
+        RestAmountLabel.setBounds(200, 680, 110, 20);
 
+        TotalPaymentsLabel.setForeground(new java.awt.Color(51, 204, 255));
         TotalPaymentsLabel.setText("jLabel19");
         jPanel1.add(TotalPaymentsLabel);
-        TotalPaymentsLabel.setBounds(560, 290, 80, 20);
+        TotalPaymentsLabel.setBounds(200, 610, 110, 20);
 
         RoomsNumbers.setForeground(new java.awt.Color(51, 204, 255));
         RoomsNumbers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103" }));
@@ -255,9 +261,9 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(RoomsNumbers);
-        RoomsNumbers.setBounds(550, 250, 123, 26);
+        RoomsNumbers.setBounds(190, 570, 123, 26);
         jPanel1.add(DepartureBoxDate);
-        DepartureBoxDate.setBounds(550, 210, 141, 28);
+        DepartureBoxDate.setBounds(190, 530, 141, 28);
 
         NightsBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,9 +271,9 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NightsBox);
-        NightsBox.setBounds(550, 170, 102, 26);
+        NightsBox.setBounds(190, 490, 102, 26);
         jPanel1.add(ArrivalsBoxDate);
-        ArrivalsBoxDate.setBounds(550, 120, 141, 24);
+        ArrivalsBoxDate.setBounds(190, 440, 141, 24);
 
         btnBook.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBook.setForeground(new java.awt.Color(51, 204, 255));
@@ -279,7 +285,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBook);
-        btnBook.setBounds(350, 430, 240, 50);
+        btnBook.setBounds(350, 630, 240, 50);
 
         jPanel2.setBackground(new java.awt.Color(51, 204, 255));
 
@@ -296,29 +302,30 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(305, Short.MAX_VALUE)
+                .addContainerGap(153, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
-                .addGap(291, 291, 291))
+                .addGap(199, 199, 199))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 910, 70);
+        jPanel2.setBounds(0, 0, 660, 70);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(300, 120, 910, 550);
+        jPanel1.setBounds(190, 0, 610, 790);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p2.jpg"))); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 204, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1500, 790);
 

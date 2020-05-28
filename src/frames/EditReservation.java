@@ -1,5 +1,7 @@
 package frames;
 
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +19,8 @@ public class EditReservation extends javax.swing.JFrame {
      */
     public EditReservation() {
         initComponents();
+        btnEdit.setBackground(new Color(0,0,0,0));
+        btnBack.setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -28,6 +32,8 @@ public class EditReservation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         Name = new javax.swing.JLabel();
         ReservationID = new javax.swing.JLabel();
@@ -35,86 +41,92 @@ public class EditReservation extends javax.swing.JFrame {
         ReservationIDBox = new javax.swing.JTextField();
         ExtraDurationInDays = new javax.swing.JLabel();
         ExtraDurationInDaysBox = new javax.swing.JTextField();
-        btnEdit = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        btnEdit = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1319, 788));
+        getContentPane().setLayout(null);
 
-        jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/12.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 300, 790);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Edit Reservation");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(130, 20, 310, 51);
 
+        Name.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
+        jPanel1.add(Name);
+        Name.setBounds(30, 180, 100, 51);
 
+        ReservationID.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        ReservationID.setForeground(new java.awt.Color(255, 255, 255));
         ReservationID.setText("Reservation ID:");
+        jPanel1.add(ReservationID);
+        ReservationID.setBounds(30, 260, 200, 51);
+        jPanel1.add(NameBox);
+        NameBox.setBounds(330, 210, 191, 26);
+        jPanel1.add(ReservationIDBox);
+        ReservationIDBox.setBounds(330, 280, 191, 26);
 
+        ExtraDurationInDays.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        ExtraDurationInDays.setForeground(new java.awt.Color(255, 255, 255));
         ExtraDurationInDays.setText("Extra Duration in Days:");
+        jPanel1.add(ExtraDurationInDays);
+        ExtraDurationInDays.setBounds(30, 350, 300, 51);
+        jPanel1.add(ExtraDurationInDaysBox);
+        ExtraDurationInDaysBox.setBounds(330, 360, 102, 26);
 
-        btnEdit.setText("Edit");
-
-        btnBack.setText("Back");
+        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(50, 660, 140, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(88, 88, 88))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(ExtraDurationInDays)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(ReservationID, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(52, 52, 52)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Name)
-                                .addGap(124, 124, 124)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ExtraDurationInDaysBox, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
-                                .addComponent(btnEdit)))))
-                .addGap(90, 90, 90))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(btnBack)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel22)
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Name)
-                    .addComponent(NameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ReservationID))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ExtraDurationInDaysBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ExtraDurationInDays)
-                    .addComponent(btnEdit))
-                .addGap(105, 105, 105)
-                .addComponent(btnBack)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        btnEdit.setBackground(new java.awt.Color(0, 0, 0));
+        btnEdit.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
+        btnEdit.setText("Edit");
+        btnEdit.setBorder(null);
+        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnEdit);
+        btnEdit.setBounds(230, 490, 120, 50);
+
+        jPanel2.setBackground(new java.awt.Color(255, 153, 102));
+        jPanel2.setLayout(null);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1);
+        jSeparator1.setBounds(130, 70, 290, 20);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 0, 570, 100);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(300, 0, 570, 790);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/12c.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(870, 0, 450, 790);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,6 +180,11 @@ public class EditReservation extends javax.swing.JFrame {
     private javax.swing.JTextField ReservationIDBox;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnEdit;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

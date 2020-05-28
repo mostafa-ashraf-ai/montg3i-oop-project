@@ -21,10 +21,14 @@ public class Login extends javax.swing.JFrame {
      * Creates new form SignIn
      */
     public Login() {
+        
         initComponents();
         btnLogin.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(0,0,0,0));
-        jPanel1.setBackground(new Color(255,255,255,99));
+        UsernamBox.setBackground(new Color(0,0,0,0));
+        PasswordBox.setBackground(new Color(0,0,0,0));
+        
+       // jPanel1.setBackground(new Color(255,255,255,10));
     }
 
     /**
@@ -55,19 +59,21 @@ public class Login extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1520, 850));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(51, 204, 255));
         btnBack.setText("< Back");
+        btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnBack);
-        btnBack.setBounds(40, 610, 120, 38);
+        btnBack.setBounds(50, 700, 120, 38);
 
         btnLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(51, 204, 255));
         btnLogin.setText("Login");
+        btnLogin.setBorder(null);
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,8 +81,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLogin);
-        btnLogin.setBounds(130, 380, 126, 45);
+        btnLogin.setBounds(140, 430, 126, 45);
 
+        PasswordBox.setForeground(new java.awt.Color(255, 255, 255));
         PasswordBox.setBorder(null);
         PasswordBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,57 +91,58 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(PasswordBox);
-        PasswordBox.setBounds(150, 310, 173, 20);
+        PasswordBox.setBounds(160, 360, 173, 20);
 
-        Password.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Password.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Password.setForeground(new java.awt.Color(51, 204, 255));
         Password.setText("Password:");
         jPanel1.add(Password);
-        Password.setBounds(40, 310, 100, 26);
+        Password.setBounds(20, 350, 130, 34);
 
+        UsernamBox.setForeground(new java.awt.Color(255, 255, 255));
         UsernamBox.setBorder(null);
         jPanel1.add(UsernamBox);
-        UsernamBox.setBounds(150, 250, 173, 20);
+        UsernamBox.setBounds(160, 300, 173, 20);
 
-        Username.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Username.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Username.setForeground(new java.awt.Color(51, 204, 255));
         Username.setText("Username:");
         jPanel1.add(Username);
-        Username.setBounds(40, 250, 100, 26);
+        Username.setBounds(20, 290, 130, 34);
 
         jSeparator1.setBackground(new java.awt.Color(51, 204, 255));
         jSeparator1.setForeground(new java.awt.Color(51, 204, 255));
         jPanel1.add(jSeparator1);
-        jSeparator1.setBounds(150, 270, 170, 20);
+        jSeparator1.setBounds(160, 320, 170, 20);
 
         jSeparator2.setBackground(new java.awt.Color(0, 204, 255));
         jSeparator2.setForeground(new java.awt.Color(51, 204, 255));
         jPanel1.add(jSeparator2);
-        jSeparator2.setBounds(150, 330, 170, 60);
+        jSeparator2.setBounds(160, 380, 170, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_login_128px.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(120, 50, 140, 130);
+        jLabel2.setBounds(130, 50, 140, 130);
 
         MessageLabel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         MessageLabel.setForeground(new java.awt.Color(255, 0, 0));
         jPanel1.add(MessageLabel);
-        MessageLabel.setBounds(50, 520, 300, 20);
+        MessageLabel.setBounds(60, 590, 300, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(930, 50, 380, 690);
+        jPanel1.setBounds(0, 0, 380, 800);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/A.JPG"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1900, 1000));
         jLabel1.setMinimumSize(new java.awt.Dimension(1900, 1000));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1500, 800);
+        jLabel1.setBounds(310, 0, 1190, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-     try{
+     
         String username=UsernamBox.getText();
        String password=PasswordBox.getText();
         if( ( "m".equals(username) ) && ("m".equals(password) ) )
@@ -154,10 +162,9 @@ public class Login extends javax.swing.JFrame {
             MessageLabel.setText("* username or password is incorrect ! !");
             UsernamBox.setText("");
             PasswordBox.setText("");
-            UsernamBox.requestFocus();
+            //UsernamBox.requestFocus();
         }
-     }
-     catch(Exception e){}
+   
         
     }//GEN-LAST:event_btnLoginActionPerformed
 

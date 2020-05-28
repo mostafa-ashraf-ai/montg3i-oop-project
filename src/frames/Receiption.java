@@ -19,19 +19,23 @@ public class Receiption extends javax.swing.JFrame {
      */
     public Receiption() {
         initComponents();
-        jPanel8.setBackground(new Color(255,255,255,50));
+        
+        jLabel3.setBackground(new Color(0,0,0,0));
         btnReservation.setBackground(new Color(0,0,0,0));
         btnSearch.setBackground(new Color(0,0,0,0));
         btnCashiering.setBackground(new Color(0,0,0,0));
         btnEditReservation.setBackground(new Color(0,0,0,0));
         btnCurrentGuests.setBackground(new Color(0,0,0,0));
         btnLogout.setBackground(new Color(0,0,0,0));
-        jPanel2.setBackground(new Color(0,0,0,60));
+        jPanel1.setBackground(new Color(0,0,0,90));
+       // jPanel2.setBackground(new Color(0,0,0,0));
+        /*
         jPanel3.setBackground(new Color(0,0,0,60));
         jPanel4.setBackground(new Color(0,0,0,60));
         jPanel5.setBackground(new Color(0,0,0,60));
         jPanel6.setBackground(new Color(0,0,0,60));
         jPanel7.setBackground(new Color(0,0,0,60));
+        */
         
     }
 
@@ -50,7 +54,6 @@ public class Receiption extends javax.swing.JFrame {
         btnEditReservation = new javax.swing.JButton();
         btnCurrentGuests = new javax.swing.JButton();
         btnCashiering = new javax.swing.JButton();
-        btnReservation = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -60,6 +63,7 @@ public class Receiption extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        btnReservation = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -69,7 +73,8 @@ public class Receiption extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Receiption");
-        setLocation(new java.awt.Point(700, 300));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1500, 840));
         getContentPane().setLayout(null);
 
         jPanel8.setBackground(new java.awt.Color(0, 0, 0));
@@ -78,7 +83,7 @@ public class Receiption extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_beach_96px.png"))); // NOI18N
-        jLabel8.setText("   Montg3i");
+        jLabel8.setText("   Montag3i");
         jPanel8.add(jLabel8);
         jLabel8.setBounds(40, 20, 450, 90);
 
@@ -91,6 +96,7 @@ public class Receiption extends javax.swing.JFrame {
         btnEditReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnEditReservation.setForeground(new java.awt.Color(255, 255, 255));
         btnEditReservation.setText("Edit Reservation");
+        btnEditReservation.setBorder(null);
         btnEditReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,11 +104,12 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEditReservation);
-        btnEditReservation.setBounds(70, 230, 175, 30);
+        btnEditReservation.setBounds(70, 230, 143, 30);
 
         btnCurrentGuests.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnCurrentGuests.setForeground(new java.awt.Color(255, 255, 255));
         btnCurrentGuests.setText("Current Guests");
+        btnCurrentGuests.setBorder(null);
         btnCurrentGuests.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCurrentGuests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +122,7 @@ public class Receiption extends javax.swing.JFrame {
         btnCashiering.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnCashiering.setForeground(new java.awt.Color(255, 255, 255));
         btnCashiering.setText("Cashiering");
+        btnCashiering.setBorder(null);
         btnCashiering.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCashiering.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,23 +132,10 @@ public class Receiption extends javax.swing.JFrame {
         jPanel1.add(btnCashiering);
         btnCashiering.setBounds(70, 370, 120, 30);
 
-        btnReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnReservation.setForeground(new java.awt.Color(255, 255, 255));
-        btnReservation.setText("Reservations ");
-        btnReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnReservation.setName(""); // NOI18N
-        btnReservation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReservationActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnReservation);
-        btnReservation.setBounds(70, 90, 150, 30);
-        btnReservation.getAccessibleContext().setAccessibleName("");
-
         btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
+        btnSearch.setBorder(null);
         btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +148,7 @@ public class Receiption extends javax.swing.JFrame {
         btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText(" Logout");
+        btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +184,22 @@ public class Receiption extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(null);
+
+        btnReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnReservation.setForeground(new java.awt.Color(255, 255, 255));
+        btnReservation.setText("Reservations ");
+        btnReservation.setBorder(null);
+        btnReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReservation.setName(""); // NOI18N
+        btnReservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReservationActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnReservation);
+        btnReservation.setBounds(50, 10, 150, 30);
+        btnReservation.getAccessibleContext().setAccessibleName("");
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(20, 80, 250, 50);
 

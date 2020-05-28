@@ -5,6 +5,8 @@
  */
 package frames;
 
+import java.awt.Color;
+
 /**
  *
  * @author hp
@@ -16,6 +18,7 @@ public class BalanceAndReservations extends javax.swing.JFrame {
      */
     public BalanceAndReservations() {
         initComponents();
+        btnBack.setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -27,16 +30,80 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
         TotalBalance = new javax.swing.JLabel();
         TotalBalanceLabel = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1530, 750));
+        getContentPane().setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        TotalBalance.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        TotalBalance.setForeground(new java.awt.Color(255, 255, 255));
+        TotalBalance.setText("Total Balance:");
+        jPanel1.add(TotalBalance);
+        TotalBalance.setBounds(100, 190, 210, 40);
+
+        TotalBalanceLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        TotalBalanceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        TotalBalanceLabel.setText("jLabel1");
+        jPanel1.add(TotalBalanceLabel);
+        TotalBalanceLabel.setBounds(340, 190, 120, 40);
+
+        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(130, 580, 90, 40);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -64,51 +131,11 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        TotalBalance.setText("Total Balance:");
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(640, 0, 730, 750);
 
-        TotalBalanceLabel.setText("jLabel1");
-
-        btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(112, 112, 112)
-                        .addComponent(btnBack)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(TotalBalance)
-                                .addGap(34, 34, 34)
-                                .addComponent(TotalBalanceLabel)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE))
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TotalBalance)
-                    .addComponent(TotalBalanceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addGap(33, 33, 33))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1530, 750);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,6 +184,7 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     private javax.swing.JLabel TotalBalance;
     private javax.swing.JLabel TotalBalanceLabel;
     private javax.swing.JButton btnBack;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

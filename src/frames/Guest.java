@@ -1,6 +1,7 @@
 package frames;
 
 
+import java.awt.Color;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 /*
@@ -20,6 +21,13 @@ public class Guest extends javax.swing.JFrame {
      */
     public Guest() {
         initComponents();
+        jPanel1.setBackground(new Color(0,0,0,80));
+        jPanel2.setBackground(new Color(0,0,0,90));
+        btnGuestLogin.setBackground(new Color(0,0,0,0));
+        btnBack.setBackground(new Color(0,0,0,0));
+        RoomNoBox.setBackground(new Color(0,0,0,0));
+        PasscodeBox.setBackground(new Color(0,0,0,0));
+        
     }
 
     /**
@@ -31,86 +39,158 @@ public class Guest extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        RoomNo = new javax.swing.JTextField();
-        btnGuestLogin = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        RoomNo = new javax.swing.JLabel();
         Passcode = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
         PasscodeBox = new javax.swing.JPasswordField();
+        RoomNoBox = new javax.swing.JTextField();
+        btnGuestLogin = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log in Guest");
-        setLocation(new java.awt.Point(700, 300));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1520, 845));
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("Room No.:");
+        jPanel1.setLayout(null);
 
-        RoomNo.addActionListener(new java.awt.event.ActionListener() {
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(null);
+
+        RoomNo.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        RoomNo.setForeground(new java.awt.Color(255, 255, 255));
+        RoomNo.setText("Room No.:");
+        jPanel2.add(RoomNo);
+        RoomNo.setBounds(40, 170, 130, 34);
+
+        Passcode.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Passcode.setForeground(new java.awt.Color(255, 255, 255));
+        Passcode.setText("Passcode:");
+        jPanel2.add(Passcode);
+        Passcode.setBounds(40, 260, 120, 34);
+
+        PasscodeBox.setBorder(null);
+        jPanel2.add(PasscodeBox);
+        PasscodeBox.setBounds(190, 270, 120, 20);
+
+        RoomNoBox.setBorder(null);
+        RoomNoBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoomNoActionPerformed(evt);
+                RoomNoBoxActionPerformed(evt);
             }
         });
+        jPanel2.add(RoomNoBox);
+        RoomNoBox.setBounds(190, 180, 120, 20);
 
+        btnGuestLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnGuestLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnGuestLogin.setText("Login");
+        btnGuestLogin.setBorder(null);
+        btnGuestLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuestLoginActionPerformed(evt);
             }
         });
+        jPanel2.add(btnGuestLogin);
+        btnGuestLogin.setBounds(100, 370, 140, 60);
 
-        Passcode.setText("Passcode:");
-
-        btnBack.setText("Back");
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        jPanel2.add(btnBack);
+        btnBack.setBounds(0, 600, 120, 35);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(Passcode))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnGuestLogin)
-                            .addComponent(RoomNo, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                            .addComponent(PasscodeBox)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(btnBack)))
-                .addContainerGap(271, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(RoomNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Passcode)
-                    .addComponent(PasscodeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(98, 98, 98)
-                .addComponent(btnGuestLogin)
-                .addGap(44, 44, 44)
-                .addComponent(btnBack)
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1);
+        jSeparator1.setBounds(190, 210, 120, 20);
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator2);
+        jSeparator2.setBounds(190, 300, 120, 10);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(40, 60, 350, 670);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 430, 800);
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/trnp.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(440, 40, 1040, 180);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/trnp2.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(500, 230, 780, 160);
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("01124247841");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(1270, 730, 190, 30);
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("01145406660");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(1270, 670, 190, 30);
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("01280491414");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(1270, 640, 180, 30);
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("01202941341");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(1270, 700, 170, 30);
+
+        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Alexandria, Egypt");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(1220, 560, 280, 40);
+
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Call us");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(1290, 590, 180, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/4.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1500, 800);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RoomNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomNoActionPerformed
+    private void RoomNoBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomNoBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RoomNoActionPerformed
+    }//GEN-LAST:event_RoomNoBoxActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         new ResortHomePage().setVisible(true);
@@ -119,11 +199,11 @@ public class Guest extends javax.swing.JFrame {
 
     private void btnGuestLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestLoginActionPerformed
         
-       String room=RoomNo.getText();
+       String room=RoomNoBox.getText();
        String passcode=PasscodeBox.getText();
         if( ( "g".equals(room) ) && ("g".equals(passcode) ) )
         {
-            new GuestProfile("she5 L 3arab","203","4Th","B").setVisible(true);
+            new GuestProfile().setVisible(true);
             this.setVisible(false);
            // int x=8,y=9;
             //new GuestProfile().btnGuestPayment.action(showMessageDialog(null,"Payed: "+x+"\n"+"Rest Amount: "+y), room);
@@ -171,9 +251,22 @@ public class Guest extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Passcode;
     private javax.swing.JPasswordField PasscodeBox;
-    private javax.swing.JTextField RoomNo;
+    private javax.swing.JLabel RoomNo;
+    private javax.swing.JTextField RoomNoBox;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnGuestLogin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }
