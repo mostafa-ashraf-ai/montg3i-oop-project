@@ -9,38 +9,38 @@ package montg3i;
  *
  * @author Ahmed Eissa
  */
-public class Manager extends Staff {
-    String Position;
+public class Reception_Employee extends Staff{
+    String Language;
     
-    public Manager(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Position) {
+    public Reception_Employee(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Language) {
         super(FirstName, LastName, Id, Username, Password, Salary, Email);
-        this.Position = Position;
+        this.Language = Language;
     }
     
     public static boolean login(String Username ,String pass)
     { 
-        return Database.staff.checkUserAndPass("manager", Username, pass) ;
+        return Database.staff.checkUserAndPass("reception", Username, pass) ;
     }
     
     public static void Add (String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email)
     {
-        Database.staff.Add("manager", Id, Username, Password, FirstName, LastName, Salary, Email);
+        Database.staff.Add("reception", Id, Username, Password, FirstName, LastName, Salary, Email);
     }
     
     public static void delete (int id)
     {
-        Database.staff.Delete("manager", id);
+        Database.staff.Delete("reception", id);
     }
     
     @Override
     public void update(String coloum_name ,String updated)
     {
-        Database.staff.Update("manager", coloum_name, updated, getId());
+        Database.staff.Update("reception", coloum_name, updated, getId());
     }
     
     @Override
     public void update(String coloum_name ,double updated)
     {
-        Database.staff.Update("manager", coloum_name, updated, getId());
+        Database.staff.Update("reception", coloum_name, updated, getId());
     }
 }

@@ -16,7 +16,7 @@ import java.sql.Statement;
  * @author mostafa
  */
 public class guest extends db {
-    
+    /*
     public static ResultSet Select(String PassCode)
     {
         ResultSet rs = null;
@@ -33,7 +33,7 @@ public class guest extends db {
         }
         return rs;
     }
-    
+    */
     public static void Add(String table,String ColumnName, Date value)
     {
         try
@@ -50,13 +50,13 @@ public class guest extends db {
         }
     }
     
-    public static void Add(String FirstName, String SecondName,String LastName,String NationalID,int age,String phone,String national,int NumbersOfRooms,String RoomNo,Date arrival,int nights,Date departure,double TotalAmount,double deposit,String PassCode)
+    public static void Add(String FirstName, String SecondName,String LastName,String NationalID,int age,String phone,String national,int RoomNo,Date arrival,int nights,Date departure,double TotalAmount,double deposit)
     {
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "INSERT INTO guest VALUES (" + FirstName + ",'" + SecondName + "','" + LastName + "','" + NationalID + "'," + age + ",'" + phone + "','" + national + "'," + NumbersOfRooms + ",'" + RoomNo + "'," + arrival + "," + nights + "," + departure + "," + TotalAmount + "," + deposit + ",'" + PassCode + "')";
+            String str = "INSERT INTO guest VALUES (" + FirstName + ",'" + SecondName + "','" + LastName + "','" + NationalID + "'," + age + ",'" + phone + "','" + national + "'," + RoomNo + "," + arrival + "," + nights + "," + departure + "," + TotalAmount + "," + deposit + ")";
             stmt.executeQuery(str);
             con.close();
         }
@@ -72,7 +72,7 @@ public class guest extends db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE guest SET " + ColumnName + " = '" + value + "' WHERE PassCode = " + PassCode;
+            String str = "UPDATE guest SET " + ColumnName + " = '" + value + "' WHERE PassCode = " + PassCode;
             stmt.executeLargeUpdate(str);
             con.close();
         }
@@ -88,7 +88,7 @@ public class guest extends db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
+            String str = "UPDATE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
             stmt.executeLargeUpdate(str);
             con.close();
         }
@@ -104,7 +104,7 @@ public class guest extends db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
+            String str = "UPDATE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
             stmt.executeLargeUpdate(str);
             con.close();
         }
@@ -120,7 +120,7 @@ public class guest extends db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
+            String str = "UPDATE guest SET " + ColumnName + " = " + value + " WHERE PassCode = " + PassCode;
             stmt.executeLargeUpdate(str);
             con.close();
         }

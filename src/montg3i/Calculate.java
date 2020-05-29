@@ -11,14 +11,14 @@ import java.sql.Date;
  *
  * @author Ahmed Eissa
  */
-public class Calculate extends Guest$ {
+public class Calculate extends Guest {
     private double SingleRoom =1000;
     private double DoubleRoom = 1500 ;
     private double SweetRoom = 2500 ;
     private String TypeOfRoom ;
     double totalcost ;
     double totalcost_AfterDeposite;
-
+/*
     public Calculate(String firstname, String secondname, String lastname, String passcode, String nationalid, int age, String phone, String national, int noofrooms, String roomno, Date arrival, int nights, Date departure, double deposite, String typeofroom) {
         super(firstname, secondname, lastname, passcode, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, deposite);
        
@@ -52,5 +52,9 @@ public class Calculate extends Guest$ {
         
         
    }
-    
+    */
+
+    public Calculate(String FirstName, String SecondName, String LastName, String NationalId, int Age, String Phone, String National, int RoomNo, Date Arrival, int Nights, Date Departure, double Deposite, double TotalAmount) {
+        super(FirstName, SecondName, LastName, NationalId, Age, Phone, National, RoomNo, Arrival, Nights, Departure, Deposite, TotalAmount);
+    }
 }

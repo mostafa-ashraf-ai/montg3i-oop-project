@@ -93,8 +93,9 @@ abstract class db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "SELECT * FROM" + table;
+            String str = "SELECT * FROM " + table;
             rs = stmt.executeQuery(str);
+            return rs;
         }
         catch(SQLException ex)
         {
@@ -110,7 +111,7 @@ abstract class db {
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "SELECT * FROM" + table + "WHERE " + ColumnName + "=" + "'" + value +"'";
+            String str = "SELECT * FROM " + table + "WHERE " + ColumnName + "=" + "'" + value +"'";
             rs = stmt.executeQuery(str);
         }
         catch(SQLException ex)

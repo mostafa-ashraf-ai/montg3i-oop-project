@@ -13,39 +13,39 @@ import javafx.scene.chart.PieChart.Data;
  *
  * @author Ahmed Eissa
  */
-public class Guest$ extends Person$ {
+public class Guest extends Person {
+    private String SecondName;
     private String NationalId ;
     private int Age ;
     private String Phone ;
     private String National ;
-    private static int NoOfRooms ;
-    private static String RoomNo ;
+    private int RoomNo ;
     private Date Arrival ;
-    private static int Nights ;
+    private int Nights ;
     private Date Departure ;
-    private static double Deposite ;
-    private static double TotalAmount ;
+    private double Deposite ;
+    private double TotalAmount ;
     private static int NoofRooms_taken ;
     private static int AllRooms=100 ;
-    
-    Guest$(String firstname ,String secondname ,String lastname ,String passcode,String nationalid,int age ,String phone,String national, int noofrooms,String roomno ,Date arrival , int nights , Date departure ,double deposite)
-    { 
-        super(firstname ,secondname,lastname,passcode);
-        NationalId= nationalid;
-        Age=age ;
-        Phone =phone ;
-        National=national;
-        NoOfRooms=noofrooms;
-        RoomNo =roomno ;
-        Arrival = arrival ;
-        Nights = nights ;
-        Departure = departure ; 
-        Deposite = deposite ;
-        //TotalAmount = getTotalAmount() ;
-        NoofRooms_taken++ ;
-        //Database.guest.Add(firstname, secondname, lastname, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, Totalamount, deposite, passcode);
-      //  Database.guest.Add(firstname, secondname, lastname, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, deposite, deposite, passcode);
+
+    public Guest(String FirstName, String SecondName, String LastName,String NationalId, int Age, String Phone, String National, int RoomNo, Date Arrival, int Nights, Date Departure, double Deposite, double TotalAmount) {
+        super(FirstName, LastName);
+        this.SecondName = SecondName;
+        this.NationalId = NationalId;
+        this.Age = Age;
+        this.Phone = Phone;
+        this.National = National;
+        this.RoomNo = RoomNo;
+        this.Arrival = Arrival;
+        this.Nights = Nights;
+        this.Departure = Departure;
+        this.Deposite = Deposite;
+        this.TotalAmount = TotalAmount;
+        Database.guest.Add(FirstName, SecondName, LastName, NationalId, Age, Phone, National, RoomNo, Arrival, Nights, Departure, TotalAmount, Deposite);
     }
+
+    
+    
     public static int getNoofRooms_taken()
     {
         return NoofRooms_taken;
@@ -88,7 +88,7 @@ public class Guest$ extends Person$ {
        return Database.guest.Select(passcode);
        
     }
-
+/*
     public static int getNoOfRooms() {
         return NoOfRooms;
     }
@@ -101,5 +101,5 @@ public class Guest$ extends Person$ {
         return Nights;
     }
     
-    
+    */
 }

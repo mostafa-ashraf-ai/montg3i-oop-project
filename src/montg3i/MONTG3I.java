@@ -23,6 +23,8 @@ public class MONTG3I  {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
+        Hotel.LoadData();
+        
         new ResortHomePage().setVisible(true);
     } 
             

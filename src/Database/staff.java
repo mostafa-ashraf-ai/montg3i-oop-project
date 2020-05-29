@@ -46,7 +46,7 @@ public class staff extends db{
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "SELECT * FROM" + table + "WHERE ID = " + id;
+            String str = "SELECT * FROM " + table + "WHERE ID = " + id;
             rs = stmt.executeQuery(str);
         }
         catch(SQLException ex)
@@ -78,7 +78,7 @@ public class staff extends db{
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE " + table + " SET " + ColumnName + " = '" + value + "' WHERE ID = " + id;
+            String str = "UPDATE " + table + " SET " + ColumnName + " = '" + value + "' WHERE ID = " + id;
             stmt.executeUpdate(str);
             con.close();
         }
@@ -94,7 +94,7 @@ public class staff extends db{
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDARE " + table + " SET " + ColumnName + " = " + value + " WHERE ID = " + id;
+            String str = "UPDATE " + table + " SET " + ColumnName + " = " + value + " WHERE ID = " + id;
             stmt.executeUpdate(str);
             con.close();
         }
