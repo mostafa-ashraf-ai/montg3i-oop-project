@@ -46,7 +46,7 @@ public class Manager extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manager");
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(1520, 845));
+        setMinimumSize(new java.awt.Dimension(1520, 850));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -83,6 +83,11 @@ public class Manager extends javax.swing.JFrame {
         btnCameras.setText("Cameras");
         btnCameras.setBorder(null);
         btnCameras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCameras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCamerasActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnCameras);
         btnCameras.setBounds(180, 480, 180, 40);
 
@@ -123,8 +128,8 @@ public class Manager extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmployeeActionPerformed
-        new Receiption().setVisible(true);
-        this.setVisible(false);
+        //new Receiption().setVisible(true);
+        //this.setVisible(false);
     }//GEN-LAST:event_btnEmployeeActionPerformed
 
     private void btnBalanceAndReservationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBalanceAndReservationsActionPerformed
@@ -140,6 +145,10 @@ public class Manager extends javax.swing.JFrame {
         new Login().setVisible(true);
             this.setVisible(false);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnCamerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCamerasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCamerasActionPerformed
 
     /**
      * @param args the command line arguments

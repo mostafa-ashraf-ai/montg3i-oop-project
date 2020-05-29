@@ -145,15 +145,21 @@ public class Login extends javax.swing.JFrame {
      
         String username=UsernamBox.getText();
        String password=PasswordBox.getText();
-        if( ( "m".equals(username) ) && ("m".equals(password) ) )
+        if( ( "g".equals(username) ) && ("g".equals(password) ) )
         {
-            new Manager().setVisible(true);
+            new Guest().setVisible(true);
             this.setVisible(false);
 
         }
         else if( ( "s".equals(username) ) && ("s".equals(password) ) )
         {
             new Receiption().setVisible(true);
+            this.setVisible(false);
+
+        }
+        else if( ( "m".equals(username) ) && ("m".equals(password) ) )
+        {
+            new Manager().setVisible(true);
             this.setVisible(false);
 
         }

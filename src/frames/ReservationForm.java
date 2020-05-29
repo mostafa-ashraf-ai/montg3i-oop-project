@@ -111,61 +111,61 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBack);
-        btnBack.setBounds(20, 740, 120, 45);
+        btnBack.setBounds(0, 730, 120, 45);
 
         Age.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Age.setForeground(new java.awt.Color(51, 204, 255));
         Age.setText("Age:");
         jPanel1.add(Age);
-        Age.setBounds(50, 400, 34, 20);
+        Age.setBounds(70, 380, 34, 20);
 
         FirstName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         FirstName.setForeground(new java.awt.Color(51, 204, 255));
         FirstName.setText("First Name:");
         jPanel1.add(FirstName);
-        FirstName.setBounds(50, 130, 82, 20);
+        FirstName.setBounds(70, 110, 82, 20);
 
         MiddleName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         MiddleName.setForeground(new java.awt.Color(51, 204, 255));
         MiddleName.setText("Middle Name:");
         jPanel1.add(MiddleName);
-        MiddleName.setBounds(50, 180, 98, 20);
+        MiddleName.setBounds(70, 160, 98, 20);
 
         LastName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         LastName.setForeground(new java.awt.Color(51, 204, 255));
         LastName.setText("Last Name:");
         jPanel1.add(LastName);
-        LastName.setBounds(50, 220, 80, 20);
+        LastName.setBounds(70, 200, 80, 20);
 
         Nationality.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nationality.setForeground(new java.awt.Color(51, 204, 255));
         Nationality.setText("Nationality:");
         jPanel1.add(Nationality);
-        Nationality.setBounds(50, 260, 81, 20);
+        Nationality.setBounds(70, 240, 81, 20);
 
         NationalID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         NationalID.setForeground(new java.awt.Color(51, 204, 255));
         NationalID.setText("National ID:");
         jPanel1.add(NationalID);
-        NationalID.setBounds(50, 300, 86, 20);
+        NationalID.setBounds(70, 280, 86, 20);
 
         MobileNumber.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         MobileNumber.setForeground(new java.awt.Color(51, 204, 255));
         MobileNumber.setText("Mobile Number:");
         jPanel1.add(MobileNumber);
-        MobileNumber.setBounds(50, 350, 114, 20);
+        MobileNumber.setBounds(70, 330, 114, 20);
         jPanel1.add(MobileNumberBox);
-        MobileNumberBox.setBounds(190, 340, 195, 26);
+        MobileNumberBox.setBounds(210, 320, 195, 26);
         jPanel1.add(AgeBox);
-        AgeBox.setBounds(190, 390, 195, 26);
+        AgeBox.setBounds(210, 370, 195, 26);
         jPanel1.add(NationalIDBox);
-        NationalIDBox.setBounds(190, 300, 195, 26);
+        NationalIDBox.setBounds(210, 280, 195, 26);
         jPanel1.add(NationalityBox);
-        NationalityBox.setBounds(190, 260, 129, 26);
+        NationalityBox.setBounds(210, 240, 129, 26);
         jPanel1.add(LastNameBox);
-        LastNameBox.setBounds(190, 220, 129, 26);
+        LastNameBox.setBounds(210, 200, 129, 26);
         jPanel1.add(MiddleNameBox);
-        MiddleNameBox.setBounds(190, 170, 129, 26);
+        MiddleNameBox.setBounds(210, 150, 129, 26);
 
         FirstNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,10 +173,11 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FirstNameBox);
-        FirstNameBox.setBounds(190, 120, 129, 26);
+        FirstNameBox.setBounds(210, 100, 129, 26);
 
+        btnNights.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnNights.setForeground(new java.awt.Color(51, 204, 255));
-        btnNights.setText("> get nights");
+        btnNights.setText("> Get Nights");
         btnNights.setBorder(null);
         btnNights.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNights.addActionListener(new java.awt.event.ActionListener() {
@@ -185,10 +186,11 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnNights);
-        btnNights.setBounds(380, 490, 130, 21);
+        btnNights.setBounds(400, 470, 130, 23);
 
+        btnDeparture.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDeparture.setForeground(new java.awt.Color(51, 204, 255));
-        btnDeparture.setText("> get departure");
+        btnDeparture.setText("> Get Departure");
         btnDeparture.setBorder(null);
         btnDeparture.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDeparture.addActionListener(new java.awt.event.ActionListener() {
@@ -197,61 +199,61 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDeparture);
-        btnDeparture.setBounds(370, 540, 160, 21);
+        btnDeparture.setBounds(390, 520, 160, 23);
 
         Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Arrivals.setForeground(new java.awt.Color(51, 204, 255));
         Arrivals.setText("Arrivals:");
         jPanel1.add(Arrivals);
-        Arrivals.setBounds(50, 440, 76, 20);
+        Arrivals.setBounds(70, 420, 76, 20);
 
         Nights.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nights.setForeground(new java.awt.Color(51, 204, 255));
         Nights.setText("Nights:");
         jPanel1.add(Nights);
-        Nights.setBounds(50, 490, 76, 20);
+        Nights.setBounds(70, 470, 76, 20);
 
         Departure.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Departure.setForeground(new java.awt.Color(51, 204, 255));
         Departure.setText("Departure:");
         jPanel1.add(Departure);
-        Departure.setBounds(50, 530, 76, 20);
+        Departure.setBounds(70, 510, 76, 20);
 
         AvailableRooms.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         AvailableRooms.setForeground(new java.awt.Color(51, 204, 255));
         AvailableRooms.setText("Available Rooms:");
         jPanel1.add(AvailableRooms);
-        AvailableRooms.setBounds(50, 580, 124, 20);
+        AvailableRooms.setBounds(70, 560, 124, 20);
 
         TotalPayments.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         TotalPayments.setForeground(new java.awt.Color(51, 204, 255));
         TotalPayments.setText("Total Payments:");
         jPanel1.add(TotalPayments);
-        TotalPayments.setBounds(50, 610, 115, 20);
+        TotalPayments.setBounds(70, 590, 115, 20);
 
         Deposit.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Deposit.setForeground(new java.awt.Color(51, 204, 255));
         Deposit.setText("Deposit:");
         jPanel1.add(Deposit);
-        Deposit.setBounds(50, 650, 115, 20);
+        Deposit.setBounds(70, 630, 115, 20);
 
         RestAmount.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         RestAmount.setForeground(new java.awt.Color(51, 204, 255));
         RestAmount.setText("Rest Amount:");
         jPanel1.add(RestAmount);
-        RestAmount.setBounds(50, 680, 115, 20);
+        RestAmount.setBounds(70, 660, 115, 20);
         jPanel1.add(DepositBox);
-        DepositBox.setBounds(190, 640, 123, 26);
+        DepositBox.setBounds(210, 620, 123, 26);
 
         RestAmountLabel.setForeground(new java.awt.Color(51, 204, 255));
         RestAmountLabel.setText("jLabel21");
         jPanel1.add(RestAmountLabel);
-        RestAmountLabel.setBounds(200, 680, 110, 20);
+        RestAmountLabel.setBounds(220, 660, 110, 20);
 
         TotalPaymentsLabel.setForeground(new java.awt.Color(51, 204, 255));
         TotalPaymentsLabel.setText("jLabel19");
         jPanel1.add(TotalPaymentsLabel);
-        TotalPaymentsLabel.setBounds(200, 610, 110, 20);
+        TotalPaymentsLabel.setBounds(220, 590, 110, 20);
 
         RoomsNumbers.setForeground(new java.awt.Color(51, 204, 255));
         RoomsNumbers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103" }));
@@ -261,9 +263,9 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(RoomsNumbers);
-        RoomsNumbers.setBounds(190, 570, 123, 26);
+        RoomsNumbers.setBounds(210, 550, 123, 26);
         jPanel1.add(DepartureBoxDate);
-        DepartureBoxDate.setBounds(190, 530, 141, 28);
+        DepartureBoxDate.setBounds(210, 510, 141, 28);
 
         NightsBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,13 +273,13 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NightsBox);
-        NightsBox.setBounds(190, 490, 102, 26);
+        NightsBox.setBounds(210, 470, 102, 26);
         jPanel1.add(ArrivalsBoxDate);
-        ArrivalsBoxDate.setBounds(190, 440, 141, 24);
+        ArrivalsBoxDate.setBounds(210, 420, 141, 24);
 
         btnBook.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBook.setForeground(new java.awt.Color(51, 204, 255));
-        btnBook.setText("~< Book >~");
+        btnBook.setText(">BOOK");
         btnBook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,7 +287,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBook);
-        btnBook.setBounds(350, 630, 240, 50);
+        btnBook.setBounds(350, 650, 240, 50);
 
         jPanel2.setBackground(new java.awt.Color(51, 204, 255));
 

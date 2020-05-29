@@ -28,21 +28,41 @@ public class ResortHomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnGuest = new javax.swing.JButton();
         btnStaff = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnGuest = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
         setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(1950, 1050));
+        setMinimumSize(new java.awt.Dimension(1300, 905));
         setPreferredSize(new java.awt.Dimension(1285, 853));
         setSize(new java.awt.Dimension(1200, 700));
         getContentPane().setLayout(null);
+
+        btnGuest.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnGuest.setText("Guest");
+        btnGuest.setBorder(null);
+        btnGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnGuestMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnGuestMouseExited(evt);
+            }
+        });
+        btnGuest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuestActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuest);
+        btnGuest.setBounds(380, 20, 110, 40);
 
         btnStaff.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnStaff.setText("Staff");
@@ -74,26 +94,6 @@ public class ResortHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(750, 10, 60, 50);
 
-        btnGuest.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnGuest.setText("Guest");
-        btnGuest.setBorder(null);
-        btnGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnGuest.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnGuestMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnGuestMouseExited(evt);
-            }
-        });
-        btnGuest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuestActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnGuest);
-        btnGuest.setBounds(380, 20, 110, 40);
-
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1280, 80);
 
@@ -104,7 +104,7 @@ public class ResortHomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1280, 860);
+        jLabel1.setBounds(0, 0, 1280, 850);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,7 +115,7 @@ public class ResortHomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnStaffActionPerformed
 
     private void btnGuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuestActionPerformed
-       new Login().setVisible(true);
+       new Guest().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGuestActionPerformed
 

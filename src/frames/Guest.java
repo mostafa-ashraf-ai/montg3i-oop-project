@@ -21,8 +21,8 @@ public class Guest extends javax.swing.JFrame {
      */
     public Guest() {
         initComponents();
-        jPanel1.setBackground(new Color(0,0,0,80));
-        jPanel2.setBackground(new Color(0,0,0,90));
+        jPanel1.setBackground(new Color(102,51,0,80));
+        //jPanel2.setBackground(new Color(102,51,0,90));
         btnGuestLogin.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(0,0,0,0));
         RoomNoBox.setBackground(new Color(0,0,0,0));
@@ -67,7 +67,7 @@ public class Guest extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(102, 51, 0));
         jPanel2.setLayout(null);
 
         RoomNo.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
@@ -82,10 +82,12 @@ public class Guest extends javax.swing.JFrame {
         jPanel2.add(Passcode);
         Passcode.setBounds(40, 260, 120, 34);
 
+        PasscodeBox.setForeground(new java.awt.Color(255, 255, 255));
         PasscodeBox.setBorder(null);
         jPanel2.add(PasscodeBox);
         PasscodeBox.setBounds(190, 270, 120, 20);
 
+        RoomNoBox.setForeground(new java.awt.Color(255, 255, 255));
         RoomNoBox.setBorder(null);
         RoomNoBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,11 +125,11 @@ public class Guest extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(190, 210, 120, 20);
+        jSeparator1.setBounds(190, 200, 120, 30);
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator2);
-        jSeparator2.setBounds(190, 300, 120, 10);
+        jSeparator2.setBounds(190, 290, 120, 20);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 60, 350, 670);

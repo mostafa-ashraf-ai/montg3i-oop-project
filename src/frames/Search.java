@@ -21,8 +21,10 @@ public class Search extends javax.swing.JFrame {
         
         initComponents();
         btnSearch.setBackground(new Color(0,0,0,0));
-        btnBack.setBackground(new Color(0,0,0,0));
-        jPanel2.setBackground(new Color(0,102,153,90));
+        btnBack.setBackground(new Color(255,255,255,0));
+        jPanel1.setBackground(new Color(0,0,0,90));
+       // jPanel2.setBackground(new Color(0,0,0,90));
+     //   jPanel2.setBackground(new Color(0,102,153,90));
        
     }
 
@@ -41,43 +43,60 @@ public class Search extends javax.swing.JFrame {
         Name = new javax.swing.JLabel();
         ReservationID = new javax.swing.JLabel();
         NameBox = new javax.swing.JTextField();
-        btnSearch = new javax.swing.JButton();
         ReservationIDBox = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
+        btnSearch = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel2.setLayout(null);
 
         Search.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         Search.setForeground(new java.awt.Color(255, 255, 255));
         Search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Search.setText("Search");
+        jPanel2.add(Search);
+        Search.setBounds(295, 16, 140, 56);
 
         Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
+        jPanel2.add(Name);
+        Name.setBounds(244, 130, 67, 28);
 
         ReservationID.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         ReservationID.setForeground(new java.awt.Color(255, 255, 255));
         ReservationID.setText("Reservation ID:");
+        jPanel2.add(ReservationID);
+        ReservationID.setBounds(244, 183, 162, 28);
 
         NameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NameBoxActionPerformed(evt);
             }
         });
+        jPanel2.add(NameBox);
+        NameBox.setBounds(440, 130, 191, 26);
+        jPanel2.add(ReservationIDBox);
+        ReservationIDBox.setBounds(440, 180, 191, 26);
 
-        btnSearch.setBackground(new java.awt.Color(0, 102, 153));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1);
+        jSeparator1.setBounds(287, 81, 163, 31);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/search_30px.png"))); // NOI18N
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(370, 250, 36, 39);
+
         btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
@@ -88,8 +107,13 @@ public class Search extends javax.swing.JFrame {
                 btnSearchActionPerformed(evt);
             }
         });
+        jPanel2.add(btnSearch);
+        btnSearch.setBounds(410, 250, 81, 35);
 
-        btnBack.setBackground(new java.awt.Color(0, 102, 153));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(50, 80, 140, 170);
+
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("< Back");
@@ -100,92 +124,18 @@ public class Search extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/search_30px.png"))); // NOI18N
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(Name)
-                                            .addGap(124, 124, 124)
-                                            .addComponent(NameBox, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addComponent(ReservationID)
-                                                    .addGap(0, 0, Short.MAX_VALUE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                    .addGap(0, 0, Short.MAX_VALUE)
-                                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(75, 75, 75)
-                                        .addComponent(Search))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(132, 132, 132)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(btnBack)))
-                .addGap(150, 150, 150))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Search)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Name)
-                            .addComponent(NameBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ReservationID)
-                            .addComponent(ReservationIDBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
-        );
+        jPanel2.add(btnBack);
+        btnBack.setBounds(170, 290, 79, 35);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(30, 20, 750, 360);
+        jPanel2.setBounds(30, 30, 750, 360);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(340, 80, 810, 710);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/3.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1500, 790);
+        jLabel1.setBounds(0, 0, 1420, 790);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

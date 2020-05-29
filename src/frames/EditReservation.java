@@ -21,6 +21,8 @@ public class EditReservation extends javax.swing.JFrame {
         initComponents();
         btnEdit.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(0,0,0,0));
+        //jPanel1.setBackground(new Color(0,0,0,90));
+        //jPanel2.setBackground(new Color(255,204,204,90));
     }
 
     /**
@@ -33,8 +35,10 @@ public class EditReservation extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
         jLabel22 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         Name = new javax.swing.JLabel();
         ReservationID = new javax.swing.JLabel();
         NameBox = new javax.swing.JTextField();
@@ -43,50 +47,58 @@ public class EditReservation extends javax.swing.JFrame {
         ExtraDurationInDaysBox = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1319, 788));
+        setMinimumSize(new java.awt.Dimension(1332, 845));
         getContentPane().setLayout(null);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/12.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 300, 790);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setLayout(null);
+        jPanel2.setBackground(new java.awt.Color(255, 153, 102));
+        jPanel2.setLayout(null);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(jSeparator1);
+        jSeparator1.setBounds(130, 70, 290, 50);
 
         jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Edit Reservation");
-        jPanel1.add(jLabel22);
-        jLabel22.setBounds(130, 20, 310, 51);
+        jPanel2.add(jLabel22);
+        jLabel22.setBounds(130, 10, 310, 51);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(300, 0, 570, 100);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
 
         Name.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
         jPanel1.add(Name);
-        Name.setBounds(30, 180, 100, 51);
+        Name.setBounds(40, 190, 100, 51);
 
         ReservationID.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         ReservationID.setForeground(new java.awt.Color(255, 255, 255));
         ReservationID.setText("Reservation ID:");
         jPanel1.add(ReservationID);
-        ReservationID.setBounds(30, 260, 200, 51);
+        ReservationID.setBounds(40, 270, 200, 51);
         jPanel1.add(NameBox);
-        NameBox.setBounds(330, 210, 191, 26);
+        NameBox.setBounds(340, 220, 191, 26);
         jPanel1.add(ReservationIDBox);
-        ReservationIDBox.setBounds(330, 280, 191, 26);
+        ReservationIDBox.setBounds(340, 290, 191, 26);
 
         ExtraDurationInDays.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         ExtraDurationInDays.setForeground(new java.awt.Color(255, 255, 255));
         ExtraDurationInDays.setText("Extra Duration in Days:");
         jPanel1.add(ExtraDurationInDays);
-        ExtraDurationInDays.setBounds(30, 350, 300, 51);
+        ExtraDurationInDays.setBounds(40, 360, 300, 51);
         jPanel1.add(ExtraDurationInDaysBox);
-        ExtraDurationInDaysBox.setBounds(330, 360, 102, 26);
+        ExtraDurationInDaysBox.setBounds(340, 370, 102, 26);
 
         btnBack.setBackground(new java.awt.Color(0, 0, 0));
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
@@ -100,7 +112,7 @@ public class EditReservation extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBack);
-        btnBack.setBounds(50, 660, 140, 50);
+        btnBack.setBounds(60, 630, 140, 50);
 
         btnEdit.setBackground(new java.awt.Color(0, 0, 0));
         btnEdit.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
@@ -109,24 +121,14 @@ public class EditReservation extends javax.swing.JFrame {
         btnEdit.setBorder(null);
         btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnEdit);
-        btnEdit.setBounds(230, 490, 120, 50);
-
-        jPanel2.setBackground(new java.awt.Color(255, 153, 102));
-        jPanel2.setLayout(null);
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(130, 70, 290, 20);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 570, 100);
+        btnEdit.setBounds(240, 500, 120, 50);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(300, 0, 570, 790);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/12c.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(870, 0, 450, 790);
+        jLabel1.setBounds(870, 0, 440, 790);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

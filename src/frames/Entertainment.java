@@ -49,8 +49,8 @@ public class Entertainment extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(700, 300));
-        setMinimumSize(new java.awt.Dimension(1070, 709));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1090, 765));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -96,42 +96,43 @@ public class Entertainment extends javax.swing.JFrame {
         MarketLabel.setForeground(new java.awt.Color(255, 255, 255));
         MarketLabel.setText("jLabel12");
         jPanel1.add(MarketLabel);
-        MarketLabel.setBounds(330, 360, 210, 23);
+        MarketLabel.setBounds(340, 360, 150, 23);
 
         ClubLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         ClubLabel.setForeground(new java.awt.Color(255, 255, 255));
         ClubLabel.setText("jLabel11");
         jPanel1.add(ClubLabel);
-        ClubLabel.setBounds(330, 320, 210, 23);
+        ClubLabel.setBounds(340, 320, 150, 23);
 
         FloorOfTheGymLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfTheGymLabel.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfTheGymLabel.setText("jLabel10");
         jPanel1.add(FloorOfTheGymLabel);
-        FloorOfTheGymLabel.setBounds(330, 270, 210, 23);
+        FloorOfTheGymLabel.setBounds(340, 270, 150, 23);
 
         FloorOfThePoolLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfThePoolLabel.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfThePoolLabel.setText("jLabel9");
         jPanel1.add(FloorOfThePoolLabel);
-        FloorOfThePoolLabel.setBounds(330, 230, 206, 23);
+        FloorOfThePoolLabel.setBounds(340, 230, 150, 23);
 
         PasswordOfWiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         PasswordOfWiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
         PasswordOfWiFiLabel.setText("jLabel8");
         jPanel1.add(PasswordOfWiFiLabel);
-        PasswordOfWiFiLabel.setBounds(330, 190, 208, 23);
+        PasswordOfWiFiLabel.setBounds(340, 190, 150, 23);
 
         WiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         WiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
         WiFiLabel.setText("jLabel7");
         jPanel1.add(WiFiLabel);
-        WiFiLabel.setBounds(330, 150, 209, 23);
+        WiFiLabel.setBounds(340, 150, 150, 23);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("< Back");
         btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

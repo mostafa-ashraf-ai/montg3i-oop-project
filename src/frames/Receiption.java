@@ -74,7 +74,7 @@ public class Receiption extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Receiption");
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(1500, 840));
+        setMinimumSize(new java.awt.Dimension(1522, 855));
         getContentPane().setLayout(null);
 
         jPanel8.setBackground(new java.awt.Color(0, 0, 0));
@@ -104,11 +104,11 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEditReservation);
-        btnEditReservation.setBounds(70, 230, 143, 30);
+        btnEditReservation.setBounds(90, 230, 150, 30);
 
         btnCurrentGuests.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnCurrentGuests.setForeground(new java.awt.Color(255, 255, 255));
-        btnCurrentGuests.setText("Current Guests");
+        btnCurrentGuests.setText("Current Guests  ");
         btnCurrentGuests.setBorder(null);
         btnCurrentGuests.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCurrentGuests.addActionListener(new java.awt.event.ActionListener() {
@@ -117,11 +117,11 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCurrentGuests);
-        btnCurrentGuests.setBounds(70, 300, 160, 30);
+        btnCurrentGuests.setBounds(90, 300, 150, 30);
 
         btnCashiering.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnCashiering.setForeground(new java.awt.Color(255, 255, 255));
-        btnCashiering.setText("Cashiering");
+        btnCashiering.setText("Cashiering       ");
         btnCashiering.setBorder(null);
         btnCashiering.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCashiering.addActionListener(new java.awt.event.ActionListener() {
@@ -130,11 +130,11 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCashiering);
-        btnCashiering.setBounds(70, 370, 120, 30);
+        btnCashiering.setBounds(90, 370, 150, 30);
 
         btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
-        btnSearch.setText("Search");
+        btnSearch.setText("Search           ");
         btnSearch.setBorder(null);
         btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -143,11 +143,11 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnSearch);
-        btnSearch.setBounds(70, 160, 100, 30);
+        btnSearch.setBounds(90, 160, 150, 30);
 
         btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText(" Logout");
+        btnLogout.setText("Logout           ");
         btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -156,38 +156,38 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLogout);
-        btnLogout.setBounds(70, 440, 100, 30);
+        btnLogout.setBounds(90, 440, 150, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_32px.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 160, 40, 30);
+        jLabel2.setBounds(50, 160, 40, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_new_file_32px.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 80, 40, 40);
+        jLabel3.setBounds(50, 80, 40, 40);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_settings_32px.png"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 220, 32, 40);
+        jLabel4.setBounds(50, 220, 32, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_activity_history_32px.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 290, 51, 40);
+        jLabel5.setBounds(50, 290, 51, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_cash_register_32px.png"))); // NOI18N
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(30, 370, 32, 30);
+        jLabel6.setBounds(50, 370, 32, 30);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_logout_rounded_left_32px.png"))); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 430, 51, 40);
+        jLabel7.setBounds(50, 430, 51, 40);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(null);
 
         btnReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnReservation.setForeground(new java.awt.Color(255, 255, 255));
-        btnReservation.setText("Reservations ");
+        btnReservation.setText("Reservations    ");
         btnReservation.setBorder(null);
         btnReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReservation.setName(""); // NOI18N
@@ -201,35 +201,35 @@ public class Receiption extends javax.swing.JFrame {
         btnReservation.getAccessibleContext().setAccessibleName("");
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(20, 80, 250, 50);
+        jPanel2.setBounds(40, 80, 210, 50);
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(null);
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(20, 150, 250, 50);
+        jPanel3.setBounds(40, 150, 210, 50);
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setLayout(null);
         jPanel1.add(jPanel4);
-        jPanel4.setBounds(20, 220, 250, 50);
+        jPanel4.setBounds(40, 220, 210, 50);
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
         jPanel5.setLayout(null);
         jPanel1.add(jPanel5);
-        jPanel5.setBounds(20, 290, 250, 50);
+        jPanel5.setBounds(40, 290, 210, 50);
 
         jPanel6.setBackground(new java.awt.Color(0, 0, 0));
         jPanel6.setLayout(null);
         jPanel1.add(jPanel6);
-        jPanel6.setBounds(20, 360, 250, 50);
+        jPanel6.setBounds(40, 360, 210, 50);
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel7.setLayout(null);
         jPanel1.add(jPanel7);
-        jPanel7.setBounds(20, 430, 250, 50);
+        jPanel7.setBounds(40, 430, 210, 50);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 120, 310, 550);
+        jPanel1.setBounds(0, 120, 300, 550);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p7.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

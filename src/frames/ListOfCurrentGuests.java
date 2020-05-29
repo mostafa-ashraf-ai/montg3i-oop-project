@@ -40,23 +40,25 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("List Of Current Guests");
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(1498, 799));
+        setMinimumSize(new java.awt.Dimension(1520, 853));
         getContentPane().setLayout(null);
 
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnBack.setText("<  Back");
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
         btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         getContentPane().add(btnBack);
-        btnBack.setBounds(60, 720, 100, 27);
+        btnBack.setBounds(90, 560, 100, 35);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(70, 760, 80, 10);
+        jSeparator1.setBounds(100, 600, 80, 20);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

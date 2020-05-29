@@ -23,6 +23,7 @@ public class Cashiering extends javax.swing.JFrame {
     public Cashiering() {
         initComponents();
         btnBack.setBackground(new Color(0,0,0,0));
+        btnCheckout.setBackground(new Color(0,0,0,0));
     }
 
     /**
@@ -50,12 +51,12 @@ public class Cashiering extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         ReservationIDBox = new javax.swing.JTextField();
-        btnCheckOut = new javax.swing.JButton();
+        btnCheckout = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(700, 300));
-        setMinimumSize(new java.awt.Dimension(1499, 801));
+        setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(1520, 855));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
@@ -157,19 +158,19 @@ public class Cashiering extends javax.swing.JFrame {
         jPanel1.add(ReservationIDBox);
         ReservationIDBox.setBounds(280, 60, 190, 26);
 
-        btnCheckOut.setBackground(new java.awt.Color(0, 102, 153));
-        btnCheckOut.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnCheckOut.setForeground(new java.awt.Color(255, 255, 255));
-        btnCheckOut.setText("Check Out");
-        btnCheckOut.setBorder(null);
-        btnCheckOut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCheckOut.addActionListener(new java.awt.event.ActionListener() {
+        btnCheckout.setBackground(new java.awt.Color(0, 102, 153));
+        btnCheckout.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnCheckout.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckout.setText("Checkout");
+        btnCheckout.setBorder(null);
+        btnCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCheckOutActionPerformed(evt);
+                btnCheckoutActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCheckOut);
-        btnCheckOut.setBounds(290, 540, 170, 60);
+        jPanel1.add(btnCheckout);
+        btnCheckout.setBounds(290, 540, 170, 60);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(210, 0, 540, 800);
@@ -190,9 +191,9 @@ public class Cashiering extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ReservationIDBoxActionPerformed
 
-    private void btnCheckOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckOutActionPerformed
+    private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCheckOutActionPerformed
+    }//GEN-LAST:event_btnCheckoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,7 +244,7 @@ public class Cashiering extends javax.swing.JFrame {
     private javax.swing.JLabel Services;
     private javax.swing.JLabel ServicesLabel;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCheckOut;
+    private javax.swing.JButton btnCheckout;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
