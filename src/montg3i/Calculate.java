@@ -18,7 +18,7 @@ public class Calculate {
     
     public static double TotalAmount(int RoomsNo[], int Nights, double Deposite)
     {
-        return (RoomsNo[0]*SingleRoom + RoomsNo[1]*DoubleRoom + RoomsNo[2]*SweetRoom)*Nights - Deposite;
+        return (RoomsNo[2]*SingleRoom + RoomsNo[1]*DoubleRoom + RoomsNo[0]*SweetRoom)*Nights - Deposite;
     }
     
     

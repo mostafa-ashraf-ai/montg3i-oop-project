@@ -20,7 +20,7 @@ public class room extends db{
             setConnection();
             stmt = con.createStatement();
             String str = "UPDATE room SET " + ColumnName + " = " + value + " WHERE RoomNumber = '" + RoomNumber + "'";
-            stmt.executeLargeUpdate(str);
+            stmt.executeUpdate(str);
             con.close();
         }
         catch(SQLException ex)
