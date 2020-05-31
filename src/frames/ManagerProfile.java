@@ -2,7 +2,8 @@ package frames;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import org.opencv.core.Core;
+
+//import org.opencv.core.Core;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -157,7 +158,7 @@ public class ManagerProfile extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
