@@ -20,7 +20,6 @@ public class Doctor extends Staff{
         this.Department = Department;
         this.Time = Time;
         this.Cost = Cost;
-        Database.staff.Add("doctor", Id, Username, Email, FirstName, LastName, Salary, Email);
     }
     
     

@@ -1,6 +1,8 @@
 package frames;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import org.opencv.core.Core;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,14 +14,14 @@ import java.awt.Color;
  *
  * @author hp
  */
-public class Manager extends javax.swing.JFrame {
+public class ManagerProfile extends javax.swing.JFrame {
 
     /**
      * Creates new form SearchOnReservation
      */
-    public Manager() {
+    public ManagerProfile() {
         initComponents();
-       btnBalanceAndReservations.setBackground(new Color(0,0,0,0));
+        btnBalanceAndReservations.setBackground(new Color(0,0,0,0));
         btnCameras.setBackground(new Color(0,0,0,0));
         btnEmployee.setBackground(new Color(0,0,0,0));
         btnLogout.setBackground(new Color(0,0,0,0));
@@ -134,7 +136,7 @@ public class Manager extends javax.swing.JFrame {
 
     private void btnBalanceAndReservationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBalanceAndReservationsActionPerformed
          new BalanceAndReservations().setVisible(true);
-        this.setVisible(false);
+         this.setVisible(false);
     }//GEN-LAST:event_btnBalanceAndReservationsActionPerformed
 
     private void btnNewEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewEmployeeActionPerformed
@@ -142,18 +144,21 @@ public class Manager extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewEmployeeActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        new Login().setVisible(true);
-            this.setVisible(false);
+         new Login().setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnCamerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCamerasActionPerformed
-        // TODO add your handling code here:
+         new CCTV().setVisible(true);
     }//GEN-LAST:event_btnCamerasActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -167,21 +172,22 @@ public class Manager extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Manager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Manager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Manager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Manager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerProfile.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new Manager().setVisible(true);
+                new ManagerProfile().setVisible(true);
             }
         });
     }

@@ -1,6 +1,7 @@
 package frames;
 
 import java.awt.Color;
+import montg3i.Hotel;
 
 public class ResortHomePage extends javax.swing.JFrame {
 
@@ -9,7 +10,8 @@ public class ResortHomePage extends javax.swing.JFrame {
      */
     public ResortHomePage() {
         initComponents();
-       
+        
+        Hotel.LoadData();
         
         jPanel1.setBackground(new Color(0,0,0,50));
         btnGuest.setForeground(Color.WHITE);

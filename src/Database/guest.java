@@ -10,6 +10,8 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -50,20 +52,21 @@ public class guest extends db {
         }
     }
     
-    public static void Add(String FirstName, String SecondName,String LastName,String NationalID,int age,String phone,String national,int RoomNo,Date arrival,int nights,Date departure,double TotalAmount,double deposit)
+    public static void Add(int GuestNo, String FirstName, String SecondName, String LastName, String NationalID, int age, String phone, String national, int NumbersOfRooms, String arrival, int nights, String departure, double deposit, double TotalAmount, String status)
     {
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "INSERT INTO guest VALUES (" + FirstName + ",'" + SecondName + "','" + LastName + "','" + NationalID + "'," + age + ",'" + phone + "','" + national + "'," + RoomNo + "," + arrival + "," + nights + "," + departure + "," + TotalAmount + "," + deposit + ")";
-            stmt.executeQuery(str);
+            String str = "INSERT INTO guest VALUES (" + GuestNo + ",'" + FirstName + "','" + SecondName + "','" + LastName + "','" + NationalID + "'," + age + ",'" + phone + "','" + national + "'," + NumbersOfRooms + ",'" + arrival + "'," + nights + ",'" + departure + "'," + deposit + "," + TotalAmount + ",'" + status + "')";
+            stmt.executeUpdate(str);
             con.close();
-        }
-        catch(SQLException ex)
+        } 
+        catch (SQLException ex)
         {
-            System.out.println("the add all method is wrong");
+            Logger.getLogger(guest.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
     public static void Update(String ColumnName, String value, int PassCode)

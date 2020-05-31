@@ -22,11 +22,6 @@ public class Manager extends Staff {
         return Database.staff.checkUserAndPass("manager", Username, pass) ;
     }
     
-    public static void Add (String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email)
-    {
-        Database.staff.Add("manager", Id, Username, Password, FirstName, LastName, Salary, Email);
-    }
-    
     public static void delete (int id)
     {
         Database.staff.Delete("manager", id);

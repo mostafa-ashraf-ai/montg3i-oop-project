@@ -56,13 +56,13 @@ public class staff extends db{
         return rs;
     }
     
-    public static void Add(String table,int id, String username,String pass,String FirstName,String LastName,double salary,String email)
+    public static void Add(String table,int id, String username,String pass,String FirstName,String LastName,double salary,String email,String PosOrLang)
     {
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "INSERT INTO " + table + " VALUES (" + id + ",'" + username + "','" + pass + "','" + FirstName + "','" + LastName + "'," +  salary+ ",'" + email + "')";
+            String str = "INSERT INTO " + table + " VALUES (" + id + ",'" + username + "','" + pass + "','" + FirstName + "','" + LastName + "'," +  salary+ ",'" + email + "','" + PosOrLang + "')";
             stmt.executeUpdate(str);
             con.close();
         }

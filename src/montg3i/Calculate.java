@@ -11,50 +11,16 @@ import java.sql.Date;
  *
  * @author Ahmed Eissa
  */
-public class Calculate extends Guest {
-    private double SingleRoom =1000;
-    private double DoubleRoom = 1500 ;
-    private double SweetRoom = 2500 ;
-    private String TypeOfRoom ;
-    double totalcost ;
-    double totalcost_AfterDeposite;
-/*
-    public Calculate(String firstname, String secondname, String lastname, String passcode, String nationalid, int age, String phone, String national, int noofrooms, String roomno, Date arrival, int nights, Date departure, double deposite, String typeofroom) {
-        super(firstname, secondname, lastname, passcode, nationalid, age, phone, national, noofrooms, roomno, arrival, nights, departure, deposite);
-       
-        TypeOfRoom =typeofroom ;
-        if(TypeOfRoom == "Single"||TypeOfRoom=="single")
-        {
-        totalcost=(nights*noofrooms*SingleRoom) ;
-        }
-        if(TypeOfRoom=="Double"|| TypeOfRoom=="double")
-        {
-         totalcost=(nights*noofrooms*DoubleRoom) ;   
-        }
-        if(TypeOfRoom=="Sweet"||TypeOfRoom=="sweet")
-        {
-            totalcost=(nights*noofrooms*SweetRoom) ;
-        }
-        totalcost_AfterDeposite=totalcost-deposite;
+public class Calculate {
+    private final static double SingleRoom =1000;
+    private final static double DoubleRoom = 1500 ;
+    private final static double SweetRoom = 2500 ;
+    
+    public static double TotalAmount(int RoomsNo[], int Nights, double Deposite)
+    {
+        return (RoomsNo[0]*SingleRoom + RoomsNo[1]*DoubleRoom + RoomsNo[2]*SweetRoom)*Nights - Deposite;
     }
     
     
-   public void Print_Data ()
-   {
-       System.out.println(getRoomNo());
-        System.out.println(getPassCode());
-         System.out.println(totalcost);
-         System.out.println(totalcost_AfterDeposite);
-         System.out.println(totalcost-totalcost_AfterDeposite);
-         
-        
-       
-        
-        
-   }
-    */
-
-    public Calculate(String FirstName, String SecondName, String LastName, String NationalId, int Age, String Phone, String National, int RoomNo, Date Arrival, int Nights, Date Departure, double Deposite, double TotalAmount) {
-        super(FirstName, SecondName, LastName, NationalId, Age, Phone, National, RoomNo, Arrival, Nights, Departure, Deposite, TotalAmount);
-    }
+    
 }

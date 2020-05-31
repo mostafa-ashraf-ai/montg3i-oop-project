@@ -1,13 +1,19 @@
 package frames;
 
 
+import com.sun.javafx.image.impl.IntArgb;
 import java.awt.Color;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javax.swing.JOptionPane.showMessageDialog;
+import montg3i.Calculate;
+import montg3i.Guest;
+import montg3i.Hotel;
+import montg3i.HotelRoom;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,6 +26,10 @@ import static javax.swing.JOptionPane.showMessageDialog;
  * @author hp
  */
 public class ReservationForm extends javax.swing.JFrame {
+    
+    int RoomsNo[] = {0,0,0};
+    ArrayList<HotelRoom> hrl = Hotel.getHotelRoomList();
+    
 
     /**
      * Creates new form ReservationForm
@@ -38,6 +48,18 @@ public class ReservationForm extends javax.swing.JFrame {
            // Results1.setVisible(false);
            // Results2.setVisible(false);
            // Results3.setVisible(false);
+           
+        FirstNameBox.setText("");
+        MiddleNameBox.setText("");
+        LastNameBox.setText("");
+        NationalIDBox.setText("");
+        AgeBox.setText("0");
+        MobileNumberBox.setText("");
+        NationalityBox.setText("");
+        NightsBox.setText("1");
+        DepositBox.setText("0");
+        
+        FirstNameBox.requestFocus();
     }
 
     /**
@@ -73,14 +95,13 @@ public class ReservationForm extends javax.swing.JFrame {
         Arrivals = new javax.swing.JLabel();
         Nights = new javax.swing.JLabel();
         Departure = new javax.swing.JLabel();
-        AvailableRooms = new javax.swing.JLabel();
+        Available_Rooms = new javax.swing.JLabel();
         TotalPayments = new javax.swing.JLabel();
         Deposit = new javax.swing.JLabel();
         RestAmount = new javax.swing.JLabel();
         DepositBox = new javax.swing.JTextField();
         RestAmountLabel = new javax.swing.JLabel();
         TotalPaymentsLabel = new javax.swing.JLabel();
-        RoomsNumbers = new javax.swing.JComboBox<>();
         DepartureBoxDate = new com.toedter.calendar.JDateChooser();
         NightsBox = new javax.swing.JTextField();
         ArrivalsBoxDate = new com.toedter.calendar.JDateChooser();
@@ -88,6 +109,16 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -117,55 +148,91 @@ public class ReservationForm extends javax.swing.JFrame {
         Age.setForeground(new java.awt.Color(51, 204, 255));
         Age.setText("Age:");
         jPanel1.add(Age);
-        Age.setBounds(70, 380, 34, 20);
+        Age.setBounds(70, 370, 34, 20);
 
         FirstName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         FirstName.setForeground(new java.awt.Color(51, 204, 255));
         FirstName.setText("First Name:");
         jPanel1.add(FirstName);
-        FirstName.setBounds(70, 110, 82, 20);
+        FirstName.setBounds(70, 100, 82, 20);
 
         MiddleName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         MiddleName.setForeground(new java.awt.Color(51, 204, 255));
         MiddleName.setText("Middle Name:");
         jPanel1.add(MiddleName);
-        MiddleName.setBounds(70, 160, 98, 20);
+        MiddleName.setBounds(70, 140, 98, 20);
 
         LastName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         LastName.setForeground(new java.awt.Color(51, 204, 255));
         LastName.setText("Last Name:");
         jPanel1.add(LastName);
-        LastName.setBounds(70, 200, 80, 20);
+        LastName.setBounds(70, 180, 80, 20);
 
         Nationality.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nationality.setForeground(new java.awt.Color(51, 204, 255));
         Nationality.setText("Nationality:");
         jPanel1.add(Nationality);
-        Nationality.setBounds(70, 240, 81, 20);
+        Nationality.setBounds(70, 230, 81, 20);
 
         NationalID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         NationalID.setForeground(new java.awt.Color(51, 204, 255));
         NationalID.setText("National ID:");
         jPanel1.add(NationalID);
-        NationalID.setBounds(70, 280, 86, 20);
+        NationalID.setBounds(70, 270, 86, 20);
 
         MobileNumber.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         MobileNumber.setForeground(new java.awt.Color(51, 204, 255));
         MobileNumber.setText("Mobile Number:");
         jPanel1.add(MobileNumber);
-        MobileNumber.setBounds(70, 330, 114, 20);
+        MobileNumber.setBounds(70, 320, 114, 20);
+
+        MobileNumberBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MobileNumberBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(MobileNumberBox);
-        MobileNumberBox.setBounds(210, 320, 195, 26);
+        MobileNumberBox.setBounds(210, 320, 195, 19);
+
+        AgeBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgeBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(AgeBox);
-        AgeBox.setBounds(210, 370, 195, 26);
+        AgeBox.setBounds(210, 370, 70, 19);
+
+        NationalIDBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NationalIDBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(NationalIDBox);
-        NationalIDBox.setBounds(210, 280, 195, 26);
+        NationalIDBox.setBounds(210, 270, 195, 19);
+
+        NationalityBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NationalityBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(NationalityBox);
-        NationalityBox.setBounds(210, 240, 129, 26);
+        NationalityBox.setBounds(210, 230, 129, 19);
+
+        LastNameBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LastNameBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(LastNameBox);
-        LastNameBox.setBounds(210, 200, 129, 26);
+        LastNameBox.setBounds(210, 180, 129, 19);
+
+        MiddleNameBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MiddleNameBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(MiddleNameBox);
-        MiddleNameBox.setBounds(210, 150, 129, 26);
+        MiddleNameBox.setBounds(210, 140, 129, 19);
 
         FirstNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +240,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FirstNameBox);
-        FirstNameBox.setBounds(210, 100, 129, 26);
+        FirstNameBox.setBounds(210, 100, 129, 20);
 
         btnNights.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnNights.setForeground(new java.awt.Color(51, 204, 255));
@@ -186,7 +253,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnNights);
-        btnNights.setBounds(400, 470, 130, 23);
+        btnNights.setBounds(400, 470, 130, 22);
 
         btnDeparture.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDeparture.setForeground(new java.awt.Color(51, 204, 255));
@@ -199,7 +266,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDeparture);
-        btnDeparture.setBounds(390, 520, 160, 23);
+        btnDeparture.setBounds(390, 520, 160, 22);
 
         Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Arrivals.setForeground(new java.awt.Color(51, 204, 255));
@@ -219,11 +286,11 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel1.add(Departure);
         Departure.setBounds(70, 510, 76, 20);
 
-        AvailableRooms.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        AvailableRooms.setForeground(new java.awt.Color(51, 204, 255));
-        AvailableRooms.setText("Available Rooms:");
-        jPanel1.add(AvailableRooms);
-        AvailableRooms.setBounds(70, 560, 124, 20);
+        Available_Rooms.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Available_Rooms.setForeground(new java.awt.Color(51, 204, 255));
+        Available_Rooms.setText("Available Rooms:");
+        jPanel1.add(Available_Rooms);
+        Available_Rooms.setBounds(510, 190, 124, 20);
 
         TotalPayments.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         TotalPayments.setForeground(new java.awt.Color(51, 204, 255));
@@ -235,35 +302,31 @@ public class ReservationForm extends javax.swing.JFrame {
         Deposit.setForeground(new java.awt.Color(51, 204, 255));
         Deposit.setText("Deposit:");
         jPanel1.add(Deposit);
-        Deposit.setBounds(70, 630, 115, 20);
+        Deposit.setBounds(70, 620, 115, 20);
 
         RestAmount.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         RestAmount.setForeground(new java.awt.Color(51, 204, 255));
         RestAmount.setText("Rest Amount:");
         jPanel1.add(RestAmount);
         RestAmount.setBounds(70, 660, 115, 20);
+
+        DepositBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DepositBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(DepositBox);
-        DepositBox.setBounds(210, 620, 123, 26);
+        DepositBox.setBounds(210, 620, 123, 19);
 
         RestAmountLabel.setForeground(new java.awt.Color(51, 204, 255));
         RestAmountLabel.setText("jLabel21");
         jPanel1.add(RestAmountLabel);
-        RestAmountLabel.setBounds(220, 660, 110, 20);
+        RestAmountLabel.setBounds(220, 660, 110, 15);
 
         TotalPaymentsLabel.setForeground(new java.awt.Color(51, 204, 255));
         TotalPaymentsLabel.setText("jLabel19");
         jPanel1.add(TotalPaymentsLabel);
-        TotalPaymentsLabel.setBounds(220, 590, 110, 20);
-
-        RoomsNumbers.setForeground(new java.awt.Color(51, 204, 255));
-        RoomsNumbers.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103" }));
-        RoomsNumbers.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoomsNumbersActionPerformed(evt);
-            }
-        });
-        jPanel1.add(RoomsNumbers);
-        RoomsNumbers.setBounds(210, 550, 123, 26);
+        TotalPaymentsLabel.setBounds(220, 590, 110, 15);
         jPanel1.add(DepartureBoxDate);
         DepartureBoxDate.setBounds(210, 510, 141, 28);
 
@@ -273,7 +336,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NightsBox);
-        NightsBox.setBounds(210, 470, 102, 26);
+        NightsBox.setBounds(210, 470, 102, 19);
         jPanel1.add(ArrivalsBoxDate);
         ArrivalsBoxDate.setBounds(210, 420, 141, 24);
 
@@ -323,8 +386,98 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 660, 70);
 
+        jButton1.setText("501");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(660, 200, 52, 25);
+
+        jButton2.setText("401");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(660, 250, 52, 25);
+
+        jButton3.setText("301");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(660, 300, 52, 25);
+
+        jButton4.setText("201");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(660, 350, 52, 25);
+
+        jButton5.setText("101");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(660, 400, 52, 25);
+
+        jButton6.setText("502");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6);
+        jButton6.setBounds(760, 200, 52, 25);
+
+        jButton7.setText("402");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7);
+        jButton7.setBounds(760, 250, 52, 25);
+
+        jButton8.setText("302");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton8);
+        jButton8.setBounds(760, 300, 52, 25);
+
+        jButton9.setText("503");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9);
+        jButton9.setBounds(860, 200, 52, 25);
+
+        jButton10.setText("403");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton10);
+        jButton10.setBounds(860, 250, 52, 25);
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(190, 0, 610, 790);
+        jPanel1.setBounds(190, 0, 1020, 790);
 
         jLabel1.setForeground(new java.awt.Color(51, 204, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/1.jpg"))); // NOI18N
@@ -335,28 +488,44 @@ public class ReservationForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookActionPerformed
-        new Receiption().setVisible(true);
-        this.setVisible(false);
-       String name="GuestName";
-       int room=405;
-       int passcode=34483;
-       String service1="dinner";
-       String service2="garage";
-       double taxes=22.094;
-       double total=22435.87;
-       double payed=4887.5;
-       double rest=154.44;
-       showMessageDialog(null,"Name: "+name+"\n"+"Room No. : "+room+"\n"+"Passcode: "+passcode+"\n"+"Services: "+"\n"+service1+"\n"+service2+"\n"+"Taxes:"+taxes+"Total Cost: "+total+"\n"+"Payed: "+payed+"\n"+"Rest Amount: "+rest);
-        
+
+       String FirstName = FirstNameBox.getText();
+       String SecondName = MiddleNameBox.getText();
+       String LastName = LastNameBox.getText();
+       String NationalId = NationalIDBox.getText();
+       int Age = Integer.parseInt(AgeBox.getText());
+       String Phone = MobileNumberBox.getText();
+       String National = NationalityBox.getText();
+       int NumbersOfRooms = RoomsNo[0]+RoomsNo[1]+RoomsNo[2];
+       String Arrival = new SimpleDateFormat("yyyy-MM-dd").format(ArrivalsBoxDate.getDate());
+       int Nights = Integer.parseInt(NightsBox.getText());
+       String Departure = new SimpleDateFormat("yyyy-MM-dd").format(DepartureBoxDate.getDate());
+       double Deposite = Double.parseDouble(DepositBox.getText());
+       double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights, Deposite);
+       
+       TotalPaymentsLabel.setText((TotalAmount-Deposite) + "");
+       RestAmountLabel.setText(TotalAmount + "");
+       
+       Hotel.AddGuestList(Guest.getGuestNextNo(), FirstName, SecondName, LastName, NationalId, Age, Phone, National, NumbersOfRooms, Arrival, Nights, Departure, Deposite, TotalAmount, "check in");
+       showMessageDialog(null,"Name: " + FirstName +" "+ SecondName +" "+ LastName +"\n"+"Room No. : "+NumbersOfRooms+"\n");
+       Guest.setGuestNextNo(Guest.getGuestNextNo());
+       
+       FirstNameBox.setText("");
+       MiddleNameBox.setText("");
+       LastNameBox.setText("");
+       NationalIDBox.setText("");
+       AgeBox.setText("0");
+       MobileNumberBox.setText("");
+       NationalityBox.setText("");
+       NightsBox.setText("1");
+       DepositBox.setText("0");
+       
+       FirstNameBox.requestFocus();
     }//GEN-LAST:event_btnBookActionPerformed
 
     private void FirstNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameBoxActionPerformed
-        // TODO add your handling code here:
+        MiddleNameBox.requestFocus();
     }//GEN-LAST:event_FirstNameBoxActionPerformed
-
-    private void RoomsNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomsNumbersActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RoomsNumbersActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         new Receiption().setVisible(true);
@@ -364,7 +533,21 @@ public class ReservationForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void NightsBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NightsBoxActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
+            String Arrivals_str = dformat.format(ArrivalsBoxDate.getDate());
+            String Arrivals[] = Arrivals_str.split("-");
+            int nights = Integer.parseInt(NightsBox.getText());
+            String Departure_str = Arrivals[0] + "-" + 
+                    (Integer.parseInt(Arrivals[1])+(Integer.parseInt(Arrivals[2])+nights)/(31+Integer.parseInt(Arrivals[1])%2)) + "-" + 
+                    ((Integer.parseInt(Arrivals[2])+nights)%(31+Integer.parseInt(Arrivals[1])%2));
+            Date departure = new SimpleDateFormat("yyyy-MM-dd").parse(Departure_str);
+            DepartureBoxDate.setDate(departure);
+        } 
+        catch (ParseException ex) {
+            Logger.getLogger(ReservationForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_NightsBoxActionPerformed
 
     private void btnDepartureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepartureActionPerformed
@@ -396,6 +579,139 @@ public class ReservationForm extends javax.swing.JFrame {
                 *(31+Integer.parseInt(Departures[1])%2+Integer.parseInt(Arrivals[1])%2);
         NightsBox.setText(nights + "");
     }//GEN-LAST:event_btnNightsActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(hrl.get(1).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(1).setAvailability(false);
+            hrl.get(1).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(hrl.get(0).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(0).setAvailability(false);
+            hrl.get(0).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if(hrl.get(2).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(2).setAvailability(false);
+            hrl.get(2).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(hrl.get(3).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(3).setAvailability(false);
+            hrl.get(3).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if(hrl.get(4).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(4).setAvailability(false);
+            hrl.get(4).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        if(hrl.get(5).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(5).setAvailability(false);
+            hrl.get(5).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        if(hrl.get(6).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(6).setAvailability(false);
+            hrl.get(6).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        if(hrl.get(7).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(7).setAvailability(false);
+            hrl.get(7).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        if(hrl.get(8).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(8).setAvailability(false);
+            hrl.get(8).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        if(hrl.get(9).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(9).setAvailability(false);
+            hrl.get(9).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void DepositBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepositBoxActionPerformed
+        int Nights = Integer.parseInt(NightsBox.getText()); 
+        double Deposite = Double.parseDouble(DepositBox.getText());
+        double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights, Deposite);
+       
+        TotalPaymentsLabel.setText((TotalAmount-Deposite) + "");
+        RestAmountLabel.setText(TotalAmount + "");
+    }//GEN-LAST:event_DepositBoxActionPerformed
+
+    private void MiddleNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiddleNameBoxActionPerformed
+        LastNameBox.requestFocus();
+    }//GEN-LAST:event_MiddleNameBoxActionPerformed
+
+    private void LastNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameBoxActionPerformed
+        NationalityBox.requestFocus();
+    }//GEN-LAST:event_LastNameBoxActionPerformed
+
+    private void NationalityBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NationalityBoxActionPerformed
+        NationalIDBox.requestFocus();
+    }//GEN-LAST:event_NationalityBoxActionPerformed
+
+    private void NationalIDBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NationalIDBoxActionPerformed
+        MobileNumberBox.requestFocus();
+    }//GEN-LAST:event_NationalIDBoxActionPerformed
+
+    private void MobileNumberBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MobileNumberBoxActionPerformed
+        AgeBox.requestFocus();
+    }//GEN-LAST:event_MobileNumberBoxActionPerformed
+
+    private void AgeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgeBoxActionPerformed
+        NightsBox.requestFocus();
+    }//GEN-LAST:event_AgeBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -439,7 +755,7 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JTextField AgeBox;
     private javax.swing.JLabel Arrivals;
     private com.toedter.calendar.JDateChooser ArrivalsBoxDate;
-    private javax.swing.JLabel AvailableRooms;
+    private javax.swing.JLabel Available_Rooms;
     private javax.swing.JLabel Departure;
     private com.toedter.calendar.JDateChooser DepartureBoxDate;
     private javax.swing.JLabel Deposit;
@@ -460,7 +776,6 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JTextField NightsBox;
     private javax.swing.JLabel RestAmount;
     private javax.swing.JLabel RestAmountLabel;
-    private javax.swing.JComboBox<String> RoomsNumbers;
     private javax.swing.JLabel TotalPayments;
     private javax.swing.JLabel TotalPaymentsLabel;
     private javax.swing.JButton btnBack;
@@ -468,6 +783,16 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JButton btnDeparture;
     private javax.swing.JButton btnNights;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -3,6 +3,8 @@ package frames;
 
 
 import java.awt.Color;
+import montg3i.ReceptionEmployee;
+import montg3i.Manager;
 //import montg3i.Reception_employee;
 
 /*
@@ -67,6 +69,11 @@ public class Login extends javax.swing.JFrame {
         btnBack.setText("< Back");
         btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnBack);
         btnBack.setBounds(50, 700, 120, 38);
 
@@ -91,7 +98,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(PasswordBox);
-        PasswordBox.setBounds(160, 360, 173, 20);
+        PasswordBox.setBounds(160, 360, 173, 15);
 
         Password.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Password.setForeground(new java.awt.Color(51, 204, 255));
@@ -102,7 +109,7 @@ public class Login extends javax.swing.JFrame {
         UsernamBox.setForeground(new java.awt.Color(255, 255, 255));
         UsernamBox.setBorder(null);
         jPanel1.add(UsernamBox);
-        UsernamBox.setBounds(160, 300, 173, 20);
+        UsernamBox.setBounds(160, 300, 173, 15);
 
         Username.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Username.setForeground(new java.awt.Color(51, 204, 255));
@@ -144,22 +151,17 @@ public class Login extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
      
         String username=UsernamBox.getText();
-       String password=PasswordBox.getText();
-        if( ( "g".equals(username) ) && ("g".equals(password) ) )
-        {
-            new Guest().setVisible(true);
-            this.setVisible(false);
-
-        }
-        else if( ( "s".equals(username) ) && ("s".equals(password) ) )
+        String password=PasswordBox.getText();
+        
+        if( ReceptionEmployee.login(username, password) )
         {
             new Receiption().setVisible(true);
             this.setVisible(false);
 
         }
-        else if( ( "m".equals(username) ) && ("m".equals(password) ) )
+        else if( Manager.login(username, password) )
         {
-            new Manager().setVisible(true);
+            new ManagerProfile().setVisible(true);
             this.setVisible(false);
 
         }
@@ -168,7 +170,7 @@ public class Login extends javax.swing.JFrame {
             MessageLabel.setText("* username or password is incorrect ! !");
             UsernamBox.setText("");
             PasswordBox.setText("");
-            //UsernamBox.requestFocus();
+            UsernamBox.requestFocus();
         }
    
         
@@ -177,6 +179,11 @@ public class Login extends javax.swing.JFrame {
     private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordBoxActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        new ResortHomePage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments

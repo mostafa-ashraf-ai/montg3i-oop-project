@@ -9,10 +9,10 @@ package montg3i;
  *
  * @author Ahmed Eissa
  */
-public class Reception_Employee extends Staff{
+public class ReceptionEmployee extends Staff{
     String Language;
     
-    public Reception_Employee(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Language) {
+    public ReceptionEmployee(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Language) {
         super(FirstName, LastName, Id, Username, Password, Salary, Email);
         this.Language = Language;
     }
@@ -20,11 +20,6 @@ public class Reception_Employee extends Staff{
     public static boolean login(String Username ,String pass)
     { 
         return Database.staff.checkUserAndPass("reception", Username, pass) ;
-    }
-    
-    public static void Add (String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email)
-    {
-        Database.staff.Add("reception", Id, Username, Password, FirstName, LastName, Salary, Email);
     }
     
     public static void delete (int id)

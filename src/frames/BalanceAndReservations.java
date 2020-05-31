@@ -141,7 +141,7 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-         new Manager().setVisible(true);
+         new ManagerProfile().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 

@@ -5,17 +5,76 @@
  */
 package frames;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import javax.imageio.ImageIO;
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfByte;
+import static org.opencv.imgcodecs.Imgcodecs.imencode;
+import org.opencv.videoio.VideoCapture;
+
 /**
  *
  * @author mostafa
  */
 public class CCTV extends javax.swing.JFrame {
+    
+    private DaemonThread myThread = null;
+    int count = 0;
+    VideoCapture webSource = null;
+
+    Mat frame = new Mat();
+    MatOfByte mem = new MatOfByte();
+    
+    class DaemonThread implements Runnable {
+    protected volatile boolean runnable = false;
+    @Override
+    public  void run(){
+        synchronized(this)
+        {
+            while(runnable)
+            {
+                if(webSource.grab())
+                {
+                    try
+                    {
+                        webSource.retrieve(frame);
+		  imencode(".bmp", frame, mem);
+	             Image im = ImageIO.read(new ByteArrayInputStream(mem.toArray()));
+
+                        BufferedImage buff = (BufferedImage) im;
+		  Graphics g=jPanel1.getGraphics();
+                        if (g.drawImage(buff, 0, 0, getWidth(), getHeight() , 0, 0, buff.getWidth(), buff.getHeight(), null))
+                            if(runnable == false)
+                            {
+                                System.out.println("Going to wait()");
+                                this.wait();
+                            }
+                    }catch(Exception ex){
+                        System.out.println("Error");
+                    }
+                }
+            }
+        }
+     }
+}
 
     /**
      * Creates new form CCTV
      */
     public CCTV() {
         initComponents();
+        
+        webSource =new VideoCapture();
+        webSource.open(0);
+        myThread = new DaemonThread();
+        Thread t = new Thread(myThread);
+        t.setDaemon(true);
+        myThread.runnable = true;
+        t.start();
     }
 
     /**
@@ -28,44 +87,63 @@ public class CCTV extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        closebtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 567, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 413, Short.MAX_VALUE)
+            .addGap(0, 438, Short.MAX_VALUE)
         );
+
+        closebtn.setBackground(new java.awt.Color(204, 0, 0));
+        closebtn.setForeground(new java.awt.Color(0, 0, 0));
+        closebtn.setText("close");
+        closebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                closebtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(closebtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(closebtn))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void closebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closebtnActionPerformed
+            myThread.runnable = false;  
+            closebtn.setEnabled(true);
+            webSource.release();
+            this.setVisible(false);
+    }//GEN-LAST:event_closebtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -98,6 +176,7 @@ public class CCTV extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton closebtn;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
