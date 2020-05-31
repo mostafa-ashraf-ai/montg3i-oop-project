@@ -83,7 +83,7 @@ public class Receiption extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_beach_96px.png"))); // NOI18N
-        jLabel8.setText("   Montag3i");
+        jLabel8.setText("   MONTAG3I");
         jPanel8.add(jLabel8);
         jLabel8.setBounds(40, 20, 450, 90);
 
@@ -98,6 +98,14 @@ public class Receiption extends javax.swing.JFrame {
         btnEditReservation.setText("Edit Reservation");
         btnEditReservation.setBorder(null);
         btnEditReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditReservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEditReservationMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEditReservationMouseExited(evt);
+            }
+        });
         btnEditReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditReservationActionPerformed(evt);
@@ -111,6 +119,14 @@ public class Receiption extends javax.swing.JFrame {
         btnCurrentGuests.setText("Current Guests  ");
         btnCurrentGuests.setBorder(null);
         btnCurrentGuests.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCurrentGuests.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCurrentGuestsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCurrentGuestsMouseExited(evt);
+            }
+        });
         btnCurrentGuests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCurrentGuestsActionPerformed(evt);
@@ -124,6 +140,14 @@ public class Receiption extends javax.swing.JFrame {
         btnCashiering.setText("Cashiering       ");
         btnCashiering.setBorder(null);
         btnCashiering.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCashiering.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCashieringMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCashieringMouseExited(evt);
+            }
+        });
         btnCashiering.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCashieringActionPerformed(evt);
@@ -137,6 +161,14 @@ public class Receiption extends javax.swing.JFrame {
         btnSearch.setText("Search           ");
         btnSearch.setBorder(null);
         btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSearchMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSearchMouseExited(evt);
+            }
+        });
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
@@ -150,6 +182,14 @@ public class Receiption extends javax.swing.JFrame {
         btnLogout.setText("Logout           ");
         btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -191,6 +231,14 @@ public class Receiption extends javax.swing.JFrame {
         btnReservation.setBorder(null);
         btnReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReservation.setName(""); // NOI18N
+        btnReservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReservationMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReservationMouseExited(evt);
+            }
+        });
         btnReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReservationActionPerformed(evt);
@@ -269,6 +317,54 @@ public class Receiption extends javax.swing.JFrame {
         new EditReservation().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnEditReservationActionPerformed
+
+    private void btnReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReservationMouseEntered
+        btnReservation.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnReservationMouseEntered
+
+    private void btnReservationMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReservationMouseExited
+        btnReservation.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnReservationMouseExited
+
+    private void btnSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseEntered
+        btnSearch.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnSearchMouseEntered
+
+    private void btnSearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseExited
+        btnSearch.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnSearchMouseExited
+
+    private void btnEditReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditReservationMouseEntered
+        btnEditReservation.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnEditReservationMouseEntered
+
+    private void btnEditReservationMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditReservationMouseExited
+        btnEditReservation.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnEditReservationMouseExited
+
+    private void btnCurrentGuestsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCurrentGuestsMouseEntered
+        btnCurrentGuests.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnCurrentGuestsMouseEntered
+
+    private void btnCurrentGuestsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCurrentGuestsMouseExited
+        btnCurrentGuests.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnCurrentGuestsMouseExited
+
+    private void btnCashieringMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCashieringMouseEntered
+        btnCashiering.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnCashieringMouseEntered
+
+    private void btnCashieringMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCashieringMouseExited
+        btnCashiering.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnCashieringMouseExited
+
+    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
+        btnLogout.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnLogoutMouseEntered
+
+    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
+        btnLogout.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnLogoutMouseExited
 
     /**
      * @param args the command line arguments

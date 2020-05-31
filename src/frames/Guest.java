@@ -102,6 +102,14 @@ public class Guest extends javax.swing.JFrame {
         btnGuestLogin.setText("Login");
         btnGuestLogin.setBorder(null);
         btnGuestLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuestLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnGuestLoginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnGuestLoginMouseExited(evt);
+            }
+        });
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuestLoginActionPerformed(evt);
@@ -115,6 +123,14 @@ public class Guest extends javax.swing.JFrame {
         btnBack.setText("< Back");
         btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -213,6 +229,22 @@ public class Guest extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_btnGuestLoginActionPerformed
+
+    private void btnGuestLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestLoginMouseEntered
+        btnGuestLogin.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnGuestLoginMouseEntered
+
+    private void btnGuestLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestLoginMouseExited
+        btnGuestLogin.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnGuestLoginMouseExited
+
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        btnBack.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
+        btnBack.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnBackMouseExited
 
     /**
      * @param args the command line arguments

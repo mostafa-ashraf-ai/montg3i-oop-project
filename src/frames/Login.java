@@ -69,6 +69,14 @@ public class Login extends javax.swing.JFrame {
         btnBack.setText("< Back");
         btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -77,18 +85,26 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(btnBack);
         btnBack.setBounds(50, 700, 120, 38);
 
-        btnLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(51, 204, 255));
         btnLogin.setText("Login");
         btnLogin.setBorder(null);
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLoginMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLoginMouseExited(evt);
+            }
+        });
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
         jPanel1.add(btnLogin);
-        btnLogin.setBounds(140, 430, 126, 45);
+        btnLogin.setBounds(120, 430, 126, 45);
 
         PasswordBox.setForeground(new java.awt.Color(255, 255, 255));
         PasswordBox.setBorder(null);
@@ -98,7 +114,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(PasswordBox);
-        PasswordBox.setBounds(160, 360, 173, 15);
+        PasswordBox.setBounds(160, 360, 173, 20);
 
         Password.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Password.setForeground(new java.awt.Color(51, 204, 255));
@@ -109,7 +125,7 @@ public class Login extends javax.swing.JFrame {
         UsernamBox.setForeground(new java.awt.Color(255, 255, 255));
         UsernamBox.setBorder(null);
         jPanel1.add(UsernamBox);
-        UsernamBox.setBounds(160, 300, 173, 15);
+        UsernamBox.setBounds(160, 300, 173, 20);
 
         Username.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Username.setForeground(new java.awt.Color(51, 204, 255));
@@ -184,6 +200,22 @@ public class Login extends javax.swing.JFrame {
         new ResortHomePage().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseEntered
+       btnLogin.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnLoginMouseEntered
+
+    private void btnLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseExited
+       btnLogin.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnLoginMouseExited
+
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+       btnBack.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
+       btnBack.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnBackMouseExited
 
     /**
      * @param args the command line arguments

@@ -33,9 +33,11 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         TotalBalance = new javax.swing.JLabel();
         TotalBalanceLabel = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1550, 805));
@@ -48,27 +50,13 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         TotalBalance.setForeground(new java.awt.Color(255, 255, 255));
         TotalBalance.setText("Total Balance:");
         jPanel1.add(TotalBalance);
-        TotalBalance.setBounds(100, 190, 210, 40);
+        TotalBalance.setBounds(40, 60, 210, 40);
 
         TotalBalanceLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         TotalBalanceLabel.setForeground(new java.awt.Color(255, 255, 255));
         TotalBalanceLabel.setText("jLabel1");
         jPanel1.add(TotalBalanceLabel);
-        TotalBalanceLabel.setBounds(340, 190, 120, 40);
-
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("< Back");
-        btnBack.setBorder(null);
-        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnBack);
-        btnBack.setBounds(130, 580, 90, 40);
+        TotalBalanceLabel.setBounds(280, 60, 120, 40);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -134,16 +122,45 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(640, 0, 730, 750);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP2.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(90, 370, 390, 220);
+
+        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(70, 619, 110, 40);
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP1.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(90, 200, 390, 180);
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1530, 750);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-         new ManagerProfile().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnBackActionPerformed
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        btnBack.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
+        btnBack.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnBackMouseExited
 
     /**
      * @param args the command line arguments
@@ -184,6 +201,8 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     private javax.swing.JLabel TotalBalance;
     private javax.swing.JLabel TotalBalanceLabel;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

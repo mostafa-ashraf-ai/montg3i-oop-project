@@ -35,9 +35,6 @@ public class EditReservation extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel22 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Name = new javax.swing.JLabel();
         ReservationID = new javax.swing.JLabel();
@@ -47,6 +44,8 @@ public class EditReservation extends javax.swing.JFrame {
         ExtraDurationInDaysBox = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel22 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,22 +56,6 @@ public class EditReservation extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 300, 790);
 
-        jPanel2.setBackground(new java.awt.Color(255, 153, 102));
-        jPanel2.setLayout(null);
-
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(130, 70, 290, 50);
-
-        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Edit Reservation");
-        jPanel2.add(jLabel22);
-        jLabel22.setBounds(130, 10, 310, 51);
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(300, 0, 570, 100);
-
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
@@ -80,17 +63,17 @@ public class EditReservation extends javax.swing.JFrame {
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
         jPanel1.add(Name);
-        Name.setBounds(40, 190, 100, 51);
+        Name.setBounds(40, 160, 100, 51);
 
         ReservationID.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         ReservationID.setForeground(new java.awt.Color(255, 255, 255));
         ReservationID.setText("Reservation ID:");
         jPanel1.add(ReservationID);
-        ReservationID.setBounds(40, 270, 200, 51);
+        ReservationID.setBounds(40, 250, 200, 51);
         jPanel1.add(NameBox);
-        NameBox.setBounds(340, 220, 191, 26);
+        NameBox.setBounds(340, 190, 191, 26);
         jPanel1.add(ReservationIDBox);
-        ReservationIDBox.setBounds(340, 290, 191, 26);
+        ReservationIDBox.setBounds(340, 270, 191, 26);
 
         ExtraDurationInDays.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         ExtraDurationInDays.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,6 +89,14 @@ public class EditReservation extends javax.swing.JFrame {
         btnBack.setText("< Back");
         btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -120,8 +111,26 @@ public class EditReservation extends javax.swing.JFrame {
         btnEdit.setText("Edit");
         btnEdit.setBorder(null);
         btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEdit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEditMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEditMouseExited(evt);
+            }
+        });
         jPanel1.add(btnEdit);
         btnEdit.setBounds(240, 500, 120, 50);
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator1);
+        jSeparator1.setBounds(130, 80, 290, 50);
+
+        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Edit Reservation");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(130, 20, 310, 51);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(300, 0, 570, 790);
@@ -137,6 +146,22 @@ public class EditReservation extends javax.swing.JFrame {
         new Receiption().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnEditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditMouseEntered
+        btnEdit.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnEditMouseEntered
+
+    private void btnEditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditMouseExited
+        btnEdit.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnEditMouseExited
+
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        btnBack.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
+        btnBack.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnBackMouseExited
 
     /**
      * @param args the command line arguments
@@ -186,7 +211,6 @@ public class EditReservation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -32,6 +32,7 @@ public class Entertainment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         WiFi = new javax.swing.JLabel();
         PasswordOfWiFi = new javax.swing.JLabel();
@@ -46,12 +47,19 @@ public class Entertainment extends javax.swing.JFrame {
         PasswordOfWiFiLabel = new javax.swing.JLabel();
         WiFiLabel = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
         setMinimumSize(new java.awt.Dimension(1090, 765));
         getContentPane().setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(600, 150, 390, 180);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(null);
@@ -60,55 +68,55 @@ public class Entertainment extends javax.swing.JFrame {
         WiFi.setForeground(new java.awt.Color(255, 255, 255));
         WiFi.setText("WiFi:");
         jPanel1.add(WiFi);
-        WiFi.setBounds(90, 140, 64, 34);
+        WiFi.setBounds(70, 70, 64, 34);
 
         PasswordOfWiFi.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         PasswordOfWiFi.setForeground(new java.awt.Color(255, 255, 255));
         PasswordOfWiFi.setText("Password Of WiFi:");
         jPanel1.add(PasswordOfWiFi);
-        PasswordOfWiFi.setBounds(90, 180, 220, 34);
+        PasswordOfWiFi.setBounds(70, 140, 220, 34);
 
         FloorOfThePool.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         FloorOfThePool.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfThePool.setText("Floor Of The Pool:");
         jPanel1.add(FloorOfThePool);
-        FloorOfThePool.setBounds(90, 220, 221, 34);
+        FloorOfThePool.setBounds(70, 220, 221, 34);
 
         FloorOfTheGym.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         FloorOfTheGym.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfTheGym.setText("Floor Of The Gym:");
         jPanel1.add(FloorOfTheGym);
-        FloorOfTheGym.setBounds(90, 260, 223, 34);
+        FloorOfTheGym.setBounds(70, 310, 223, 34);
 
         Club.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Club.setForeground(new java.awt.Color(255, 255, 255));
         Club.setText("Club:");
         jPanel1.add(Club);
-        Club.setBounds(90, 310, 58, 34);
+        Club.setBounds(70, 400, 58, 34);
 
         Market.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Market.setForeground(new java.awt.Color(255, 255, 255));
         Market.setText("Market:");
         jPanel1.add(Market);
-        Market.setBounds(90, 350, 93, 34);
+        Market.setBounds(70, 480, 93, 34);
 
         MarketLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         MarketLabel.setForeground(new java.awt.Color(255, 255, 255));
         MarketLabel.setText("jLabel12");
         jPanel1.add(MarketLabel);
-        MarketLabel.setBounds(340, 360, 150, 23);
+        MarketLabel.setBounds(340, 490, 150, 23);
 
         ClubLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         ClubLabel.setForeground(new java.awt.Color(255, 255, 255));
         ClubLabel.setText("jLabel11");
         jPanel1.add(ClubLabel);
-        ClubLabel.setBounds(340, 320, 150, 23);
+        ClubLabel.setBounds(340, 410, 150, 23);
 
         FloorOfTheGymLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfTheGymLabel.setForeground(new java.awt.Color(255, 255, 255));
         FloorOfTheGymLabel.setText("jLabel10");
         jPanel1.add(FloorOfTheGymLabel);
-        FloorOfTheGymLabel.setBounds(340, 270, 150, 23);
+        FloorOfTheGymLabel.setBounds(340, 320, 150, 23);
 
         FloorOfThePoolLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfThePoolLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,29 +128,41 @@ public class Entertainment extends javax.swing.JFrame {
         PasswordOfWiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
         PasswordOfWiFiLabel.setText("jLabel8");
         jPanel1.add(PasswordOfWiFiLabel);
-        PasswordOfWiFiLabel.setBounds(340, 190, 150, 23);
+        PasswordOfWiFiLabel.setBounds(340, 150, 150, 23);
 
         WiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         WiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
         WiFiLabel.setText("jLabel7");
         jPanel1.add(WiFiLabel);
-        WiFiLabel.setBounds(340, 150, 150, 23);
+        WiFiLabel.setBounds(340, 80, 150, 23);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("< Back");
         btnBack.setBorder(null);
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         jPanel1.add(btnBack);
-        btnBack.setBounds(50, 499, 160, 40);
+        btnBack.setBounds(10, 610, 160, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 540, 710);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP2.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(600, 320, 390, 220);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/8.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -155,6 +175,14 @@ public class Entertainment extends javax.swing.JFrame {
         new GuestProfile().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        btnBack.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
+        btnBack.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnBackMouseExited
 
     /**
      * @param args the command line arguments
@@ -207,6 +235,8 @@ public class Entertainment extends javax.swing.JFrame {
     private javax.swing.JLabel WiFiLabel;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

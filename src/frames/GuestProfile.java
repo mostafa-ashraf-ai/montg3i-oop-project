@@ -85,12 +85,12 @@ public class GuestProfile extends javax.swing.JFrame {
         FloorLabel.setForeground(new java.awt.Color(255, 255, 255));
         FloorLabel.setText("jLabel8");
         jPanel1.add(FloorLabel);
-        FloorLabel.setBounds(208, 122, 51, 20);
+        FloorLabel.setBounds(270, 120, 51, 20);
 
         NameLabel.setForeground(new java.awt.Color(255, 255, 255));
         NameLabel.setText("jLabel2");
         jPanel1.add(NameLabel);
-        NameLabel.setBounds(208, 53, 51, 20);
+        NameLabel.setBounds(270, 50, 51, 20);
 
         RoomNo.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         RoomNo.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,13 +101,21 @@ public class GuestProfile extends javax.swing.JFrame {
         RoomNoLabel.setForeground(new java.awt.Color(255, 255, 255));
         RoomNoLabel.setText("jLabel4");
         jPanel1.add(RoomNoLabel);
-        RoomNoLabel.setBounds(275, 194, 51, 20);
+        RoomNoLabel.setBounds(270, 190, 51, 20);
 
         btnEntertainment.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnEntertainment.setForeground(new java.awt.Color(255, 255, 255));
         btnEntertainment.setText(">  Entertainment");
         btnEntertainment.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntertainment.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEntertainment.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEntertainmentMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEntertainmentMouseExited(evt);
+            }
+        });
         btnEntertainment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntertainmentActionPerformed(evt);
@@ -121,6 +129,14 @@ public class GuestProfile extends javax.swing.JFrame {
         btnUpdateTheReservation.setText(">  Update The Reservation");
         btnUpdateTheReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpdateTheReservation.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdateTheReservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUpdateTheReservationMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUpdateTheReservationMouseExited(evt);
+            }
+        });
         btnUpdateTheReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateTheReservationActionPerformed(evt);
@@ -134,6 +150,14 @@ public class GuestProfile extends javax.swing.JFrame {
         btnGuestPayment.setText(">  The Payment");
         btnGuestPayment.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuestPayment.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuestPayment.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnGuestPaymentMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnGuestPaymentMouseExited(evt);
+            }
+        });
         btnGuestPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuestPaymentActionPerformed(evt);
@@ -152,6 +176,14 @@ public class GuestProfile extends javax.swing.JFrame {
         btnLogout.setText("< Logout");
         btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -194,6 +226,38 @@ public class GuestProfile extends javax.swing.JFrame {
         new Guest().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnEntertainmentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntertainmentMouseEntered
+        btnEntertainment.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnEntertainmentMouseEntered
+
+    private void btnEntertainmentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntertainmentMouseExited
+        btnEntertainment.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnEntertainmentMouseExited
+
+    private void btnUpdateTheReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateTheReservationMouseEntered
+        btnUpdateTheReservation.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnUpdateTheReservationMouseEntered
+
+    private void btnUpdateTheReservationMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateTheReservationMouseExited
+        btnUpdateTheReservation.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnUpdateTheReservationMouseExited
+
+    private void btnGuestPaymentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestPaymentMouseEntered
+        btnGuestPayment.setForeground(Color.LIGHT_GRAY);   
+    }//GEN-LAST:event_btnGuestPaymentMouseEntered
+
+    private void btnGuestPaymentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestPaymentMouseExited
+        btnGuestPayment.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnGuestPaymentMouseExited
+
+    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
+        btnLogout.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnLogoutMouseEntered
+
+    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
+        btnLogout.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnLogoutMouseExited
     
     /**
      * @param args the command line arguments

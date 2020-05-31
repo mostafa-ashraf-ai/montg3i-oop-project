@@ -110,13 +110,21 @@ public class Receiptionist extends javax.swing.JFrame {
         btnLogout.setText("< Logout");
         btnLogout.setBorder(null);
         btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
             }
         });
         jPanel2.add(btnLogout);
-        btnLogout.setBounds(80, 680, 110, 43);
+        btnLogout.setBounds(30, 700, 110, 43);
 
         Complains.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Complains.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,16 +134,24 @@ public class Receiptionist extends javax.swing.JFrame {
 
         btnSend.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnSend.setForeground(new java.awt.Color(255, 255, 255));
-        btnSend.setText("Send");
+        btnSend.setText("SEND");
         btnSend.setBorder(null);
         btnSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSend.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSendMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSendMouseExited(evt);
+            }
+        });
         btnSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSendActionPerformed(evt);
             }
         });
         jPanel2.add(btnSend);
-        btnSend.setBounds(200, 600, 130, 40);
+        btnSend.setBounds(200, 610, 130, 40);
 
         btnSalary.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSalary.setForeground(new java.awt.Color(255, 255, 255));
@@ -232,6 +248,22 @@ public class Receiptionist extends javax.swing.JFrame {
     private void btnInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsuranceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnInsuranceActionPerformed
+
+    private void btnSendMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSendMouseEntered
+        btnSend.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnSendMouseEntered
+
+    private void btnSendMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSendMouseExited
+        btnSend.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnSendMouseExited
+
+    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
+        btnLogout.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnLogoutMouseEntered
+
+    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
+        btnLogout.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnLogoutMouseExited
 
     /**
      * @param args the command line arguments

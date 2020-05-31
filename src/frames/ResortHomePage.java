@@ -18,6 +18,7 @@ public class ResortHomePage extends javax.swing.JFrame {
         btnStaff.setForeground(Color.WHITE);
         btnStaff.setBackground(new Color(0,0,0,0));
         btnGuest.setBackground(new Color(0,0,0,0));
+        btnOffer.setBackground(new Color(0,0,0,0));
       
     }
 
@@ -32,6 +33,7 @@ public class ResortHomePage extends javax.swing.JFrame {
 
         btnGuest = new javax.swing.JButton();
         btnStaff = new javax.swing.JButton();
+        btnOffer = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -85,6 +87,17 @@ public class ResortHomePage extends javax.swing.JFrame {
         });
         getContentPane().add(btnStaff);
         btnStaff.setBounds(820, 20, 100, 40);
+
+        btnOffer.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnOffer.setText("OFFER");
+        btnOffer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOffer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOfferActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnOffer);
+        btnOffer.setBounds(1170, 20, 93, 40);
 
         jPanel1.setLayout(null);
 
@@ -141,6 +154,11 @@ public class ResortHomePage extends javax.swing.JFrame {
            btnGuest.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnGuestMouseExited
 
+    private void btnOfferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOfferActionPerformed
+            new Offer().setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_btnOfferActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,6 +196,7 @@ public class ResortHomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuest;
+    private javax.swing.JButton btnOffer;
     private javax.swing.JButton btnStaff;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
