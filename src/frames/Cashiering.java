@@ -37,7 +37,6 @@ public class Cashiering extends javax.swing.JFrame {
 
         buttonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        ReservationID = new javax.swing.JLabel();
         Clinic = new javax.swing.JLabel();
         Restaurant = new javax.swing.JLabel();
         ClinicLabel = new javax.swing.JLabel();
@@ -50,7 +49,6 @@ public class Cashiering extends javax.swing.JFrame {
         RestAmountLabel = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        ReservationIDBox = new javax.swing.JTextField();
         btnCheckout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -64,79 +62,73 @@ public class Cashiering extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
         jPanel1.setLayout(null);
 
-        ReservationID.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        ReservationID.setForeground(new java.awt.Color(255, 255, 255));
-        ReservationID.setText("Reservation ID:");
-        jPanel1.add(ReservationID);
-        ReservationID.setBounds(80, 50, 200, 34);
-
         Clinic.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Clinic.setForeground(new java.awt.Color(255, 255, 255));
         Clinic.setText("Clinic:");
         jPanel1.add(Clinic);
-        Clinic.setBounds(80, 110, 130, 34);
+        Clinic.setBounds(110, 80, 130, 34);
 
         Restaurant.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Restaurant.setForeground(new java.awt.Color(255, 255, 255));
         Restaurant.setText("Restaurant:");
         jPanel1.add(Restaurant);
-        Restaurant.setBounds(80, 170, 170, 34);
+        Restaurant.setBounds(110, 140, 170, 34);
 
         ClinicLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         ClinicLabel.setForeground(new java.awt.Color(255, 255, 255));
         ClinicLabel.setText("jLabel4");
         jPanel1.add(ClinicLabel);
-        ClinicLabel.setBounds(280, 120, 100, 26);
+        ClinicLabel.setBounds(310, 90, 100, 26);
 
         RestaurantLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         RestaurantLabel.setForeground(new java.awt.Color(255, 255, 255));
         RestaurantLabel.setText("jLabel5");
         jPanel1.add(RestaurantLabel);
-        RestaurantLabel.setBounds(280, 180, 170, 26);
+        RestaurantLabel.setBounds(310, 150, 170, 26);
 
         Services.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Services.setForeground(new java.awt.Color(255, 255, 255));
         Services.setText("Services:");
         jPanel1.add(Services);
-        Services.setBounds(80, 230, 150, 34);
+        Services.setBounds(110, 200, 150, 34);
 
         ServicesLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         ServicesLabel.setForeground(new java.awt.Color(255, 255, 255));
         ServicesLabel.setText("jLabel7");
         jPanel1.add(ServicesLabel);
-        ServicesLabel.setBounds(280, 240, 70, 26);
+        ServicesLabel.setBounds(310, 210, 70, 26);
 
         Cash.setBackground(new java.awt.Color(0, 102, 153));
         buttonGroup.add(Cash);
         Cash.setForeground(new java.awt.Color(255, 255, 255));
         Cash.setText("Cash");
         jPanel1.add(Cash);
-        Cash.setBounds(120, 430, 67, 29);
+        Cash.setBounds(150, 400, 67, 29);
 
         CreditCard.setBackground(new java.awt.Color(0, 102, 153));
         buttonGroup.add(CreditCard);
         CreditCard.setForeground(new java.awt.Color(255, 255, 255));
         CreditCard.setText("Credit Card");
         jPanel1.add(CreditCard);
-        CreditCard.setBounds(120, 480, 113, 29);
+        CreditCard.setBounds(150, 450, 113, 29);
 
         RestAmount.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         RestAmount.setForeground(new java.awt.Color(255, 255, 255));
         RestAmount.setText("Rest Amount:");
         jPanel1.add(RestAmount);
-        RestAmount.setBounds(80, 300, 180, 34);
+        RestAmount.setBounds(110, 270, 180, 34);
 
         RestAmountLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         RestAmountLabel.setForeground(new java.awt.Color(255, 255, 255));
         RestAmountLabel.setText("jLabel9");
         jPanel1.add(RestAmountLabel);
-        RestAmountLabel.setBounds(280, 310, 80, 26);
+        RestAmountLabel.setBounds(310, 280, 80, 26);
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Check Out Method:");
+        jLabel10.setText("Checkout Method:");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(80, 380, 230, 34);
+        jLabel10.setBounds(110, 350, 230, 34);
 
         btnBack.setBackground(new java.awt.Color(0, 102, 153));
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
@@ -160,14 +152,6 @@ public class Cashiering extends javax.swing.JFrame {
         jPanel1.add(btnBack);
         btnBack.setBounds(50, 710, 120, 50);
 
-        ReservationIDBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReservationIDBoxActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ReservationIDBox);
-        ReservationIDBox.setBounds(280, 60, 190, 26);
-
         btnCheckout.setBackground(new java.awt.Color(0, 102, 153));
         btnCheckout.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnCheckout.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,7 +172,7 @@ public class Cashiering extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCheckout);
-        btnCheckout.setBounds(290, 580, 200, 60);
+        btnCheckout.setBounds(290, 560, 200, 60);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(210, 0, 540, 800);
@@ -211,13 +195,9 @@ public class Cashiering extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new Receiption().setVisible(true);
+        new Search().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
-
-    private void ReservationIDBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservationIDBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ReservationIDBoxActionPerformed
 
     private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
         // TODO add your handling code here:
@@ -279,8 +259,6 @@ public class Cashiering extends javax.swing.JFrame {
     private javax.swing.JLabel Clinic;
     private javax.swing.JLabel ClinicLabel;
     private javax.swing.JRadioButton CreditCard;
-    private javax.swing.JLabel ReservationID;
-    private javax.swing.JTextField ReservationIDBox;
     private javax.swing.JLabel RestAmount;
     private javax.swing.JLabel RestAmountLabel;
     private javax.swing.JLabel Restaurant;

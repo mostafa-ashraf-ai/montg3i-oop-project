@@ -44,6 +44,8 @@ public class ManagerProfile extends javax.swing.JFrame {
         btnCameras = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         btnBalanceAndReservations = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,6 +125,16 @@ public class ManagerProfile extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(250, 0, 520, 800);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP2.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(910, 380, 390, 220);
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/OP1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(910, 210, 390, 180);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p10.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1500, 800);
@@ -200,6 +212,8 @@ public class ManagerProfile extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnNewEmployee;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

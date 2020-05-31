@@ -23,8 +23,8 @@ public class Receiption extends javax.swing.JFrame {
         jLabel3.setBackground(new Color(0,0,0,0));
         btnReservation.setBackground(new Color(0,0,0,0));
         btnSearch.setBackground(new Color(0,0,0,0));
-        btnCashiering.setBackground(new Color(0,0,0,0));
-        btnEditReservation.setBackground(new Color(0,0,0,0));
+       // btnCashiering.setBackground(new Color(0,0,0,0));
+        //btnEditReservation.setBackground(new Color(0,0,0,0));
         btnCurrentGuests.setBackground(new Color(0,0,0,0));
         btnLogout.setBackground(new Color(0,0,0,0));
         jPanel1.setBackground(new Color(0,0,0,90));
@@ -51,23 +51,17 @@ public class Receiption extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        btnEditReservation = new javax.swing.JButton();
         btnCurrentGuests = new javax.swing.JButton();
-        btnCashiering = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnReservation = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -93,27 +87,6 @@ public class Receiption extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
-        btnEditReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnEditReservation.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditReservation.setText("Edit Reservation");
-        btnEditReservation.setBorder(null);
-        btnEditReservation.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditReservation.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnEditReservationMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnEditReservationMouseExited(evt);
-            }
-        });
-        btnEditReservation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditReservationActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnEditReservation);
-        btnEditReservation.setBounds(90, 230, 150, 30);
-
         btnCurrentGuests.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnCurrentGuests.setForeground(new java.awt.Color(255, 255, 255));
         btnCurrentGuests.setText("Current Guests  ");
@@ -133,28 +106,7 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCurrentGuests);
-        btnCurrentGuests.setBounds(90, 300, 150, 30);
-
-        btnCashiering.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnCashiering.setForeground(new java.awt.Color(255, 255, 255));
-        btnCashiering.setText("Cashiering       ");
-        btnCashiering.setBorder(null);
-        btnCashiering.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCashiering.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCashieringMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCashieringMouseExited(evt);
-            }
-        });
-        btnCashiering.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCashieringActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnCashiering);
-        btnCashiering.setBounds(90, 370, 150, 30);
+        btnCurrentGuests.setBounds(80, 170, 150, 30);
 
         btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +127,7 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnSearch);
-        btnSearch.setBounds(90, 160, 150, 30);
+        btnSearch.setBounds(80, 110, 150, 30);
 
         btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
@@ -196,31 +148,23 @@ public class Receiption extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLogout);
-        btnLogout.setBounds(90, 440, 150, 30);
+        btnLogout.setBounds(80, 230, 150, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_32px.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 160, 40, 30);
+        jLabel2.setBounds(40, 110, 40, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_new_file_32px.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(50, 80, 40, 40);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_settings_32px.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(50, 220, 32, 40);
+        jLabel3.setBounds(40, 40, 40, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_activity_history_32px.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(50, 290, 51, 40);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_cash_register_32px.png"))); // NOI18N
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(50, 370, 32, 30);
+        jLabel5.setBounds(40, 160, 51, 40);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_logout_rounded_left_32px.png"))); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(50, 430, 51, 40);
+        jLabel7.setBounds(40, 220, 51, 40);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(null);
@@ -249,35 +193,25 @@ public class Receiption extends javax.swing.JFrame {
         btnReservation.getAccessibleContext().setAccessibleName("");
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 80, 210, 50);
+        jPanel2.setBounds(30, 40, 210, 50);
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(null);
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(40, 150, 210, 50);
-
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.setLayout(null);
-        jPanel1.add(jPanel4);
-        jPanel4.setBounds(40, 220, 210, 50);
+        jPanel3.setBounds(30, 100, 210, 50);
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
         jPanel5.setLayout(null);
         jPanel1.add(jPanel5);
-        jPanel5.setBounds(40, 290, 210, 50);
-
-        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel6.setLayout(null);
-        jPanel1.add(jPanel6);
-        jPanel6.setBounds(40, 360, 210, 50);
+        jPanel5.setBounds(30, 160, 210, 50);
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel7.setLayout(null);
         jPanel1.add(jPanel7);
-        jPanel7.setBounds(40, 430, 210, 50);
+        jPanel7.setBounds(30, 220, 210, 50);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 120, 300, 550);
+        jPanel1.setBounds(0, 240, 300, 320);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/p7.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -298,11 +232,6 @@ public class Receiption extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCurrentGuestsActionPerformed
 
-    private void btnCashieringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashieringActionPerformed
-        new Cashiering().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCashieringActionPerformed
-
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         new Login().setVisible(true);
             this.setVisible(false);
@@ -312,11 +241,6 @@ public class Receiption extends javax.swing.JFrame {
         new Search().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnSearchActionPerformed
-
-    private void btnEditReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditReservationActionPerformed
-        new EditReservation().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnEditReservationActionPerformed
 
     private void btnReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReservationMouseEntered
         btnReservation.setForeground(Color.LIGHT_GRAY);
@@ -334,14 +258,6 @@ public class Receiption extends javax.swing.JFrame {
         btnSearch.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnSearchMouseExited
 
-    private void btnEditReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditReservationMouseEntered
-        btnEditReservation.setForeground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_btnEditReservationMouseEntered
-
-    private void btnEditReservationMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditReservationMouseExited
-        btnEditReservation.setForeground(Color.WHITE);
-    }//GEN-LAST:event_btnEditReservationMouseExited
-
     private void btnCurrentGuestsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCurrentGuestsMouseEntered
         btnCurrentGuests.setForeground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_btnCurrentGuestsMouseEntered
@@ -349,14 +265,6 @@ public class Receiption extends javax.swing.JFrame {
     private void btnCurrentGuestsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCurrentGuestsMouseExited
         btnCurrentGuests.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnCurrentGuestsMouseExited
-
-    private void btnCashieringMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCashieringMouseEntered
-        btnCashiering.setForeground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_btnCashieringMouseEntered
-
-    private void btnCashieringMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCashieringMouseExited
-        btnCashiering.setForeground(Color.WHITE);
-    }//GEN-LAST:event_btnCashieringMouseExited
 
     private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
         btnLogout.setForeground(Color.LIGHT_GRAY);
@@ -403,26 +311,20 @@ public class Receiption extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCashiering;
     private javax.swing.JButton btnCurrentGuests;
-    private javax.swing.JButton btnEditReservation;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnReservation;
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables

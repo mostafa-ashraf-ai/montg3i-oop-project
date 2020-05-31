@@ -49,6 +49,7 @@ public class EditReservation extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Update Reservation");
         setMinimumSize(new java.awt.Dimension(1332, 845));
         getContentPane().setLayout(null);
 
@@ -124,13 +125,13 @@ public class EditReservation extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1);
-        jSeparator1.setBounds(130, 80, 290, 50);
+        jSeparator1.setBounds(140, 80, 290, 50);
 
         jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Edit Reservation");
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(130, 20, 310, 51);
+        jLabel22.setBounds(140, 20, 350, 51);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(300, 0, 570, 790);
@@ -188,6 +189,9 @@ public class EditReservation extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EditReservation.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

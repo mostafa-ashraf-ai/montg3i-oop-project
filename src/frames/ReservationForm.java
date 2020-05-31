@@ -352,7 +352,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnNights);
-        btnNights.setBounds(150, 500, 130, 22);
+        btnNights.setBounds(150, 500, 130, 23);
 
         btnDeparture.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDeparture.setForeground(new java.awt.Color(255, 255, 255));
@@ -373,7 +373,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDeparture);
-        btnDeparture.setBounds(150, 590, 160, 22);
+        btnDeparture.setBounds(150, 590, 160, 23);
 
         Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Arrivals.setForeground(new java.awt.Color(255, 255, 255));
@@ -493,7 +493,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R100A);
-        R100A.setBounds(710, 360, 60, 25);
+        R100A.setBounds(710, 360, 70, 29);
 
         R101B.setBackground(new java.awt.Color(204, 0, 0));
         R101B.setText("101B");
@@ -503,7 +503,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R101B);
-        R101B.setBounds(620, 360, 60, 25);
+        R101B.setBounds(620, 360, 70, 29);
 
         R102B.setBackground(new java.awt.Color(204, 0, 0));
         R102B.setText("102B");
@@ -513,7 +513,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R102B);
-        R102B.setBounds(620, 330, 60, 25);
+        R102B.setBounds(620, 330, 70, 29);
 
         R103C.setBackground(new java.awt.Color(204, 0, 0));
         R103C.setText("103C");
@@ -523,7 +523,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R103C);
-        R103C.setBounds(530, 360, 60, 25);
+        R103C.setBounds(530, 360, 70, 29);
 
         R104C.setBackground(new java.awt.Color(204, 0, 0));
         R104C.setText("104C");
@@ -533,7 +533,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R104C);
-        R104C.setBounds(530, 330, 60, 25);
+        R104C.setBounds(530, 330, 70, 29);
 
         R105C.setBackground(new java.awt.Color(204, 0, 0));
         R105C.setText("105C");
@@ -543,7 +543,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R105C);
-        R105C.setBounds(530, 300, 60, 25);
+        R105C.setBounds(530, 300, 70, 29);
 
         R200A.setBackground(new java.awt.Color(204, 0, 0));
         R200A.setText("200A");
@@ -553,7 +553,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R200A);
-        R200A.setBounds(710, 260, 60, 25);
+        R200A.setBounds(710, 260, 70, 29);
 
         R201B.setBackground(new java.awt.Color(204, 0, 0));
         R201B.setText("201B");
@@ -563,7 +563,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R201B);
-        R201B.setBounds(620, 260, 60, 25);
+        R201B.setBounds(620, 260, 70, 29);
 
         R202B.setBackground(new java.awt.Color(204, 0, 0));
         R202B.setText("202B");
@@ -573,7 +573,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R202B);
-        R202B.setBounds(620, 230, 60, 25);
+        R202B.setBounds(620, 230, 70, 29);
 
         R203C.setBackground(new java.awt.Color(204, 0, 0));
         R203C.setText("203C");
@@ -583,7 +583,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R203C);
-        R203C.setBounds(530, 260, 60, 25);
+        R203C.setBounds(530, 260, 70, 29);
 
         R204C.setBackground(new java.awt.Color(204, 0, 0));
         R204C.setText("204C");
@@ -593,7 +593,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R204C);
-        R204C.setBounds(530, 230, 60, 25);
+        R204C.setBounds(530, 230, 70, 29);
 
         R205C.setBackground(new java.awt.Color(204, 0, 0));
         R205C.setText("205C");
@@ -603,7 +603,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R205C);
-        R205C.setBounds(530, 200, 60, 25);
+        R205C.setBounds(530, 200, 70, 29);
 
         R300A.setBackground(new java.awt.Color(204, 0, 0));
         R300A.setText("300A");
@@ -613,7 +613,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R300A);
-        R300A.setBounds(710, 160, 60, 25);
+        R300A.setBounds(710, 160, 70, 29);
 
         R301B.setBackground(new java.awt.Color(204, 0, 0));
         R301B.setText("301B");
@@ -623,7 +623,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R301B);
-        R301B.setBounds(620, 160, 60, 25);
+        R301B.setBounds(620, 160, 70, 29);
 
         R302B.setBackground(new java.awt.Color(204, 0, 0));
         R302B.setText("302B");
@@ -633,7 +633,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R302B);
-        R302B.setBounds(620, 130, 60, 25);
+        R302B.setBounds(620, 130, 70, 29);
 
         R303C.setBackground(new java.awt.Color(204, 0, 0));
         R303C.setText("303C");
@@ -643,7 +643,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R303C);
-        R303C.setBounds(530, 160, 60, 25);
+        R303C.setBounds(530, 160, 70, 29);
 
         R304C.setBackground(new java.awt.Color(204, 0, 0));
         R304C.setText("304C");
@@ -653,7 +653,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R304C);
-        R304C.setBounds(530, 130, 60, 25);
+        R304C.setBounds(530, 130, 70, 29);
 
         R305C.setBackground(new java.awt.Color(204, 0, 0));
         R305C.setText("305C");
@@ -663,7 +663,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(R305C);
-        R305C.setBounds(530, 100, 60, 25);
+        R305C.setBounds(530, 100, 70, 29);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(190, 0, 810, 790);

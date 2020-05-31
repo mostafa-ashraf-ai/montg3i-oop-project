@@ -23,6 +23,9 @@ public class Search extends javax.swing.JFrame {
         btnSearch.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(255,255,255,0));
         jPanel1.setBackground(new Color(0,0,0,90));
+         btnCancel.setBackground(new Color(0,0,0,0));
+        btnEdit.setBackground(new Color(0,0,0,0));
+        btnCheckout.setBackground(new Color(0,0,0,0));
        // jPanel2.setBackground(new Color(0,0,0,90));
      //   jPanel2.setBackground(new Color(0,102,153,90));
        
@@ -41,14 +44,21 @@ public class Search extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Search = new javax.swing.JLabel();
         Name = new javax.swing.JLabel();
-        ReservationID = new javax.swing.JLabel();
+        Room = new javax.swing.JLabel();
         NameBox = new javax.swing.JTextField();
         ReservationIDBox = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         btnSearch = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        btnCancel = new javax.swing.JButton();
+        btnEdit = new javax.swing.JButton();
+        btnCheckout = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,19 +75,19 @@ public class Search extends javax.swing.JFrame {
         Search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Search.setText("Search");
         jPanel2.add(Search);
-        Search.setBounds(295, 16, 140, 56);
+        Search.setBounds(410, 10, 140, 56);
 
         Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
         jPanel2.add(Name);
-        Name.setBounds(244, 130, 67, 28);
+        Name.setBounds(190, 130, 67, 28);
 
-        ReservationID.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        ReservationID.setForeground(new java.awt.Color(255, 255, 255));
-        ReservationID.setText("Reservation ID:");
-        jPanel2.add(ReservationID);
-        ReservationID.setBounds(244, 183, 162, 28);
+        Room.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Room.setForeground(new java.awt.Color(255, 255, 255));
+        Room.setText("Room:");
+        jPanel2.add(Room);
+        Room.setBounds(480, 130, 70, 28);
 
         NameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,17 +95,17 @@ public class Search extends javax.swing.JFrame {
             }
         });
         jPanel2.add(NameBox);
-        NameBox.setBounds(440, 130, 191, 26);
+        NameBox.setBounds(260, 130, 191, 26);
         jPanel2.add(ReservationIDBox);
-        ReservationIDBox.setBounds(440, 180, 191, 26);
+        ReservationIDBox.setBounds(560, 130, 191, 26);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(287, 81, 163, 31);
+        jSeparator1.setBounds(400, 80, 163, 31);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/search_30px.png"))); // NOI18N
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(370, 250, 36, 39);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/search_30px.png"))); // NOI18N
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(300, 180, 36, 39);
 
         btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,11 +126,11 @@ public class Search extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnSearch);
-        btnSearch.setBounds(410, 250, 81, 35);
+        btnSearch.setBounds(340, 180, 81, 35);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 80, 140, 170);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(20, 60, 140, 170);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,13 +151,93 @@ public class Search extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnBack);
-        btnBack.setBounds(170, 290, 79, 35);
+        btnBack.setBounds(190, 230, 79, 35);
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel2.add(jSeparator2);
+        jSeparator2.setBounds(790, 80, 20, 140);
+
+        btnCancel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancel.setText("Cancel");
+        btnCancel.setBorder(null);
+        btnCancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCancelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCancelMouseExited(evt);
+            }
+        });
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnCancel);
+        btnCancel.setBounds(840, 80, 80, 35);
+
+        btnEdit.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
+        btnEdit.setText("Edit");
+        btnEdit.setBorder(null);
+        btnEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEdit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEditMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEditMouseExited(evt);
+            }
+        });
+        btnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnEdit);
+        btnEdit.setBounds(840, 130, 60, 35);
+
+        btnCheckout.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnCheckout.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckout.setText("Checkout");
+        btnCheckout.setBorder(null);
+        btnCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCheckout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCheckoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCheckoutMouseExited(evt);
+            }
+        });
+        btnCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCheckoutActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnCheckout);
+        btnCheckout.setBounds(840, 180, 110, 35);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_cash_register_32px.png"))); // NOI18N
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(810, 80, 32, 30);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_cash_register_32px.png"))); // NOI18N
+        jPanel2.add(jLabel8);
+        jLabel8.setBounds(810, 180, 32, 30);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_settings_32px.png"))); // NOI18N
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(810, 130, 32, 40);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(30, 30, 750, 360);
+        jPanel2.setBounds(30, 30, 970, 310);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(340, 80, 810, 720);
+        jPanel1.setBounds(230, 80, 1030, 720);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/3.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -155,6 +245,18 @@ public class Search extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void NameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NameBoxActionPerformed
+
+    private void btnSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseEntered
+        btnSearch.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnSearchMouseEntered
+
+    private void btnSearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseExited
+        btnSearch.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnSearchMouseExited
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
 
@@ -167,17 +269,7 @@ public class Search extends javax.swing.JFrame {
         Results1.setText("Reservation Number: "+x);
         Results2.setText("Room: "+y);
         Results3.setText("Total Payment: "+z+" $");*/
-
     }//GEN-LAST:event_btnSearchActionPerformed
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new Receiption().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void NameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NameBoxActionPerformed
 
     private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
         btnBack.setForeground(Color.LIGHT_GRAY);
@@ -187,13 +279,49 @@ public class Search extends javax.swing.JFrame {
         btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
 
-    private void btnSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseEntered
-        btnSearch.setForeground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_btnSearchMouseEntered
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        new Receiption().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnSearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseExited
-        btnSearch.setForeground(Color.WHITE);
-    }//GEN-LAST:event_btnSearchMouseExited
+    private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
+        new Cashiering().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCheckoutActionPerformed
+
+    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
+        new EditReservation().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnEditActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        new Cashiering().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnCancelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseEntered
+        btnCancel.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnCancelMouseEntered
+
+    private void btnCancelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseExited
+        btnCancel.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnCancelMouseExited
+
+    private void btnEditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditMouseEntered
+         btnEdit.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnEditMouseEntered
+
+    private void btnEditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditMouseExited
+        btnEdit.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnEditMouseExited
+
+    private void btnCheckoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckoutMouseEntered
+        btnCheckout.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnCheckoutMouseEntered
+
+    private void btnCheckoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckoutMouseExited
+        btnCheckout.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnCheckoutMouseExited
 
     /**
      * @param args the command line arguments
@@ -233,16 +361,23 @@ public class Search extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Name;
     private javax.swing.JTextField NameBox;
-    private javax.swing.JLabel ReservationID;
     private javax.swing.JTextField ReservationIDBox;
+    private javax.swing.JLabel Room;
     private javax.swing.JLabel Search;
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnCheckout;
+    private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }
