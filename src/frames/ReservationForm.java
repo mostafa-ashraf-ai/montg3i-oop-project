@@ -49,6 +49,79 @@ public class ReservationForm extends javax.swing.JFrame {
            // Results2.setVisible(false);
            // Results3.setVisible(false);
            
+         if(hrl.get(0).isAvailability())
+         {
+             R100A.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(1).isAvailability())
+         {
+             R101B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(2).isAvailability())
+         {
+             R102B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(3).isAvailability())
+         {
+             R103C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(4).isAvailability())
+         {
+             R104C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(5).isAvailability())
+         {
+             R105C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(6).isAvailability())
+         {
+             R200A.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(7).isAvailability())
+         {
+             R201B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(8).isAvailability())
+         {
+             R202B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(9).isAvailability())
+         {
+             R203C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(10).isAvailability())
+         {
+             R204C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(11).isAvailability())
+         {
+             R205C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(12).isAvailability())
+         {
+             R300A.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(13).isAvailability())
+         {
+             R301B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(14).isAvailability())
+         {
+             R302B.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(15).isAvailability())
+         {
+             R303C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(16).isAvailability())
+         {
+             R304C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+         if(hrl.get(17).isAvailability())
+         {
+             R305C.setBackground(new java.awt.Color(0, 153, 0));
+         }
+           
         FirstNameBox.setText("");
         MiddleNameBox.setText("");
         LastNameBox.setText("");
@@ -106,19 +179,27 @@ public class ReservationForm extends javax.swing.JFrame {
         NightsBox = new javax.swing.JTextField();
         ArrivalsBoxDate = new com.toedter.calendar.JDateChooser();
         btnBook = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
+        R100A = new javax.swing.JButton();
+        R101B = new javax.swing.JButton();
+        R102B = new javax.swing.JButton();
+        R103C = new javax.swing.JButton();
+        R104C = new javax.swing.JButton();
+        R105C = new javax.swing.JButton();
+        R200A = new javax.swing.JButton();
+        R201B = new javax.swing.JButton();
+        R202B = new javax.swing.JButton();
+        R203C = new javax.swing.JButton();
+        R204C = new javax.swing.JButton();
+        R205C = new javax.swing.JButton();
+        R300A = new javax.swing.JButton();
+        R301B = new javax.swing.JButton();
+        R302B = new javax.swing.JButton();
+        R303C = new javax.swing.JButton();
+        R304C = new javax.swing.JButton();
+        R305C = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -200,7 +281,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(MobileNumberBox);
-        MobileNumberBox.setBounds(150, 310, 195, 26);
+        MobileNumberBox.setBounds(150, 310, 195, 30);
 
         AgeBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +289,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(AgeBox);
-        AgeBox.setBounds(150, 360, 70, 26);
+        AgeBox.setBounds(150, 360, 70, 30);
 
         NationalIDBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +297,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NationalIDBox);
-        NationalIDBox.setBounds(150, 260, 195, 26);
+        NationalIDBox.setBounds(150, 260, 195, 30);
 
         NationalityBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +305,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NationalityBox);
-        NationalityBox.setBounds(150, 220, 129, 26);
+        NationalityBox.setBounds(150, 220, 129, 30);
 
         LastNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,7 +313,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(LastNameBox);
-        LastNameBox.setBounds(150, 170, 129, 26);
+        LastNameBox.setBounds(150, 170, 129, 30);
 
         MiddleNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,7 +321,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(MiddleNameBox);
-        MiddleNameBox.setBounds(150, 130, 129, 26);
+        MiddleNameBox.setBounds(150, 130, 129, 30);
 
         FirstNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,7 +329,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FirstNameBox);
-        FirstNameBox.setBounds(150, 90, 129, 20);
+        FirstNameBox.setBounds(150, 90, 129, 30);
 
         btnNights.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnNights.setForeground(new java.awt.Color(255, 255, 255));
@@ -269,7 +350,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnNights);
-        btnNights.setBounds(150, 500, 130, 23);
+        btnNights.setBounds(150, 500, 130, 22);
 
         btnDeparture.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnDeparture.setForeground(new java.awt.Color(255, 255, 255));
@@ -290,7 +371,7 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnDeparture);
-        btnDeparture.setBounds(150, 590, 160, 23);
+        btnDeparture.setBounds(150, 590, 160, 22);
 
         Arrivals.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Arrivals.setForeground(new java.awt.Color(255, 255, 255));
@@ -314,25 +395,25 @@ public class ReservationForm extends javax.swing.JFrame {
         Available_Rooms.setForeground(new java.awt.Color(255, 255, 255));
         Available_Rooms.setText("Available Rooms:");
         jPanel1.add(Available_Rooms);
-        Available_Rooms.setBounds(390, 90, 124, 20);
+        Available_Rooms.setBounds(400, 90, 124, 20);
 
         TotalPayments.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         TotalPayments.setForeground(new java.awt.Color(255, 255, 255));
         TotalPayments.setText("Total Payments:");
         jPanel1.add(TotalPayments);
-        TotalPayments.setBounds(390, 380, 115, 20);
+        TotalPayments.setBounds(400, 430, 115, 20);
 
         Deposit.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Deposit.setForeground(new java.awt.Color(255, 255, 255));
         Deposit.setText("Deposit:");
         jPanel1.add(Deposit);
-        Deposit.setBounds(390, 420, 115, 20);
+        Deposit.setBounds(400, 480, 115, 20);
 
         RestAmount.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         RestAmount.setForeground(new java.awt.Color(255, 255, 255));
         RestAmount.setText("Rest Amount:");
         jPanel1.add(RestAmount);
-        RestAmount.setBounds(390, 460, 115, 20);
+        RestAmount.setBounds(400, 530, 115, 20);
 
         DepositBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,21 +421,21 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(DepositBox);
-        DepositBox.setBounds(520, 420, 123, 26);
+        DepositBox.setBounds(530, 480, 123, 30);
 
         TotalPaymentsLabel.setBackground(new java.awt.Color(0, 0, 0));
         TotalPaymentsLabel.setForeground(java.awt.Color.white);
-        TotalPaymentsLabel.setText("jLabel19");
+        TotalPaymentsLabel.setText("0");
         jPanel1.add(TotalPaymentsLabel);
-        TotalPaymentsLabel.setBounds(520, 380, 110, 20);
+        TotalPaymentsLabel.setBounds(530, 430, 110, 20);
 
         RestAmountLabel.setBackground(new java.awt.Color(0, 0, 0));
         RestAmountLabel.setForeground(java.awt.Color.white);
-        RestAmountLabel.setText("jLabel21");
+        RestAmountLabel.setText("0");
         jPanel1.add(RestAmountLabel);
-        RestAmountLabel.setBounds(520, 460, 110, 20);
+        RestAmountLabel.setBounds(530, 530, 110, 20);
         jPanel1.add(DepartureBoxDate);
-        DepartureBoxDate.setBounds(150, 550, 141, 28);
+        DepartureBoxDate.setBounds(150, 550, 141, 30);
 
         NightsBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -362,9 +443,9 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NightsBox);
-        NightsBox.setBounds(150, 460, 102, 26);
+        NightsBox.setBounds(150, 460, 102, 30);
         jPanel1.add(ArrivalsBoxDate);
-        ArrivalsBoxDate.setBounds(150, 410, 141, 24);
+        ArrivalsBoxDate.setBounds(150, 410, 141, 30);
 
         btnBook.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBook.setForeground(new java.awt.Color(255, 255, 255));
@@ -386,96 +467,6 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel1.add(btnBook);
         btnBook.setBounds(300, 670, 240, 50);
 
-        jButton1.setText("501");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(520, 100, 59, 29);
-
-        jButton2.setText("401");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(520, 150, 59, 29);
-
-        jButton3.setText("301");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(520, 200, 59, 29);
-
-        jButton4.setText("201");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(520, 250, 59, 29);
-
-        jButton5.setText("101");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5);
-        jButton5.setBounds(520, 300, 59, 29);
-
-        jButton6.setText("502");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton6);
-        jButton6.setBounds(620, 100, 59, 29);
-
-        jButton7.setText("402");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton7);
-        jButton7.setBounds(620, 150, 59, 29);
-
-        jButton8.setText("302");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton8);
-        jButton8.setBounds(620, 200, 59, 29);
-
-        jButton9.setText("503");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton9);
-        jButton9.setBounds(720, 100, 59, 29);
-
-        jButton10.setText("403");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton10);
-        jButton10.setBounds(720, 150, 59, 29);
-
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -491,6 +482,186 @@ public class ReservationForm extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_new_file_32px.png"))); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(230, 10, 41, 41);
+
+        R100A.setBackground(new java.awt.Color(204, 0, 0));
+        R100A.setText("100A");
+        R100A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R100AActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R100A);
+        R100A.setBounds(710, 360, 60, 25);
+
+        R101B.setBackground(new java.awt.Color(204, 0, 0));
+        R101B.setText("101B");
+        R101B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R101BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R101B);
+        R101B.setBounds(620, 360, 60, 25);
+
+        R102B.setBackground(new java.awt.Color(204, 0, 0));
+        R102B.setText("102B");
+        R102B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R102BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R102B);
+        R102B.setBounds(620, 330, 60, 25);
+
+        R103C.setBackground(new java.awt.Color(204, 0, 0));
+        R103C.setText("103C");
+        R103C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R103CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R103C);
+        R103C.setBounds(530, 360, 60, 25);
+
+        R104C.setBackground(new java.awt.Color(204, 0, 0));
+        R104C.setText("104C");
+        R104C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R104CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R104C);
+        R104C.setBounds(530, 330, 60, 25);
+
+        R105C.setBackground(new java.awt.Color(204, 0, 0));
+        R105C.setText("105C");
+        R105C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R105CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R105C);
+        R105C.setBounds(530, 300, 60, 25);
+
+        R200A.setBackground(new java.awt.Color(204, 0, 0));
+        R200A.setText("200A");
+        R200A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R200AActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R200A);
+        R200A.setBounds(710, 260, 60, 25);
+
+        R201B.setBackground(new java.awt.Color(204, 0, 0));
+        R201B.setText("201B");
+        R201B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R201BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R201B);
+        R201B.setBounds(620, 260, 60, 25);
+
+        R202B.setBackground(new java.awt.Color(204, 0, 0));
+        R202B.setText("202B");
+        R202B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R202BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R202B);
+        R202B.setBounds(620, 230, 60, 25);
+
+        R203C.setBackground(new java.awt.Color(204, 0, 0));
+        R203C.setText("203C");
+        R203C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R203CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R203C);
+        R203C.setBounds(530, 260, 60, 25);
+
+        R204C.setBackground(new java.awt.Color(204, 0, 0));
+        R204C.setText("204C");
+        R204C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R204CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R204C);
+        R204C.setBounds(530, 230, 60, 25);
+
+        R205C.setBackground(new java.awt.Color(204, 0, 0));
+        R205C.setText("205C");
+        R205C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R205CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R205C);
+        R205C.setBounds(530, 200, 60, 25);
+
+        R300A.setBackground(new java.awt.Color(204, 0, 0));
+        R300A.setText("300A");
+        R300A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R300AActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R300A);
+        R300A.setBounds(710, 160, 60, 25);
+
+        R301B.setBackground(new java.awt.Color(204, 0, 0));
+        R301B.setText("301B");
+        R301B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R301BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R301B);
+        R301B.setBounds(620, 160, 60, 25);
+
+        R302B.setBackground(new java.awt.Color(204, 0, 0));
+        R302B.setText("302B");
+        R302B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R302BActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R302B);
+        R302B.setBounds(620, 130, 60, 25);
+
+        R303C.setBackground(new java.awt.Color(204, 0, 0));
+        R303C.setText("303C");
+        R303C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R303CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R303C);
+        R303C.setBounds(530, 160, 60, 25);
+
+        R304C.setBackground(new java.awt.Color(204, 0, 0));
+        R304C.setText("304C");
+        R304C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R304CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R304C);
+        R304C.setBounds(530, 130, 60, 25);
+
+        R305C.setBackground(new java.awt.Color(204, 0, 0));
+        R305C.setText("305C");
+        R305C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                R305CActionPerformed(evt);
+            }
+        });
+        jPanel1.add(R305C);
+        R305C.setBounds(530, 100, 60, 25);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(190, 0, 810, 790);
@@ -596,106 +767,6 @@ public class ReservationForm extends javax.swing.JFrame {
         NightsBox.setText(nights + "");
     }//GEN-LAST:event_btnNightsActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(hrl.get(1).isAvailability())
-        {
-            RoomsNo[0]++;
-            hrl.get(1).setAvailability(false);
-            hrl.get(1).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(hrl.get(0).isAvailability())
-        {
-            RoomsNo[0]++;
-            hrl.get(0).setAvailability(false);
-            hrl.get(0).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if(hrl.get(2).isAvailability())
-        {
-            RoomsNo[0]++;
-            hrl.get(2).setAvailability(false);
-            hrl.get(2).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        if(hrl.get(3).isAvailability())
-        {
-            RoomsNo[0]++;
-            hrl.get(3).setAvailability(false);
-            hrl.get(3).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if(hrl.get(4).isAvailability())
-        {
-            RoomsNo[0]++;
-            hrl.get(4).setAvailability(false);
-            hrl.get(4).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        if(hrl.get(5).isAvailability())
-        {
-            RoomsNo[1]++;
-            hrl.get(5).setAvailability(false);
-            hrl.get(5).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        if(hrl.get(6).isAvailability())
-        {
-            RoomsNo[1]++;
-            hrl.get(6).setAvailability(false);
-            hrl.get(6).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        if(hrl.get(7).isAvailability())
-        {
-            RoomsNo[1]++;
-            hrl.get(7).setAvailability(false);
-            hrl.get(7).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        if(hrl.get(8).isAvailability())
-        {
-            RoomsNo[2]++;
-            hrl.get(8).setAvailability(false);
-            hrl.get(8).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        if(hrl.get(9).isAvailability())
-        {
-            RoomsNo[2]++;
-            hrl.get(9).setAvailability(false);
-            hrl.get(9).setGuestNo(Guest.getGuestNextNo());
-            Hotel.setHotelRoomList(hrl);
-        }
-    }//GEN-LAST:event_jButton10ActionPerformed
-
     private void DepositBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepositBoxActionPerformed
         int Nights = Integer.parseInt(NightsBox.getText()); 
         double Deposite = Double.parseDouble(DepositBox.getText());
@@ -761,6 +832,204 @@ public class ReservationForm extends javax.swing.JFrame {
         btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
 
+    private void R100AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R100AActionPerformed
+        if(hrl.get(0).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(0).setAvailability(false);
+            hrl.get(0).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R100A.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R100AActionPerformed
+
+    private void R101BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R101BActionPerformed
+        if(hrl.get(1).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(1).setAvailability(false);
+            hrl.get(1).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R101B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R101BActionPerformed
+
+    private void R102BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R102BActionPerformed
+        if(hrl.get(2).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(2).setAvailability(false);
+            hrl.get(2).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R102B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R102BActionPerformed
+
+    private void R103CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R103CActionPerformed
+        if(hrl.get(3).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(3).setAvailability(false);
+            hrl.get(3).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R103C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R103CActionPerformed
+
+    private void R104CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R104CActionPerformed
+        if(hrl.get(4).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(4).setAvailability(false);
+            hrl.get(4).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R104C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R104CActionPerformed
+
+    private void R105CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R105CActionPerformed
+        if(hrl.get(5).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(5).setAvailability(false);
+            hrl.get(5).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R105C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R105CActionPerformed
+
+    private void R200AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R200AActionPerformed
+        if(hrl.get(6).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(6).setAvailability(false);
+            hrl.get(6).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R200A.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R200AActionPerformed
+
+    private void R201BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R201BActionPerformed
+        if(hrl.get(7).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(7).setAvailability(false);
+            hrl.get(7).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R201B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R201BActionPerformed
+
+    private void R202BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R202BActionPerformed
+        if(hrl.get(8).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(8).setAvailability(false);
+            hrl.get(8).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R202B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R202BActionPerformed
+
+    private void R203CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R203CActionPerformed
+        if(hrl.get(9).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(9).setAvailability(false);
+            hrl.get(9).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R203C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R203CActionPerformed
+
+    private void R204CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R204CActionPerformed
+        if(hrl.get(10).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(10).setAvailability(false);
+            hrl.get(10).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R204C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R204CActionPerformed
+
+    private void R205CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R205CActionPerformed
+        if(hrl.get(11).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(11).setAvailability(false);
+            hrl.get(11).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R205C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R205CActionPerformed
+
+    private void R300AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R300AActionPerformed
+        if(hrl.get(12).isAvailability())
+        {
+            RoomsNo[0]++;
+            hrl.get(12).setAvailability(false);
+            hrl.get(12).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R300A.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R300AActionPerformed
+
+    private void R301BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R301BActionPerformed
+        if(hrl.get(13).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(13).setAvailability(false);
+            hrl.get(13).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R301B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R301BActionPerformed
+
+    private void R302BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R302BActionPerformed
+        if(hrl.get(14).isAvailability())
+        {
+            RoomsNo[1]++;
+            hrl.get(14).setAvailability(false);
+            hrl.get(14).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R302B.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R302BActionPerformed
+
+    private void R303CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R303CActionPerformed
+        if(hrl.get(15).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(15).setAvailability(false);
+            hrl.get(15).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R303C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R303CActionPerformed
+
+    private void R304CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R304CActionPerformed
+        if(hrl.get(16).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(16).setAvailability(false);
+            hrl.get(16).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R304C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R304CActionPerformed
+
+    private void R305CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_R305CActionPerformed
+        if(hrl.get(17).isAvailability())
+        {
+            RoomsNo[2]++;
+            hrl.get(17).setAvailability(false);
+            hrl.get(17).setGuestNo(Guest.getGuestNextNo());
+            Hotel.setHotelRoomList(hrl);
+            R305C.setBackground(new java.awt.Color(204, 0, 0));
+        }
+    }//GEN-LAST:event_R305CActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -822,6 +1091,24 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JTextField NationalityBox;
     private javax.swing.JLabel Nights;
     private javax.swing.JTextField NightsBox;
+    private javax.swing.JButton R100A;
+    private javax.swing.JButton R101B;
+    private javax.swing.JButton R102B;
+    private javax.swing.JButton R103C;
+    private javax.swing.JButton R104C;
+    private javax.swing.JButton R105C;
+    private javax.swing.JButton R200A;
+    private javax.swing.JButton R201B;
+    private javax.swing.JButton R202B;
+    private javax.swing.JButton R203C;
+    private javax.swing.JButton R204C;
+    private javax.swing.JButton R205C;
+    private javax.swing.JButton R300A;
+    private javax.swing.JButton R301B;
+    private javax.swing.JButton R302B;
+    private javax.swing.JButton R303C;
+    private javax.swing.JButton R304C;
+    private javax.swing.JButton R305C;
     private javax.swing.JLabel RestAmount;
     private javax.swing.JLabel RestAmountLabel;
     private javax.swing.JLabel TotalPayments;
@@ -831,16 +1118,6 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JButton btnDeparture;
     private javax.swing.JButton btnNights;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
