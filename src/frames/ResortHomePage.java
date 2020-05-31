@@ -13,6 +13,7 @@ public class ResortHomePage extends javax.swing.JFrame {
         
         Hotel.LoadData();
         
+        
         jPanel1.setBackground(new Color(0,0,0,50));
         btnGuest.setForeground(Color.WHITE);
         btnStaff.setForeground(Color.WHITE);

@@ -30,6 +30,8 @@ public class Login extends javax.swing.JFrame {
         UsernamBox.setBackground(new Color(0,0,0,0));
         PasswordBox.setBackground(new Color(0,0,0,0));
         
+        UsernamBox.requestFocus();
+        
        // jPanel1.setBackground(new Color(255,255,255,10));
     }
 
@@ -114,7 +116,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(PasswordBox);
-        PasswordBox.setBounds(160, 360, 173, 20);
+        PasswordBox.setBounds(160, 360, 173, 15);
 
         Password.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Password.setForeground(new java.awt.Color(51, 204, 255));
@@ -124,8 +126,13 @@ public class Login extends javax.swing.JFrame {
 
         UsernamBox.setForeground(new java.awt.Color(255, 255, 255));
         UsernamBox.setBorder(null);
+        UsernamBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsernamBoxActionPerformed(evt);
+            }
+        });
         jPanel1.add(UsernamBox);
-        UsernamBox.setBounds(160, 300, 173, 20);
+        UsernamBox.setBounds(160, 300, 173, 15);
 
         Username.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Username.setForeground(new java.awt.Color(51, 204, 255));
@@ -193,7 +200,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void PasswordBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordBoxActionPerformed
-        // TODO add your handling code here:
+        btnLoginActionPerformed(evt);
     }//GEN-LAST:event_PasswordBoxActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -216,6 +223,10 @@ public class Login extends javax.swing.JFrame {
     private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
        btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
+
+    private void UsernamBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernamBoxActionPerformed
+        PasswordBox.requestFocus();
+    }//GEN-LAST:event_UsernamBoxActionPerformed
 
     /**
      * @param args the command line arguments

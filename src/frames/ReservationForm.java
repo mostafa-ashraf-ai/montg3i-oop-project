@@ -30,6 +30,7 @@ public class ReservationForm extends javax.swing.JFrame {
     int RoomsNo[] = {0,0,0};
     ArrayList<HotelRoom> hrl = Hotel.getHotelRoomList();
     
+    
 
     /**
      * Creates new form ReservationForm
@@ -48,6 +49,7 @@ public class ReservationForm extends javax.swing.JFrame {
            // Results1.setVisible(false);
            // Results2.setVisible(false);
            // Results3.setVisible(false);
+           
            
          if(hrl.get(0).isAvailability())
          {
@@ -120,7 +122,7 @@ public class ReservationForm extends javax.swing.JFrame {
          if(hrl.get(17).isAvailability())
          {
              R305C.setBackground(new java.awt.Color(0, 153, 0));
-         }
+         } 
            
         FirstNameBox.setText("");
         MiddleNameBox.setText("");
