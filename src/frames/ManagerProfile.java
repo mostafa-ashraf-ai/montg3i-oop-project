@@ -25,7 +25,7 @@ public class ManagerProfile extends javax.swing.JFrame {
         btnBalanceAndReservations.setBackground(new Color(0,0,0,0));
         btnCameras.setBackground(new Color(0,0,0,0));
         btnEmployee.setBackground(new Color(0,0,0,0));
-        btnLogout.setBackground(new Color(0,0,0,0));
+        btnProfile.setBackground(new Color(0,0,0,0));
        
     }
 
@@ -41,7 +41,7 @@ public class ManagerProfile extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnEmployee = new javax.swing.JButton();
         btnCameras = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
+        btnProfile = new javax.swing.JButton();
         btnBalanceAndReservations = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -98,26 +98,26 @@ public class ManagerProfile extends javax.swing.JFrame {
         jPanel1.add(btnCameras);
         btnCameras.setBounds(170, 420, 180, 40);
 
-        btnLogout.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("<  Logout");
-        btnLogout.setBorder(null);
-        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnProfile.setForeground(new java.awt.Color(255, 255, 255));
+        btnProfile.setText("Profile");
+        btnProfile.setBorder(null);
+        btnProfile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnProfile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseEntered(evt);
+                btnProfileMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseExited(evt);
+                btnProfileMouseExited(evt);
             }
         });
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btnProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btnProfileActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLogout);
-        btnLogout.setBounds(170, 600, 180, 40);
+        jPanel1.add(btnProfile);
+        btnProfile.setBounds(170, 600, 180, 40);
 
         btnBalanceAndReservations.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         btnBalanceAndReservations.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,10 +170,10 @@ public class ManagerProfile extends javax.swing.JFrame {
          this.setVisible(false);
     }//GEN-LAST:event_btnBalanceAndReservationsActionPerformed
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-         new Login().setVisible(true);
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
+             new Profile().setVisible(true);
          this.setVisible(false);
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_btnProfileActionPerformed
 
     private void btnCamerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCamerasActionPerformed
          new CCTV().setVisible(true);
@@ -203,13 +203,13 @@ public class ManagerProfile extends javax.swing.JFrame {
            btnCameras.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnCamerasMouseExited
 
-    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
-           btnLogout.setForeground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_btnLogoutMouseEntered
+    private void btnProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProfileMouseEntered
+           btnProfile.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnProfileMouseEntered
 
-    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
-           btnLogout.setForeground(Color.WHITE);
-    }//GEN-LAST:event_btnLogoutMouseExited
+    private void btnProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProfileMouseExited
+           btnProfile.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnProfileMouseExited
 
     /**
      * @param args the command line arguments
@@ -255,7 +255,7 @@ public class ManagerProfile extends javax.swing.JFrame {
     private javax.swing.JButton btnBalanceAndReservations;
     private javax.swing.JButton btnCameras;
     private javax.swing.JButton btnEmployee;
-    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

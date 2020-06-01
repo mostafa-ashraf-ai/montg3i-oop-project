@@ -262,6 +262,9 @@ public class Profile extends javax.swing.JFrame {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         new Receiption().setVisible(true);
         this.setVisible(false);
+        //     OR
+        //new Msnager().setVisible(true);
+        //this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSaveUsernameMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaveUsernameMouseEntered
