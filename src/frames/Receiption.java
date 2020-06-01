@@ -14,9 +14,7 @@ import java.awt.Color;
  */
 public class Receiption extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Receiption
-     */
+    
     public Receiption() {
         initComponents();
         
@@ -26,7 +24,7 @@ public class Receiption extends javax.swing.JFrame {
        // btnCashiering.setBackground(new Color(0,0,0,0));
         //btnEditReservation.setBackground(new Color(0,0,0,0));
         btnCurrentGuests.setBackground(new Color(0,0,0,0));
-        btnLogout.setBackground(new Color(0,0,0,0));
+        btnProfile.setBackground(new Color(0,0,0,0));
         jPanel1.setBackground(new Color(0,0,0,90));
        // jPanel2.setBackground(new Color(0,0,0,0));
         /*
@@ -53,16 +51,16 @@ public class Receiption extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnCurrentGuests = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
+        btnProfile = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnReservation = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -129,26 +127,26 @@ public class Receiption extends javax.swing.JFrame {
         jPanel1.add(btnSearch);
         btnSearch.setBounds(80, 110, 150, 30);
 
-        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout           ");
-        btnLogout.setBorder(null);
-        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnProfile.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnProfile.setForeground(new java.awt.Color(255, 255, 255));
+        btnProfile.setText("Profile           ");
+        btnProfile.setBorder(null);
+        btnProfile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnProfile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseEntered(evt);
+                btnProfileMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseExited(evt);
+                btnProfileMouseExited(evt);
             }
         });
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btnProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btnProfileActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLogout);
-        btnLogout.setBounds(80, 230, 150, 30);
+        jPanel1.add(btnProfile);
+        btnProfile.setBounds(80, 230, 150, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_32px.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -156,15 +154,11 @@ public class Receiption extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_new_file_32px.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 40, 40, 40);
+        jLabel3.setBounds(40, 50, 40, 30);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_activity_history_32px.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(40, 160, 51, 40);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_logout_rounded_left_32px.png"))); // NOI18N
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(40, 220, 51, 40);
+        jLabel5.setBounds(40, 168, 30, 32);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(null);
@@ -207,6 +201,11 @@ public class Receiption extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel7.setLayout(null);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_profile_32px.png"))); // NOI18N
+        jPanel7.add(jLabel7);
+        jLabel7.setBounds(10, 10, 30, 30);
+
         jPanel1.add(jPanel7);
         jPanel7.setBounds(30, 220, 210, 50);
 
@@ -232,10 +231,10 @@ public class Receiption extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCurrentGuestsActionPerformed
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        new Login().setVisible(true);
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
+        new Profile().setVisible(true);
             this.setVisible(false);
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    }//GEN-LAST:event_btnProfileActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         new Search().setVisible(true);
@@ -266,13 +265,13 @@ public class Receiption extends javax.swing.JFrame {
         btnCurrentGuests.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnCurrentGuestsMouseExited
 
-    private void btnLogoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseEntered
-        btnLogout.setForeground(Color.LIGHT_GRAY);
-    }//GEN-LAST:event_btnLogoutMouseEntered
+    private void btnProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProfileMouseEntered
+        btnProfile.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnProfileMouseEntered
 
-    private void btnLogoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLogoutMouseExited
-        btnLogout.setForeground(Color.WHITE);
-    }//GEN-LAST:event_btnLogoutMouseExited
+    private void btnProfileMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProfileMouseExited
+        btnProfile.setForeground(Color.WHITE);
+    }//GEN-LAST:event_btnProfileMouseExited
 
     /**
      * @param args the command line arguments
@@ -312,7 +311,7 @@ public class Receiption extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCurrentGuests;
-    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnReservation;
     private javax.swing.JButton btnSearch;
     private javax.swing.JLabel jLabel1;

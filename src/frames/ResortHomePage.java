@@ -17,6 +17,7 @@ public class ResortHomePage extends javax.swing.JFrame {
         jPanel1.setBackground(new Color(0,0,0,50));
         btnGuest.setForeground(Color.WHITE);
         btnStaff.setForeground(Color.WHITE);
+        btnOffer.setForeground(Color.RED);
         btnStaff.setBackground(new Color(0,0,0,0));
         btnGuest.setBackground(new Color(0,0,0,0));
         btnOffer.setBackground(new Color(0,0,0,0));
@@ -32,12 +33,13 @@ public class ResortHomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnGuest = new javax.swing.JButton();
-        btnStaff = new javax.swing.JButton();
         btnOffer = new javax.swing.JButton();
+        btnStaff = new javax.swing.JButton();
+        btnGuest = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,25 +51,26 @@ public class ResortHomePage extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1200, 700));
         getContentPane().setLayout(null);
 
-        btnGuest.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnGuest.setText("Guest");
-        btnGuest.setBorder(null);
-        btnGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnGuest.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnOffer.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnOffer.setForeground(new java.awt.Color(255, 51, 51));
+        btnOffer.setText("OFFER");
+        btnOffer.setBorder(null);
+        btnOffer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOffer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnGuestMouseEntered(evt);
+                btnOfferMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnGuestMouseExited(evt);
+                btnOfferMouseExited(evt);
             }
         });
-        btnGuest.addActionListener(new java.awt.event.ActionListener() {
+        btnOffer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuestActionPerformed(evt);
+                btnOfferActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuest);
-        btnGuest.setBounds(380, 20, 110, 40);
+        getContentPane().add(btnOffer);
+        btnOffer.setBounds(1160, 20, 50, 40);
 
         btnStaff.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnStaff.setText("Staff");
@@ -87,18 +90,27 @@ public class ResortHomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnStaff);
-        btnStaff.setBounds(820, 20, 100, 40);
+        btnStaff.setBounds(810, 20, 80, 40);
 
-        btnOffer.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnOffer.setText("OFFER");
-        btnOffer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnOffer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOfferActionPerformed(evt);
+        btnGuest.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnGuest.setText("Guest");
+        btnGuest.setBorder(null);
+        btnGuest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnGuestMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnGuestMouseExited(evt);
             }
         });
-        getContentPane().add(btnOffer);
-        btnOffer.setBounds(1170, 20, 93, 40);
+        btnGuest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuestActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuest);
+        btnGuest.setBounds(370, 20, 70, 40);
 
         jPanel1.setLayout(null);
 
@@ -108,7 +120,11 @@ public class ResortHomePage extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_user_groups_50px_2.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(750, 10, 60, 50);
+        jLabel3.setBounds(750, 10, 50, 50);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_discount_30px.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(1130, 20, 30, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1280, 80);
@@ -140,7 +156,7 @@ public class ResortHomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnStaffMouseExited
 
     private void btnStaffMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStaffMouseEntered
-        btnStaff.setForeground(Color.GRAY);
+        btnStaff.setForeground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_btnStaffMouseEntered
 
     private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
@@ -148,7 +164,7 @@ public class ResortHomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void btnGuestMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestMouseEntered
-        btnGuest.setForeground(Color.GRAY);
+        btnGuest.setForeground(Color.LIGHT_GRAY);
     }//GEN-LAST:event_btnGuestMouseEntered
 
     private void btnGuestMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGuestMouseExited
@@ -159,6 +175,14 @@ public class ResortHomePage extends javax.swing.JFrame {
             new Offer().setVisible(true);
             this.setVisible(false);
     }//GEN-LAST:event_btnOfferActionPerformed
+
+    private void btnOfferMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOfferMouseEntered
+        btnOffer.setForeground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_btnOfferMouseEntered
+
+    private void btnOfferMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOfferMouseExited
+        btnOffer.setForeground(Color.RED);
+    }//GEN-LAST:event_btnOfferMouseExited
 
     /**
      * @param args the command line arguments
@@ -202,6 +226,7 @@ public class ResortHomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
