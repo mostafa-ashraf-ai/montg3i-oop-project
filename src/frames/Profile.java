@@ -58,6 +58,8 @@ public class Profile extends javax.swing.JFrame {
 
         btnSavePassword = new javax.swing.JButton();
         btnSaveUsername = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -78,8 +80,6 @@ public class Profile extends javax.swing.JFrame {
         CurrentPass = new javax.swing.JTextField();
         NewUsername = new javax.swing.JTextField();
         CurrentUsername = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
         inulable = new javax.swing.JLabel();
         inplable = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -108,7 +108,7 @@ public class Profile extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSavePassword);
-        btnSavePassword.setBounds(470, 630, 110, 36);
+        btnSavePassword.setBounds(470, 630, 110, 35);
 
         btnSaveUsername.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSaveUsername.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,7 +128,47 @@ public class Profile extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnSaveUsername);
-        btnSaveUsername.setBounds(470, 410, 110, 36);
+        btnSaveUsername.setBounds(470, 410, 110, 35);
+
+        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("Logout");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLogout);
+        btnLogout.setBounds(670, 720, 110, 35);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBack);
+        btnBack.setBounds(240, 720, 100, 35);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
@@ -250,46 +290,6 @@ public class Profile extends javax.swing.JFrame {
         });
         jPanel1.add(CurrentUsername);
         CurrentUsername.setBounds(370, 320, 170, 30);
-
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("< Back");
-        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBackMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnBackMouseExited(evt);
-            }
-        });
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnBack);
-        btnBack.setBounds(10, 720, 100, 36);
-
-        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout");
-        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseExited(evt);
-            }
-        });
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnLogout);
-        btnLogout.setBounds(440, 720, 110, 36);
 
         inulable.setForeground(new java.awt.Color(255, 0, 0));
         jPanel1.add(inulable);

@@ -26,8 +26,6 @@ public class Search extends javax.swing.JFrame {
          btnCancel.setBackground(new Color(0,0,0,0));
         btnEdit.setBackground(new Color(0,0,0,0));
         btnCheckout.setBackground(new Color(0,0,0,0));
-       // jPanel2.setBackground(new Color(0,0,0,90));
-        //jPanel2.setBackground(new Color(0,102,153,90));
        
     }
 
@@ -174,9 +172,9 @@ public class Search extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(680, 130, 36, 39);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_64px_1.png"))); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(540, 0, 120, 120);
+        jLabel5.setBounds(540, 20, 70, 80);
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);

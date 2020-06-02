@@ -41,15 +41,7 @@ public class ReservationForm extends javax.swing.JFrame {
         btnBack.setBackground(new Color(0,0,0,0));
         btnDeparture.setBackground(new Color(0,0,0,0));
         btnNights.setBackground(new Color(0,0,0,0));
-      // jPanel2.setBackground(new Color(51,204,255,90));
-            //SuiteRooms.setVisible(false);
-            //DoubleRooms.setVisible(false);
-            //SingleRooms.setVisible(false);
-            //AvailableRooms.setVisible(false);
-           // Results1.setVisible(false);
-           // Results2.setVisible(false);
-           // Results3.setVisible(false);
-           
+      
            
          if(hrl.get(0).isAvailability())
          {
@@ -130,7 +122,8 @@ public class ReservationForm extends javax.swing.JFrame {
         NationalIDBox.setText("");
         AgeBox.setText("0");
         MobileNumberBox.setText("");
-        NationalityBox.setText("");
+        NationalityComboBox.getSelectedItem();
+        //NationalityBox.setText("");
         NightsBox.setText("1");
         DepositBox.setText("0");
         
@@ -155,13 +148,13 @@ public class ReservationForm extends javax.swing.JFrame {
         FirstName = new javax.swing.JLabel();
         MiddleName = new javax.swing.JLabel();
         LastName = new javax.swing.JLabel();
+        NationalityComboBox = new javax.swing.JComboBox<>();
         Nationality = new javax.swing.JLabel();
         NationalID = new javax.swing.JLabel();
         MobileNumber = new javax.swing.JLabel();
         MobileNumberBox = new javax.swing.JTextField();
         AgeBox = new javax.swing.JTextField();
         NationalIDBox = new javax.swing.JTextField();
-        NationalityBox = new javax.swing.JTextField();
         LastNameBox = new javax.swing.JTextField();
         MiddleNameBox = new javax.swing.JTextField();
         FirstNameBox = new javax.swing.JTextField();
@@ -259,6 +252,10 @@ public class ReservationForm extends javax.swing.JFrame {
         jPanel1.add(LastName);
         LastName.setBounds(30, 170, 80, 20);
 
+        NationalityComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Egyptian", "Turkish", "Italian", "Russian", "German" }));
+        jPanel1.add(NationalityComboBox);
+        NationalityComboBox.setBounds(150, 220, 130, 26);
+
         Nationality.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nationality.setForeground(new java.awt.Color(255, 255, 255));
         Nationality.setText("Nationality:");
@@ -300,14 +297,6 @@ public class ReservationForm extends javax.swing.JFrame {
         });
         jPanel1.add(NationalIDBox);
         NationalIDBox.setBounds(150, 260, 195, 30);
-
-        NationalityBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NationalityBoxActionPerformed(evt);
-            }
-        });
-        jPanel1.add(NationalityBox);
-        NationalityBox.setBounds(150, 220, 129, 30);
 
         LastNameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -684,7 +673,7 @@ public class ReservationForm extends javax.swing.JFrame {
        String NationalId = NationalIDBox.getText();
        int Age = Integer.parseInt(AgeBox.getText());
        String Phone = MobileNumberBox.getText();
-       String National = NationalityBox.getText();
+       String Nationality = (String) NationalityComboBox.getSelectedItem();
        int NumbersOfRooms = RoomsNo[0]+RoomsNo[1]+RoomsNo[2];
        String Arrival = new SimpleDateFormat("yyyy-MM-dd").format(ArrivalsBoxDate.getDate());
        int Nights = Integer.parseInt(NightsBox.getText());
@@ -695,7 +684,7 @@ public class ReservationForm extends javax.swing.JFrame {
        TotalPaymentsLabel.setText(TotalAmount + "");
        RestAmountLabel.setText((TotalAmount-Deposite) + "");
        
-       Hotel.AddGuestList(Guest.getGuestNextNo(), FirstName, SecondName, LastName, NationalId, Age, Phone, National, NumbersOfRooms, Arrival, Nights, Departure, Deposite, TotalAmount, "check in");
+       Hotel.AddGuestList(Guest.getGuestNextNo(), FirstName, SecondName, LastName, NationalId, Age, Phone, Nationality, NumbersOfRooms, Arrival, Nights, Departure, Deposite, TotalAmount, "check in");
        showMessageDialog(null,"Name: " + FirstName +" "+ SecondName +" "+ LastName +"\n"+"Room No. : "+NumbersOfRooms+"\n");
        Guest.setGuestNextNo(Guest.getGuestNextNo());
        
@@ -705,7 +694,8 @@ public class ReservationForm extends javax.swing.JFrame {
        NationalIDBox.setText("");
        AgeBox.setText("0");
        MobileNumberBox.setText("");
-       NationalityBox.setText("");
+       NationalityComboBox.getSelectedItem();
+       //NationalityBox.setText("");
        NightsBox.setText("1");
        DepositBox.setText("0");
        
@@ -783,12 +773,8 @@ public class ReservationForm extends javax.swing.JFrame {
     }//GEN-LAST:event_MiddleNameBoxActionPerformed
 
     private void LastNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameBoxActionPerformed
-        NationalityBox.requestFocus();
-    }//GEN-LAST:event_LastNameBoxActionPerformed
-
-    private void NationalityBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NationalityBoxActionPerformed
         NationalIDBox.requestFocus();
-    }//GEN-LAST:event_NationalityBoxActionPerformed
+    }//GEN-LAST:event_LastNameBoxActionPerformed
 
     private void NationalIDBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NationalIDBoxActionPerformed
         MobileNumberBox.requestFocus();
@@ -1090,7 +1076,7 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JLabel NationalID;
     private javax.swing.JTextField NationalIDBox;
     private javax.swing.JLabel Nationality;
-    private javax.swing.JTextField NationalityBox;
+    private javax.swing.JComboBox<String> NationalityComboBox;
     private javax.swing.JLabel Nights;
     private javax.swing.JTextField NightsBox;
     private javax.swing.JButton R100A;

@@ -59,6 +59,7 @@ public class Employee extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TableOfEmp = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -71,7 +72,6 @@ public class Employee extends javax.swing.JFrame {
         LanguageTxt = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        btnAdd = new javax.swing.JButton();
         SalaryTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
@@ -113,6 +113,27 @@ public class Employee extends javax.swing.JFrame {
         });
         getContentPane().add(btnBack);
         btnBack.setBounds(200, 660, 140, 50);
+
+        btnAdd.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setText("+ Add");
+        btnAdd.setBorder(null);
+        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddMouseExited(evt);
+            }
+        });
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAdd);
+        btnAdd.setBounds(350, 530, 110, 50);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
@@ -192,27 +213,6 @@ public class Employee extends javax.swing.JFrame {
         jLabel7.setText("Salary:");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(60, 370, 80, 20);
-
-        btnAdd.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdd.setText("+ Add");
-        btnAdd.setBorder(null);
-        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAddMouseExited(evt);
-            }
-        });
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnAdd);
-        btnAdd.setBounds(150, 530, 110, 50);
 
         SalaryTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         SalaryTxt.addActionListener(new java.awt.event.ActionListener() {
