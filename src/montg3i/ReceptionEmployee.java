@@ -5,21 +5,45 @@
  */
 package montg3i;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed Eissa
  */
 public class ReceptionEmployee extends Staff{
-    String Language;
+    private String Language;
+    private static int NextID;
     
     public ReceptionEmployee(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Language) {
         super(FirstName, LastName, Id, Username, Password, Salary, Email);
         this.Language = Language;
     }
+
+    public String getLanguage() {
+        return Language;
+    }
     
     public static boolean login(String Username ,String pass)
     { 
-        return Database.staff.checkUserAndPass("reception", Username, pass) ;
+        ArrayList<Staff> r = Hotel.getReceptionEmployeeList();
+        for(int i=0; i<r.size(); i++)
+        {
+            if(Username.equals(r.get(i).getUsername()))
+            {
+                Staff.setCurrentStaff(i);
+                return (pass.equals(r.get(i).getPassword()));
+            }
+        }
+        return false;
+    }
+
+    public static int getNextID() {
+        return NextID;
+    }
+
+    public static void setNextID(int NextID) {
+        ReceptionEmployee.NextID = NextID + 1;
     }
     
     public static void delete (int id)

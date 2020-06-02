@@ -40,10 +40,8 @@ public class Search extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnBack = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        btnSearch = new javax.swing.JButton();
         btnCheckout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -59,32 +57,17 @@ public class Search extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        btnSearch = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
-
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("< Back");
-        btnBack.setBorder(null);
-        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBackMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnBackMouseExited(evt);
-            }
-        });
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnBack);
-        btnBack.setBounds(440, 360, 90, 40);
 
         btnEdit.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnEdit.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,27 +111,6 @@ public class Search extends javax.swing.JFrame {
         getContentPane().add(btnCancel);
         btnCancel.setBounds(1100, 190, 80, 30);
 
-        btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        btnSearch.setForeground(new java.awt.Color(255, 255, 255));
-        btnSearch.setText("Search");
-        btnSearch.setBorder(null);
-        btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnSearch.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnSearchMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnSearchMouseExited(evt);
-            }
-        });
-        btnSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSearchActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSearch);
-        btnSearch.setBounds(600, 290, 90, 40);
-
         btnCheckout.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnCheckout.setForeground(new java.awt.Color(255, 255, 255));
         btnCheckout.setText("Checkout");
@@ -180,19 +142,19 @@ public class Search extends javax.swing.JFrame {
         Search.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Search.setText("Search");
         jPanel2.add(Search);
-        Search.setBounds(410, 10, 140, 56);
+        Search.setBounds(390, 30, 140, 56);
 
         Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
         Name.setText("Name:");
         jPanel2.add(Name);
-        Name.setBounds(190, 130, 67, 28);
+        Name.setBounds(10, 140, 67, 28);
 
         Room.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         Room.setForeground(new java.awt.Color(255, 255, 255));
         Room.setText("Room:");
         jPanel2.add(Room);
-        Room.setBounds(480, 130, 70, 28);
+        Room.setBounds(290, 140, 70, 28);
 
         NameBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,21 +162,21 @@ public class Search extends javax.swing.JFrame {
             }
         });
         jPanel2.add(NameBox);
-        NameBox.setBounds(260, 130, 191, 26);
+        NameBox.setBounds(80, 140, 191, 30);
         jPanel2.add(ReservationIDBox);
-        ReservationIDBox.setBounds(560, 130, 191, 26);
+        ReservationIDBox.setBounds(360, 140, 191, 30);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
-        jSeparator1.setBounds(400, 80, 163, 31);
+        jSeparator1.setBounds(380, 90, 163, 31);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/search_30px.png"))); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(300, 180, 36, 39);
+        jLabel4.setBounds(680, 130, 36, 39);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/icons8_search_128px.png"))); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(20, 60, 140, 170);
+        jLabel5.setBounds(540, 0, 120, 120);
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -233,8 +195,79 @@ public class Search extends javax.swing.JFrame {
         jPanel2.add(jLabel7);
         jLabel7.setBounds(810, 130, 32, 40);
 
+        btnSearch.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnSearch.setForeground(new java.awt.Color(255, 255, 255));
+        btnSearch.setText("Search");
+        btnSearch.setBorder(null);
+        btnSearch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSearchMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSearchMouseExited(evt);
+            }
+        });
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnSearch);
+        btnSearch.setBounds(590, 130, 90, 40);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setBorder(null);
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBack);
+        btnBack.setBounds(10, 20, 90, 40);
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(120, 250, 150, 30);
+        jPanel2.add(jTextField2);
+        jTextField2.setBounds(120, 210, 150, 30);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(30, 30, 970, 310);
+
+        Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "no", "Nmae", "RoomNumber", "Arrival", "Departure", "Deposit", "Statuse"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(Table);
+        if (Table.getColumnModel().getColumnCount() > 0) {
+            Table.getColumnModel().getColumn(0).setMinWidth(20);
+            Table.getColumnModel().getColumn(0).setMaxWidth(30);
+        }
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(33, 360, 970, 350);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(230, 80, 1030, 720);
@@ -364,6 +397,7 @@ public class Search extends javax.swing.JFrame {
     private javax.swing.JTextField ReservationIDBox;
     private javax.swing.JLabel Room;
     private javax.swing.JLabel Search;
+    private javax.swing.JTable Table;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCheckout;
@@ -377,7 +411,10 @@ public class Search extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

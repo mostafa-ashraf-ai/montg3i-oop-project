@@ -690,10 +690,10 @@ public class ReservationForm extends javax.swing.JFrame {
        int Nights = Integer.parseInt(NightsBox.getText());
        String Departure = new SimpleDateFormat("yyyy-MM-dd").format(DepartureBoxDate.getDate());
        double Deposite = Double.parseDouble(DepositBox.getText());
-       double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights, Deposite);
+       double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights);
        
-       TotalPaymentsLabel.setText((TotalAmount-Deposite) + "");
-       RestAmountLabel.setText(TotalAmount + "");
+       TotalPaymentsLabel.setText(TotalAmount + "");
+       RestAmountLabel.setText((TotalAmount-Deposite) + "");
        
        Hotel.AddGuestList(Guest.getGuestNextNo(), FirstName, SecondName, LastName, NationalId, Age, Phone, National, NumbersOfRooms, Arrival, Nights, Departure, Deposite, TotalAmount, "check in");
        showMessageDialog(null,"Name: " + FirstName +" "+ SecondName +" "+ LastName +"\n"+"Room No. : "+NumbersOfRooms+"\n");
@@ -727,7 +727,7 @@ public class ReservationForm extends javax.swing.JFrame {
             SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
             String Arrivals_str = dformat.format(ArrivalsBoxDate.getDate());
             String Arrivals[] = Arrivals_str.split("-");
-            int nights = Integer.parseInt(NightsBox.getText());
+            int nights = Integer.parseInt(NightsBox.getText()) + 1;
             String Departure_str = Arrivals[0] + "-" + 
                     (Integer.parseInt(Arrivals[1])+(Integer.parseInt(Arrivals[2])+nights)/(31+Integer.parseInt(Arrivals[1])%2)) + "-" + 
                     ((Integer.parseInt(Arrivals[2])+nights)%(31+Integer.parseInt(Arrivals[1])%2));
@@ -745,7 +745,7 @@ public class ReservationForm extends javax.swing.JFrame {
             SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
             String Arrivals_str = dformat.format(ArrivalsBoxDate.getDate());
             String Arrivals[] = Arrivals_str.split("-");
-            int nights = Integer.parseInt(NightsBox.getText());
+            int nights = Integer.parseInt(NightsBox.getText()) + 1;
             String Departure_str = Arrivals[0] + "-" + 
                     (Integer.parseInt(Arrivals[1])+(Integer.parseInt(Arrivals[2])+nights)/(31+Integer.parseInt(Arrivals[1])%2)) + "-" + 
                     ((Integer.parseInt(Arrivals[2])+nights)%(31+Integer.parseInt(Arrivals[1])%2));
@@ -766,16 +766,16 @@ public class ReservationForm extends javax.swing.JFrame {
         int nights = Integer.parseInt(Departures[2])-Integer.parseInt(Arrivals[2])
                 +(Integer.parseInt(Departures[1])-Integer.parseInt(Arrivals[1]))
                 *(31+Integer.parseInt(Departures[1])%2+Integer.parseInt(Arrivals[1])%2);
-        NightsBox.setText(nights + "");
+        NightsBox.setText((nights+1) + "");
     }//GEN-LAST:event_btnNightsActionPerformed
 
     private void DepositBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepositBoxActionPerformed
         int Nights = Integer.parseInt(NightsBox.getText()); 
         double Deposite = Double.parseDouble(DepositBox.getText());
-        double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights, Deposite);
+        double TotalAmount = Calculate.TotalAmount(RoomsNo, Nights);
        
-        TotalPaymentsLabel.setText((TotalAmount-Deposite) + "");
-        RestAmountLabel.setText(TotalAmount + "");
+        TotalPaymentsLabel.setText(TotalAmount + "");
+        RestAmountLabel.setText((TotalAmount-Deposite) + "");
     }//GEN-LAST:event_DepositBoxActionPerformed
 
     private void MiddleNameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiddleNameBoxActionPerformed

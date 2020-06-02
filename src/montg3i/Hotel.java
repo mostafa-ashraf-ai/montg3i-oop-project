@@ -28,7 +28,7 @@ public class Hotel {
 
     public static void AddReceptionEmployeeList(String FirstName, String LastName, int Id, String Username, String Password, double Salary, String Email, String Language) {
         ReceptionEmployeeList.add(new ReceptionEmployee(FirstName, LastName, Id, Username, Password, Salary, Email, Language));
-        Database.staff.Add("reception", Id, Username, Email, FirstName, LastName, Salary, Email, Language);
+        Database.staff.Add("reception", Id, Username, Password, FirstName, LastName, Salary, Email, Language);
     }
 
     public static ArrayList<Staff> getManagerList() {
@@ -59,6 +59,7 @@ public class Hotel {
     
     private static void LoadReceptionEmployee ()
     {
+        ReceptionEmployee.setNextID(0);
         ResultSet rs = Database.staff.Select("reception");
         try 
         {
@@ -66,6 +67,7 @@ public class Hotel {
             {
                 Staff RecEmp = new ReceptionEmployee(rs.getString("FirstName"), rs.getString("LastName"), rs.getInt("ID"), rs.getString("username"), rs.getString("pass"), rs.getDouble("salary"), rs.getString("email"), rs.getString("language"));
                 ReceptionEmployeeList.add(RecEmp);
+                ReceptionEmployee.setNextID(rs.getInt("ID"));
             }
             rs.close();
         } 

@@ -10,6 +10,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -56,19 +58,18 @@ public class staff extends db{
         return rs;
     }
     
-    public static void Add(String table,int id, String username,String pass,String FirstName,String LastName,double salary,String email,String PosOrLang)
+    public static void Add(String table,int id, String username,String pass,String FirstName,String LastName,double salary,String email,String value)
     {
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "INSERT INTO " + table + " VALUES (" + id + ",'" + username + "','" + pass + "','" + FirstName + "','" + LastName + "'," +  salary+ ",'" + email + "','" + PosOrLang + "')";
+            String str = "INSERT INTO " + table + " VALUES (" + id + ",'" + username + "','" + pass + "','" + FirstName + "','" + LastName + "'," + salary + ",'" + email + "','" + value + "')";
             stmt.executeUpdate(str);
             con.close();
-        }
-        catch(SQLException ex)
-        {
-            System.out.println("the add all method is wrong");
+        } 
+        catch (SQLException ex) {
+            Logger.getLogger(staff.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

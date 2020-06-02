@@ -5,6 +5,7 @@ package frames;
 import java.awt.Color;
 import montg3i.ReceptionEmployee;
 import montg3i.Manager;
+import montg3i.Staff;
 //import montg3i.Reception_employee;
 
 /*
@@ -178,15 +179,15 @@ public class Login extends javax.swing.JFrame {
         
         if( ReceptionEmployee.login(username, password) )
         {
+            Staff.setTypeStaff(true);
             new Receiption().setVisible(true);
             this.setVisible(false);
-
         }
         else if( Manager.login(username, password) )
         {
+            Staff.setTypeStaff(false);
             new ManagerProfile().setVisible(true);
             this.setVisible(false);
-
         }
         else
         {

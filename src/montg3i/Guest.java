@@ -37,6 +37,58 @@ public class Guest extends Person {
         Guest.GuestNextNo = GuestNextNo + 1;
     }
 
+    public int getGuestNo() {
+        return GuestNo;
+    }
+
+    public String getSecondName() {
+        return SecondName;
+    }
+
+    public String getNationalId() {
+        return NationalId;
+    }
+
+    public int getAge() {
+        return Age;
+    }
+
+    public String getPhone() {
+        return Phone;
+    }
+
+    public String getNational() {
+        return National;
+    }
+
+    public int getNumbersOfRooms() {
+        return NumbersOfRooms;
+    }
+
+    public String getArrival() {
+        return Arrival;
+    }
+
+    public int getNights() {
+        return Nights;
+    }
+
+    public String getDeparture() {
+        return Departure;
+    }
+
+    public double getDeposite() {
+        return Deposite;
+    }
+
+    public double getTotalAmount() {
+        return TotalAmount;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
     public Guest(int GuestNo, String FirstName, String SecondName, String LastName,String NationalId, int Age, String Phone, String National, int NumbersOfRooms, String Arrival, int Nights, String Departure, double Deposite, double TotalAmount, String Status) {
         super(FirstName, LastName);
         this.GuestNo = GuestNo;

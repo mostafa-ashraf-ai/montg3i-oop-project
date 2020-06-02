@@ -6,12 +6,21 @@
 package frames;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import montg3i.Hotel;
+import montg3i.Staff;
+import montg3i.ReceptionEmployee;
 
 /**
  *
  * @author hp
  */
 public class Employee extends javax.swing.JFrame {
+    
+        ArrayList<Staff> r = Hotel.getReceptionEmployeeList();
+        int i = 0;
+        
 
     /**
      * Creates new form Employee
@@ -22,6 +31,20 @@ public class Employee extends javax.swing.JFrame {
        // jPanel1.setBackground(new Color(0,0,0,80));
         btnAdd.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(0,0,0,0));
+        
+        FirstNameTxt.setText("");
+        LastNameTxt.setText("");
+        EmailTxt.setText("");
+        SalaryTxt.setText("");
+        LanguageTxt.setText("");
+        
+        FirstNameTxt.requestFocus();
+        
+        DefaultTableModel model = (DefaultTableModel)TableOfEmp.getModel();
+        for(i=0; i<r.size(); i++)
+        {
+            model.insertRow(model.getRowCount(), new Object[]{r.get(i).getId(), r.get(i).getFirstName(), r.get(i).getEmail(), r.get(i).getSalary()});
+        }
     }
 
     /**
@@ -34,8 +57,7 @@ public class Employee extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnAdd = new javax.swing.JButton();
+        TableOfEmp = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -43,11 +65,14 @@ public class Employee extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        FirstNameTxt = new javax.swing.JTextField();
+        LastNameTxt = new javax.swing.JTextField();
+        EmailTxt = new javax.swing.JTextField();
+        LanguageTxt = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        btnAdd = new javax.swing.JButton();
+        SalaryTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,53 +80,18 @@ public class Employee extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1520, 853));
         getContentPane().setLayout(null);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TableOfEmp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Name", "E-mail", "Salary", "Title 4"
+                "ID", "Name", "E-mail", "Salary"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TableOfEmp);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(730, 240, 770, 370);
-
-        btnAdd.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdd.setText("+ Add");
-        btnAdd.setBorder(null);
-        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAddMouseExited(evt);
-            }
-        });
-        getContentPane().add(btnAdd);
-        btnAdd.setBounds(340, 480, 110, 50);
+        jScrollPane1.setBounds(720, 240, 770, 370);
 
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,29 +143,85 @@ public class Employee extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Salary:");
+        jLabel6.setText("Language:");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(60, 370, 80, 20);
+        jLabel6.setBounds(60, 450, 90, 20);
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(180, 140, 190, 22);
+        FirstNameTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        FirstNameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FirstNameTxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(FirstNameTxt);
+        FirstNameTxt.setBounds(180, 140, 190, 30);
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(180, 210, 190, 22);
+        LastNameTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LastNameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LastNameTxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LastNameTxt);
+        LastNameTxt.setBounds(180, 210, 190, 30);
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(180, 290, 190, 22);
+        EmailTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        EmailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmailTxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmailTxt);
+        EmailTxt.setBounds(180, 290, 190, 30);
 
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(180, 370, 190, 22);
+        LanguageTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        LanguageTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LanguageTxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LanguageTxt);
+        LanguageTxt.setBounds(180, 447, 190, 30);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(90, 70, 250, 10);
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Salary:");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(60, 370, 80, 20);
+
+        btnAdd.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setText("+ Add");
+        btnAdd.setBorder(null);
+        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddMouseExited(evt);
+            }
+        });
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAdd);
+        btnAdd.setBounds(150, 530, 110, 50);
+
+        SalaryTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SalaryTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalaryTxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SalaryTxt);
+        SalaryTxt.setBounds(180, 370, 190, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(180, 0, 420, 800);
@@ -207,6 +253,47 @@ public class Employee extends javax.swing.JFrame {
     private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
         btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
+
+    private void FirstNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtActionPerformed
+        LastNameTxt.requestFocus();
+    }//GEN-LAST:event_FirstNameTxtActionPerformed
+
+    private void LastNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameTxtActionPerformed
+        EmailTxt.requestFocus();
+    }//GEN-LAST:event_LastNameTxtActionPerformed
+
+    private void EmailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTxtActionPerformed
+       SalaryTxt.requestFocus();
+    }//GEN-LAST:event_EmailTxtActionPerformed
+
+    private void LanguageTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LanguageTxtActionPerformed
+        btnAddActionPerformed(evt);
+    }//GEN-LAST:event_LanguageTxtActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        DefaultTableModel model = (DefaultTableModel)TableOfEmp.getModel();
+        String FirstName = FirstNameTxt.getText();
+        String LastName = LastNameTxt.getText();
+        int Id = ReceptionEmployee.getNextID();
+        String UserName = "admin";
+        String Password = "0000";
+        double Salary = Double.parseDouble(SalaryTxt.getText());
+        String Email = EmailTxt.getText();
+        String Language = LanguageTxt.getText();
+        Hotel.AddReceptionEmployeeList(FirstName, LastName, Id, UserName, Password, Salary, Email, Language);
+        r = Hotel.getReceptionEmployeeList();
+        model.insertRow(model.getRowCount(), new Object[]{r.get(i).getId(), r.get(i).getFirstName(), r.get(i).getEmail(), r.get(i).getSalary()});
+        
+        FirstNameTxt.setText("");
+        LastNameTxt.setText("");
+        EmailTxt.setText("");
+        SalaryTxt.setText("");
+        LanguageTxt.setText("");
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void SalaryTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalaryTxtActionPerformed
+        LanguageTxt.requestFocus();
+    }//GEN-LAST:event_SalaryTxtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,6 +331,12 @@ public class Employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField EmailTxt;
+    private javax.swing.JTextField FirstNameTxt;
+    private javax.swing.JTextField LanguageTxt;
+    private javax.swing.JTextField LastNameTxt;
+    private javax.swing.JTextField SalaryTxt;
+    private javax.swing.JTable TableOfEmp;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
@@ -252,13 +345,9 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

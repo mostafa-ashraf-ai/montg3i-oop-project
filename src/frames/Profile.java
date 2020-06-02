@@ -6,12 +6,18 @@
 package frames;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import static javax.swing.JOptionPane.showMessageDialog;
+import montg3i.Hotel;
+import montg3i.Staff;
 
 /**
  *
  * @author hp
  */
 public class Profile extends javax.swing.JFrame {
+    
+    ArrayList<Staff> s;
 
     /**
      * Creates new form Profile
@@ -23,6 +29,21 @@ public class Profile extends javax.swing.JFrame {
          btnLogout.setBackground(new Color(0,0,0,0));
          btnSaveUsername.setBackground(new Color(0,0,0,0));
          btnSavePassword.setBackground(new Color(0,0,0,0));
+         
+         if(Staff.isTypeStaff())
+         {
+             s = Hotel.getReceptionEmployeeList();
+             NameLabel.setText(s.get(Staff.getCurrentStaff()).getFirstName() + " " + s.get(Staff.getCurrentStaff()).getLastName());
+             IdLabel.setText(s.get(Staff.getCurrentStaff()).getId() + "");
+             EmailLabel.setText(s.get(Staff.getCurrentStaff()).getEmail());
+         }
+         else
+         {
+             s = Hotel.getManagerList();
+             NameLabel.setText(s.get(Staff.getCurrentStaff()).getFirstName() + " " + s.get(Staff.getCurrentStaff()).getLastName());
+             IdLabel.setText(s.get(Staff.getCurrentStaff()).getId() + "");
+             EmailLabel.setText(s.get(Staff.getCurrentStaff()).getEmail());
+         }
         
     }
 
@@ -35,8 +56,6 @@ public class Profile extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnLogout = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
         btnSavePassword = new javax.swing.JButton();
         btnSaveUsername = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -46,7 +65,7 @@ public class Profile extends javax.swing.JFrame {
         Name = new javax.swing.JLabel();
         NameLabel = new javax.swing.JLabel();
         Username = new javax.swing.JLabel();
-        UsernameLabel = new javax.swing.JLabel();
+        IdLabel = new javax.swing.JLabel();
         EmailLabel = new javax.swing.JLabel();
         Email = new javax.swing.JLabel();
         EmailLabel1 = new javax.swing.JLabel();
@@ -55,10 +74,14 @@ public class Profile extends javax.swing.JFrame {
         EmailLabel4 = new javax.swing.JLabel();
         EmailLabel5 = new javax.swing.JLabel();
         EmailLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        NewPass = new javax.swing.JTextField();
+        CurrentPass = new javax.swing.JTextField();
+        NewUsername = new javax.swing.JTextField();
+        CurrentUsername = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        inulable = new javax.swing.JLabel();
+        inplable = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -66,46 +89,6 @@ public class Profile extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1520, 845));
         getContentPane().setLayout(null);
-
-        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout");
-        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnLogoutMouseExited(evt);
-            }
-        });
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLogout);
-        btnLogout.setBounds(230, 675, 110, 35);
-
-        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("< Back");
-        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBackMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnBackMouseExited(evt);
-            }
-        });
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnBack);
-        btnBack.setBounds(230, 730, 100, 35);
 
         btnSavePassword.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSavePassword.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,8 +102,13 @@ public class Profile extends javax.swing.JFrame {
                 btnSavePasswordMouseExited(evt);
             }
         });
+        btnSavePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSavePasswordActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSavePassword);
-        btnSavePassword.setBounds(470, 630, 110, 35);
+        btnSavePassword.setBounds(470, 630, 110, 36);
 
         btnSaveUsername.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnSaveUsername.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,8 +122,13 @@ public class Profile extends javax.swing.JFrame {
                 btnSaveUsernameMouseExited(evt);
             }
         });
+        btnSaveUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveUsernameActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSaveUsername);
-        btnSaveUsername.setBounds(470, 410, 110, 35);
+        btnSaveUsername.setBounds(470, 410, 110, 36);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
@@ -164,25 +157,25 @@ public class Profile extends javax.swing.JFrame {
         NameLabel.setForeground(new java.awt.Color(255, 255, 255));
         NameLabel.setText("??");
         jPanel1.add(NameLabel);
-        NameLabel.setBounds(290, 120, 80, 20);
+        NameLabel.setBounds(290, 120, 300, 20);
 
         Username.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Username.setForeground(new java.awt.Color(255, 255, 255));
-        Username.setText("Username:");
+        Username.setText("ID:");
         jPanel1.add(Username);
         Username.setBounds(140, 160, 130, 34);
 
-        UsernameLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        UsernameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        UsernameLabel.setText("??");
-        jPanel1.add(UsernameLabel);
-        UsernameLabel.setBounds(290, 160, 120, 40);
+        IdLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        IdLabel.setForeground(new java.awt.Color(255, 255, 255));
+        IdLabel.setText("??");
+        jPanel1.add(IdLabel);
+        IdLabel.setBounds(290, 160, 120, 40);
 
         EmailLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         EmailLabel.setForeground(new java.awt.Color(255, 255, 255));
         EmailLabel.setText("????");
         jPanel1.add(EmailLabel);
-        EmailLabel.setBounds(290, 210, 190, 30);
+        EmailLabel.setBounds(290, 210, 300, 30);
 
         Email.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         Email.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,17 +215,89 @@ public class Profile extends javax.swing.JFrame {
 
         EmailLabel6.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         EmailLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        EmailLabel6.setText("Current Uesrname:");
+        EmailLabel6.setText("Current Username:");
         jPanel1.add(EmailLabel6);
         EmailLabel6.setBounds(200, 320, 160, 26);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(360, 590, 170, 26);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(360, 540, 170, 26);
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(370, 370, 170, 26);
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(370, 320, 170, 26);
+
+        NewPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewPassActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NewPass);
+        NewPass.setBounds(360, 590, 170, 30);
+
+        CurrentPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CurrentPassActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CurrentPass);
+        CurrentPass.setBounds(360, 540, 170, 30);
+
+        NewUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewUsernameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NewUsername);
+        NewUsername.setBounds(370, 370, 170, 30);
+
+        CurrentUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CurrentUsernameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CurrentUsername);
+        CurrentUsername.setBounds(370, 320, 170, 30);
+
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("< Back");
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnBackMouseExited(evt);
+            }
+        });
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBack);
+        btnBack.setBounds(10, 720, 100, 36);
+
+        btnLogout.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("Logout");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnLogoutMouseExited(evt);
+            }
+        });
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLogout);
+        btnLogout.setBounds(440, 720, 110, 36);
+
+        inulable.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel1.add(inulable);
+        inulable.setBounds(430, 420, 0, 0);
+
+        inplable.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel1.add(inplable);
+        inplable.setBounds(430, 640, 0, 0);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(220, 0, 600, 800);
@@ -260,11 +325,17 @@ public class Profile extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new Receiption().setVisible(true);
-        this.setVisible(false);
-        //     OR
-        //new Msnager().setVisible(true);
-        //this.setVisible(false);
+        if(Staff.isTypeStaff())
+        {
+            new Receiption().setVisible(true);
+            this.setVisible(false);
+        }
+        else
+        {
+            new ManagerProfile().setVisible(true);
+            this.setVisible(false);          
+        }
+
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSaveUsernameMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaveUsernameMouseEntered
@@ -298,6 +369,56 @@ public class Profile extends javax.swing.JFrame {
     private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
         btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
+
+    private void CurrentUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrentUsernameActionPerformed
+        NewUsername.requestFocus();
+    }//GEN-LAST:event_CurrentUsernameActionPerformed
+
+    private void NewUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewUsernameActionPerformed
+        btnSaveUsernameActionPerformed(evt);
+    }//GEN-LAST:event_NewUsernameActionPerformed
+
+    private void btnSaveUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveUsernameActionPerformed
+        if(CurrentUsername.getText().equals(s.get(Staff.getCurrentStaff()).getUsername()))
+        {
+            s.get(Staff.getCurrentStaff()).update("username", NewUsername.getText());
+            CurrentUsername.setText("");
+            NewUsername.setText("");
+            showMessageDialog(null, "Done");
+        }
+        else
+        {
+            CurrentUsername.setText("");
+            NewUsername.setText("");
+            inulable.setText("incorrect username");
+            CurrentUsername.requestFocus();
+        }
+    }//GEN-LAST:event_btnSaveUsernameActionPerformed
+
+    private void CurrentPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrentPassActionPerformed
+        NewPass.requestFocus();
+    }//GEN-LAST:event_CurrentPassActionPerformed
+
+    private void NewPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewPassActionPerformed
+        btnSavePasswordActionPerformed(evt);
+    }//GEN-LAST:event_NewPassActionPerformed
+
+    private void btnSavePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePasswordActionPerformed
+        if(CurrentPass.getText().equals(s.get(Staff.getCurrentStaff()).getPassword()))
+        {
+            s.get(Staff.getCurrentStaff()).update("pass", NewPass.getText());
+            CurrentPass.setText("");
+            NewPass.setText("");
+            showMessageDialog(null, "Done");
+        }
+        else
+        {
+            CurrentPass.setText("");
+            NewPass.setText("");
+            inplable.setText("incorrect password");
+            CurrentPass.requestFocus();
+        }
+    }//GEN-LAST:event_btnSavePasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,6 +456,8 @@ public class Profile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CurrentPass;
+    private javax.swing.JTextField CurrentUsername;
     private javax.swing.JLabel Email;
     private javax.swing.JLabel EmailLabel;
     private javax.swing.JLabel EmailLabel1;
@@ -343,14 +466,18 @@ public class Profile extends javax.swing.JFrame {
     private javax.swing.JLabel EmailLabel4;
     private javax.swing.JLabel EmailLabel5;
     private javax.swing.JLabel EmailLabel6;
+    private javax.swing.JLabel IdLabel;
     private javax.swing.JLabel Name;
     private javax.swing.JLabel NameLabel;
+    private javax.swing.JTextField NewPass;
+    private javax.swing.JTextField NewUsername;
     private javax.swing.JLabel Username;
-    private javax.swing.JLabel UsernameLabel;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnSavePassword;
     private javax.swing.JButton btnSaveUsername;
+    private javax.swing.JLabel inplable;
+    private javax.swing.JLabel inulable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -358,9 +485,5 @@ public class Profile extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

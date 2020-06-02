@@ -6,6 +6,13 @@
 package frames;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import montg3i.Hotel;
+import montg3i.Guest;
+import montg3i.Manager;
+import montg3i.ReceptionEmployee;
+import montg3i.Staff;
 
 /**
  *
@@ -19,6 +26,29 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     public BalanceAndReservations() {
         initComponents();
         btnBack.setBackground(new Color(0,0,0,0));
+        
+        ArrayList<Guest> g = Hotel.getGuestList();
+        ArrayList<Staff> m = Hotel.getManagerList();
+        ArrayList<Staff> r = Hotel.getReceptionEmployeeList();
+        double TotalBalance = 0;
+        
+        DefaultTableModel model = (DefaultTableModel)TableOfGuests.getModel();
+        for(int i=0; i<g.size(); i++)
+        {
+            model.insertRow(model.getRowCount(), new Object[]{g.get(i).getFirstName(), g.get(i).getNational(), g.get(i).getNumbersOfRooms(), g.get(i).getDeparture(), g.get(i).getNights()}); 
+            TotalBalance += g.get(i).getTotalAmount();
+        }
+        
+        for(int i=0; i<m.size(); i++)
+        {
+            TotalBalance -= m.get(i).getSalary();
+        }
+        for(int i=0; i<r.size(); i++)
+        {
+            TotalBalance -= r.get(i).getSalary();
+        }
+        
+        TotalBalanceLabel.setText(TotalBalance + "");
     }
 
     /**
@@ -34,7 +64,7 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         TotalBalance = new javax.swing.JLabel();
         TotalBalanceLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TableOfGuests = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -58,66 +88,30 @@ public class BalanceAndReservations extends javax.swing.JFrame {
         jPanel1.add(TotalBalanceLabel);
         TotalBalanceLabel.setBounds(280, 60, 120, 40);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TableOfGuests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "Name", "reservation ID", "Room/s", "Date", "Number of Nights"
+                "Name", "Nationality", "number of Rooms", "Date", "Number of Nights"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TableOfGuests);
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(640, 0, 730, 750);
@@ -137,6 +131,11 @@ public class BalanceAndReservations extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnBackMouseExited(evt);
+            }
+        });
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
             }
         });
         jPanel1.add(btnBack);
@@ -161,6 +160,11 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     private void btnBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseExited
         btnBack.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnBackMouseExited
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        new ManagerProfile().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,6 +202,7 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TableOfGuests;
     private javax.swing.JLabel TotalBalance;
     private javax.swing.JLabel TotalBalanceLabel;
     private javax.swing.JButton btnBack;
@@ -205,6 +210,5 @@ public class BalanceAndReservations extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

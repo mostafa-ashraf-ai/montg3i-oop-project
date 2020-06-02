@@ -5,6 +5,8 @@
  */
 package montg3i;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ahmed Eissa
@@ -19,7 +21,16 @@ public class Manager extends Staff {
     
     public static boolean login(String Username ,String pass)
     { 
-        return Database.staff.checkUserAndPass("manager", Username, pass) ;
+        ArrayList<Staff> m = Hotel.getManagerList();
+        for(int i=0; i<m.size(); i++)
+        {
+            if(Username.equals(m.get(i).getUsername()))
+            {
+                Staff.setCurrentStaff(i);
+                return (pass.equals(m.get(i).getPassword()));
+            }
+        }
+        return false;
     }
     
     public static void delete (int id)

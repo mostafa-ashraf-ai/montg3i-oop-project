@@ -140,8 +140,9 @@ public class CCTV extends javax.swing.JFrame {
             myThread.runnable = false;  
             closebtn.setEnabled(true);
             webSource.release();
-            this.setVisible(false);
         */
+            this.setVisible(false);
+        
     }//GEN-LAST:event_closebtnActionPerformed
 
     /**

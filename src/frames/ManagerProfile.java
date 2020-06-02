@@ -161,8 +161,8 @@ public class ManagerProfile extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmployeeActionPerformed
-        
-        
+         new Employee().setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_btnEmployeeActionPerformed
 
     private void btnBalanceAndReservationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBalanceAndReservationsActionPerformed
