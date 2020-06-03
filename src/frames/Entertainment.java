@@ -102,37 +102,37 @@ public class Entertainment extends javax.swing.JFrame {
 
         MarketLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         MarketLabel.setForeground(new java.awt.Color(255, 255, 255));
-        MarketLabel.setText("jLabel12");
+        MarketLabel.setText("building B");
         jPanel1.add(MarketLabel);
         MarketLabel.setBounds(340, 490, 150, 23);
 
         ClubLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         ClubLabel.setForeground(new java.awt.Color(255, 255, 255));
-        ClubLabel.setText("jLabel11");
+        ClubLabel.setText("building A");
         jPanel1.add(ClubLabel);
         ClubLabel.setBounds(340, 410, 150, 23);
 
         FloorOfTheGymLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfTheGymLabel.setForeground(new java.awt.Color(255, 255, 255));
-        FloorOfTheGymLabel.setText("jLabel10");
+        FloorOfTheGymLabel.setText("2");
         jPanel1.add(FloorOfTheGymLabel);
         FloorOfTheGymLabel.setBounds(340, 320, 150, 23);
 
         FloorOfThePoolLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         FloorOfThePoolLabel.setForeground(new java.awt.Color(255, 255, 255));
-        FloorOfThePoolLabel.setText("jLabel9");
+        FloorOfThePoolLabel.setText("3");
         jPanel1.add(FloorOfThePoolLabel);
         FloorOfThePoolLabel.setBounds(340, 230, 150, 23);
 
         PasswordOfWiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         PasswordOfWiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
-        PasswordOfWiFiLabel.setText("jLabel8");
+        PasswordOfWiFiLabel.setText("montag3i00");
         jPanel1.add(PasswordOfWiFiLabel);
         PasswordOfWiFiLabel.setBounds(340, 150, 150, 23);
 
         WiFiLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
         WiFiLabel.setForeground(new java.awt.Color(255, 255, 255));
-        WiFiLabel.setText("jLabel7");
+        WiFiLabel.setText("montag3i");
         jPanel1.add(WiFiLabel);
         WiFiLabel.setBounds(340, 80, 150, 23);
 

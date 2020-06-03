@@ -2,7 +2,11 @@ package frames;
 
 
 import java.awt.Color;
+import java.util.ArrayList;
 import static javax.swing.JOptionPane.showMessageDialog;
+import montg3i.Hotel;
+
+import montg3i.HotelRoom;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,6 +29,12 @@ public class GuestProfile extends javax.swing.JFrame {
         btnGuestPayment.setBackground(new Color(0,0,0,0));
         btnUpdateTheReservation.setBackground(new Color(0,0,0,0));
         btnLogout.setBackground(new Color(0,0,0,0));
+        
+        ArrayList<montg3i.Guest> g = Hotel.getGuestList();
+        
+        NameLabel.setText(g.get(montg3i.Guest.getCurrentGuestNo()).getFirstName() + " " + g.get(montg3i.Guest.getCurrentGuestNo()).getLastName());
+        RoomNoLabel.setText(HotelRoom.Search(montg3i.Guest.getCurrentGuestNo()));
+        
     }
    /* public GuestProfile(String x,String y,String r,String e) {
         initComponents();
@@ -48,8 +58,6 @@ public class GuestProfile extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Name = new javax.swing.JLabel();
-        Floor = new javax.swing.JLabel();
-        FloorLabel = new javax.swing.JLabel();
         NameLabel = new javax.swing.JLabel();
         RoomNo = new javax.swing.JLabel();
         RoomNoLabel = new javax.swing.JLabel();
@@ -59,6 +67,8 @@ public class GuestProfile extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         btnLogout = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Floor = new javax.swing.JLabel();
+        FloorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
@@ -76,32 +86,21 @@ public class GuestProfile extends javax.swing.JFrame {
         jPanel1.add(Name);
         Name.setBounds(98, 42, 75, 34);
 
-        Floor.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        Floor.setForeground(new java.awt.Color(255, 255, 255));
-        Floor.setText("Floor:");
-        jPanel1.add(Floor);
-        Floor.setBounds(98, 111, 70, 34);
-
-        FloorLabel.setForeground(new java.awt.Color(255, 255, 255));
-        FloorLabel.setText("jLabel8");
-        jPanel1.add(FloorLabel);
-        FloorLabel.setBounds(270, 120, 51, 20);
-
         NameLabel.setForeground(new java.awt.Color(255, 255, 255));
         NameLabel.setText("jLabel2");
         jPanel1.add(NameLabel);
-        NameLabel.setBounds(270, 50, 51, 20);
+        NameLabel.setBounds(270, 50, 34, 15);
 
         RoomNo.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         RoomNo.setForeground(new java.awt.Color(255, 255, 255));
         RoomNo.setText("Room/s No.:");
         jPanel1.add(RoomNo);
-        RoomNo.setBounds(98, 183, 147, 34);
+        RoomNo.setBounds(80, 140, 147, 34);
 
         RoomNoLabel.setForeground(new java.awt.Color(255, 255, 255));
         RoomNoLabel.setText("jLabel4");
         jPanel1.add(RoomNoLabel);
-        RoomNoLabel.setBounds(270, 190, 51, 20);
+        RoomNoLabel.setBounds(270, 150, 34, 15);
 
         btnEntertainment.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnEntertainment.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,7 +121,7 @@ public class GuestProfile extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEntertainment);
-        btnEntertainment.setBounds(410, 60, 231, 43);
+        btnEntertainment.setBounds(410, 60, 233, 44);
 
         btnUpdateTheReservation.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnUpdateTheReservation.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,7 +142,7 @@ public class GuestProfile extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnUpdateTheReservation);
-        btnUpdateTheReservation.setBounds(410, 120, 350, 43);
+        btnUpdateTheReservation.setBounds(410, 120, 350, 44);
 
         btnGuestPayment.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnGuestPayment.setForeground(new java.awt.Color(255, 255, 255));
@@ -164,7 +163,7 @@ public class GuestProfile extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnGuestPayment);
-        btnGuestPayment.setBounds(410, 180, 217, 43);
+        btnGuestPayment.setBounds(410, 180, 218, 44);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -190,7 +189,7 @@ public class GuestProfile extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLogout);
-        btnLogout.setBounds(38, 257, 101, 35);
+        btnLogout.setBounds(38, 257, 100, 34);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 230, 760, 320);
@@ -198,6 +197,17 @@ public class GuestProfile extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frames/5.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-6, -4, 1500, 800);
+
+        Floor.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Floor.setForeground(new java.awt.Color(255, 255, 255));
+        Floor.setText("Floor:");
+        getContentPane().add(Floor);
+        Floor.setBounds(950, 430, 70, 34);
+
+        FloorLabel.setForeground(new java.awt.Color(255, 255, 255));
+        FloorLabel.setText("jLabel8");
+        getContentPane().add(FloorLabel);
+        FloorLabel.setBounds(1000, 320, 34, 15);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -10,20 +10,20 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import javax.imageio.ImageIO;
-/*
+
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
 import static org.opencv.imgcodecs.Imgcodecs.imencode;
 import org.opencv.videoio.VideoCapture;
-*/
+
 
 /**
  *
  * @author mostafa
  */
 public class CCTV extends javax.swing.JFrame {
-    /*
+    
     private DaemonThread myThread = null;
     int count = 0;
     VideoCapture webSource = null;
@@ -63,14 +63,14 @@ public class CCTV extends javax.swing.JFrame {
         }
      }
 }
-    */
+    
 
     /**
      * Creates new form CCTV
      */
     public CCTV() {
         initComponents();
-        /*
+        
         webSource =new VideoCapture();
         webSource.open(0);
         myThread = new DaemonThread();
@@ -78,7 +78,7 @@ public class CCTV extends javax.swing.JFrame {
         t.setDaemon(true);
         myThread.runnable = true;
         t.start();
-        */
+        
     }
 
     /**
@@ -136,11 +136,11 @@ public class CCTV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void closebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closebtnActionPerformed
-            /*
+            
             myThread.runnable = false;  
             closebtn.setEnabled(true);
             webSource.release();
-        */
+        
             this.setVisible(false);
         
     }//GEN-LAST:event_closebtnActionPerformed
@@ -150,7 +150,7 @@ public class CCTV extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         
-        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

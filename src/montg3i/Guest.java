@@ -137,8 +137,9 @@ public class Guest extends Person {
         {
             if(Room.equals(g.get(i).getRoomNumber()))
             {
+                System.out.println(passCode.equals(g.get(i).getGuestNo()));
                 Guest.setCurrentGuestNo(i);
-                return (passCode.equals(g.get(i).getGuestNo()));
+                return (passCode.equals(g.get(i).getGuestNo()+""));
             }
         }
         return false;
