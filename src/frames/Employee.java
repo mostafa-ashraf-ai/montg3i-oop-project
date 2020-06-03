@@ -87,7 +87,21 @@ public class Employee extends javax.swing.JFrame {
             new String [] {
                 "ID", "Name", "E-mail", "Salary"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TableOfEmp.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        TableOfEmp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TableOfEmpMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(TableOfEmp);
 
         getContentPane().add(jScrollPane1);
@@ -294,6 +308,10 @@ public class Employee extends javax.swing.JFrame {
     private void SalaryTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalaryTxtActionPerformed
         LanguageTxt.requestFocus();
     }//GEN-LAST:event_SalaryTxtActionPerformed
+
+    private void TableOfEmpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableOfEmpMouseClicked
+        SalaryTxt.setText(TableOfEmp.getValueAt(TableOfEmp.getSelectedRow(), 3).toString());
+    }//GEN-LAST:event_TableOfEmpMouseClicked
 
     /**
      * @param args the command line arguments

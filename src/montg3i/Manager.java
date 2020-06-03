@@ -42,11 +42,15 @@ public class Manager extends Staff {
     public void update(String coloum_name ,String updated)
     {
         Database.staff.Update("manager", coloum_name, updated, getId());
+        Hotel.getManagerList().clear();
+        Hotel.LoadManager();
     }
     
     @Override
     public void update(String coloum_name ,double updated)
     {
         Database.staff.Update("manager", coloum_name, updated, getId());
+        Hotel.getManagerList().clear();
+        Hotel.LoadManager();
     }
 }

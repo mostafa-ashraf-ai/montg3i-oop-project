@@ -1,6 +1,10 @@
 package frames;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import montg3i.Hotel;
+import montg3i.Guest;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,6 +24,14 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
     public ListOfCurrentGuests() {
         initComponents();
         btnBack.setBackground(new Color(0,0,0,0));
+        
+        ArrayList<Guest> g = Hotel.getGuestList();
+        
+        DefaultTableModel model = (DefaultTableModel)TableOfGuests.getModel();
+        for(int i=0; i<g.size(); i++)
+        {
+            model.insertRow(model.getRowCount(), new Object[]{g.get(i).getFirstName(), g.get(i).getNational(), g.get(i).getNumbersOfRooms(), g.get(i).getArrival(), g.get(i).getDeparture()});
+        }
     }
 
     /**
@@ -34,7 +46,7 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TableOfGuests = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -64,63 +76,24 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnBack);
-        btnBack.setBounds(30, 690, 100, 35);
+        btnBack.setBounds(30, 690, 100, 34);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(40, 730, 80, 20);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TableOfGuests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Name", "Type Of Room", "Room No.", "Title 4"
+                "Name", "Nationalty", "Number of Rooms", "Arrival", "Departure"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TableOfGuests);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(210, 0, 760, 800);
+        jScrollPane1.setBounds(210, 10, 760, 780);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,12 +161,12 @@ public class ListOfCurrentGuests extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TableOfGuests;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -55,11 +55,15 @@ public class ReceptionEmployee extends Staff{
     public void update(String coloum_name ,String updated)
     {
         Database.staff.Update("reception", coloum_name, updated, getId());
+        Hotel.getReceptionEmployeeList().clear();
+        Hotel.LoadReceptionEmployee();
     }
     
     @Override
     public void update(String coloum_name ,double updated)
     {
         Database.staff.Update("reception", coloum_name, updated, getId());
+        Hotel.getReceptionEmployeeList().clear();
+        Hotel.LoadReceptionEmployee();
     }
 }

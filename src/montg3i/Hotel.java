@@ -57,7 +57,7 @@ public class Hotel {
         Database.guest.Add(GuestNo, FirstName, SecondName, LastName, NationalId, Age, Phone, National, RoomNo, Arrival, Nights, Departure, Deposite, TotalAmount, Status);
     }
     
-    private static void LoadReceptionEmployee ()
+    public static void LoadReceptionEmployee ()
     {
         ReceptionEmployee.setNextID(0);
         ResultSet rs = Database.staff.Select("reception");
@@ -76,7 +76,7 @@ public class Hotel {
         }
     }
     
-    private static void LoadManager ()
+    public static void LoadManager ()
     {
         ResultSet rs = Database.staff.Select("manager");
         try 
@@ -93,7 +93,7 @@ public class Hotel {
         }
     }
     
-    private static void LoadGuest ()
+    public static void LoadGuest ()
     {
         Guest.setGuestNextNo(0);
         ResultSet rs = Database.guest.Select("guest");

@@ -1,6 +1,17 @@
 package frames;
 
 import java.awt.Color;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.table.DefaultTableModel;
+import montg3i.Hotel;
+import montg3i.Guest;
+import montg3i.HotelRoom;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,7 +24,10 @@ import java.awt.Color;
  * @author hp
  */
 public class Search extends javax.swing.JFrame {
-
+    
+    ArrayList<Guest> g = Hotel.getGuestList();
+    ArrayList<HotelRoom> h = Hotel.getHotelRoomList();
+    
     /**
      * Creates new form Search
      */
@@ -23,9 +37,25 @@ public class Search extends javax.swing.JFrame {
         btnSearch.setBackground(new Color(0,0,0,0));
         btnBack.setBackground(new Color(255,255,255,0));
         jPanel1.setBackground(new Color(0,0,0,90));
-         btnCancel.setBackground(new Color(0,0,0,0));
+        btnCancel.setBackground(new Color(0,0,0,0));
         btnEdit.setBackground(new Color(0,0,0,0));
         btnCheckout.setBackground(new Color(0,0,0,0));
+        
+        NameTxt.setText("");
+        RoomTxt.setText("");
+        DepositTxt.setText("");
+        
+        
+        
+        DefaultTableModel model = (DefaultTableModel)Table.getModel();
+        for(int i=0; i<g.size(); i++)
+        {
+            for(int j=0; j<g.get(i).getNumbersOfRooms(); j++)
+            {
+                model.insertRow(model.getRowCount(), new Object[]{g.get(i).getGuestNo(), g.get(i).getFirstName() + " " + g.get(i).getSecondName() + " " + g.get(i).getLastName(), HotelRoom.Search(i), g.get(i).getArrival(), g.get(i).getDeparture(), g.get(i).getDeposite(), g.get(i).getStatus()});
+            }
+        }
+        
        
     }
 
@@ -44,10 +74,9 @@ public class Search extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         Search = new javax.swing.JLabel();
-        Name = new javax.swing.JLabel();
         Room = new javax.swing.JLabel();
-        NameBox = new javax.swing.JTextField();
-        ReservationIDBox = new javax.swing.JTextField();
+        NameTxt = new javax.swing.JTextField();
+        RoomTxt = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -57,11 +86,16 @@ public class Search extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         btnSearch = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        DepositTxt = new javax.swing.JTextField();
+        DepartureDate = new com.toedter.calendar.JDateChooser();
+        Name1 = new javax.swing.JLabel();
+        Name2 = new javax.swing.JLabel();
+        Name3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        StatuseBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1520, 845));
@@ -142,27 +176,21 @@ public class Search extends javax.swing.JFrame {
         jPanel2.add(Search);
         Search.setBounds(390, 30, 140, 56);
 
-        Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        Name.setForeground(new java.awt.Color(255, 255, 255));
-        Name.setText("Name:");
-        jPanel2.add(Name);
-        Name.setBounds(10, 140, 67, 28);
-
         Room.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         Room.setForeground(new java.awt.Color(255, 255, 255));
         Room.setText("Room:");
         jPanel2.add(Room);
-        Room.setBounds(290, 140, 70, 28);
+        Room.setBounds(310, 140, 70, 28);
 
-        NameBox.addActionListener(new java.awt.event.ActionListener() {
+        NameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameBoxActionPerformed(evt);
+                NameTxtActionPerformed(evt);
             }
         });
-        jPanel2.add(NameBox);
-        NameBox.setBounds(80, 140, 191, 30);
-        jPanel2.add(ReservationIDBox);
-        ReservationIDBox.setBounds(360, 140, 191, 30);
+        jPanel2.add(NameTxt);
+        NameTxt.setBounds(80, 140, 200, 30);
+        jPanel2.add(RoomTxt);
+        RoomTxt.setBounds(380, 140, 191, 30);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
@@ -234,10 +262,28 @@ public class Search extends javax.swing.JFrame {
         });
         jPanel2.add(btnBack);
         btnBack.setBounds(10, 20, 90, 40);
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(120, 250, 150, 30);
-        jPanel2.add(jTextField2);
-        jTextField2.setBounds(120, 210, 150, 30);
+        jPanel2.add(DepositTxt);
+        DepositTxt.setBounds(400, 220, 120, 30);
+        jPanel2.add(DepartureDate);
+        DepartureDate.setBounds(130, 220, 150, 30);
+
+        Name1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Name1.setForeground(new java.awt.Color(255, 255, 255));
+        Name1.setText("Name:");
+        jPanel2.add(Name1);
+        Name1.setBounds(10, 140, 67, 28);
+
+        Name2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Name2.setForeground(new java.awt.Color(255, 255, 255));
+        Name2.setText("Departure:");
+        jPanel2.add(Name2);
+        Name2.setBounds(10, 220, 120, 28);
+
+        Name3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Name3.setForeground(new java.awt.Color(255, 255, 255));
+        Name3.setText("Deposit:");
+        jPanel2.add(Name3);
+        Name3.setBounds(310, 220, 85, 28);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(30, 30, 970, 310);
@@ -247,15 +293,21 @@ public class Search extends javax.swing.JFrame {
 
             },
             new String [] {
-                "no", "Nmae", "RoomNumber", "Arrival", "Departure", "Deposit", "Statuse"
+                "no", "Name", "RoomNumber", "Arrival", "Departure", "Deposit", "Statuse"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        Table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TableMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(Table);
@@ -274,12 +326,22 @@ public class Search extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1500, 800);
 
+        Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        Name.setForeground(new java.awt.Color(255, 255, 255));
+        Name.setText("Statuse:");
+        getContentPane().add(Name);
+        Name.setBounds(90, 310, 82, 28);
+
+        StatuseBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(StatuseBox);
+        StatuseBox.setBounds(50, 380, 140, 30);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NameBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameBoxActionPerformed
+    private void NameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NameBoxActionPerformed
+    }//GEN-LAST:event_NameTxtActionPerformed
 
     private void btnSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchMouseEntered
         btnSearch.setForeground(Color.LIGHT_GRAY);
@@ -290,16 +352,40 @@ public class Search extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSearchMouseExited
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-
-        /*String x=" 10022";
-        String y="205";
-        int z=367;
-        Results1.setVisible(true);
-        Results2.setVisible(true);
-        Results3.setVisible(true);
-        Results1.setText("Reservation Number: "+x);
-        Results2.setText("Room: "+y);
-        Results3.setText("Total Payment: "+z+" $");*/
+        
+        DefaultTableModel model = (DefaultTableModel)Table.getModel();
+        if(!(NameTxt.getText().equals("") && RoomTxt.getText().equals("")))
+        {
+            
+            int i = HotelRoom.Search(RoomTxt.getText());
+            if(i >= 0)
+            {
+                model.insertRow(model.getRowCount(), new Object[]{g.get(i).getGuestNo(), g.get(i).getFirstName() + " " + g.get(i).getSecondName() + " " + g.get(i).getLastName(), HotelRoom.Search(i), g.get(i).getArrival(), g.get(i).getDeparture(), g.get(i).getDeposite(), g.get(i).getStatus()});
+            }
+        }
+        else if(!(NameTxt.getText().equals("")) && RoomTxt.getText().equals(""))
+        {
+            int i = Guest.Search(NameTxt.getText());
+            if(i >= 0)
+            {
+                model.insertRow(model.getRowCount(), new Object[]{g.get(i).getGuestNo(), g.get(i).getFirstName() + " " + g.get(i).getSecondName() + " " + g.get(i).getLastName(), HotelRoom.Search(i), g.get(i).getArrival(), g.get(i).getDeparture(), g.get(i).getDeposite(), g.get(i).getStatus()});
+            }
+        }
+        else if(NameTxt.getText().equals("") && !(RoomTxt.getText().equals("")))
+        {
+            int i = HotelRoom.Search(RoomTxt.getText());
+            if(i >= 0)
+            {
+                model.insertRow(model.getRowCount(), new Object[]{g.get(i).getGuestNo(), g.get(i).getFirstName() + " " + g.get(i).getSecondName() + " " + g.get(i).getLastName(), HotelRoom.Search(i), g.get(i).getArrival(), g.get(i).getDeparture(), g.get(i).getDeposite(), g.get(i).getStatus()});
+            }
+        }
+        else
+        {
+            for(int i=0; i<g.size(); i++)
+            {
+                model.insertRow(model.getRowCount(), new Object[]{g.get(i).getGuestNo(), g.get(i).getFirstName() + " " + g.get(i).getSecondName() + " " + g.get(i).getLastName(), HotelRoom.Search(i), g.get(i).getArrival(), g.get(i).getDeparture(), g.get(i).getDeposite(), g.get(i).getStatus()});
+            }
+        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
@@ -316,18 +402,36 @@ public class Search extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
-        new Cashiering().setVisible(true);
-        this.setVisible(false);
+        int i= Guest.Search(NameTxt.getText());
+        g.get(i).update("status","Check Out");
+        h.get(i).setAvailability(true);
+        NameTxt.setText("");
+        RoomTxt.setText("");
+        DepositTxt.setText("");
+        showMessageDialog(null, "Total Amount = " + (g.get(i).getTotalAmount()-g.get(i).getDeposite()));
     }//GEN-LAST:event_btnCheckoutActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
-        new EditReservation().setVisible(true);
-        this.setVisible(false);
+        int i=Guest.Search(NameTxt.getText());
+        SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
+        String Departure_str = dformat.format(DepartureDate.getDate());
+        g.get(i).update("departure",Departure_str);
+        g.get(i).update("deposit",Double.parseDouble(DepositTxt.getText()));
+        NameTxt.setText("");
+        RoomTxt.setText("");
+        DepositTxt.setText("");
+        showMessageDialog(null, "Done");
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        new Cashiering().setVisible(true);
-        this.setVisible(false);
+        int i=Guest.Search(NameTxt.getText());
+        g.get(i).update("status","Cancel");
+        h.get(i).setAvailability(true);
+        
+        NameTxt.setText("");
+        RoomTxt.setText("");
+        DepositTxt.setText("");
+        showMessageDialog(null, "Done");
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCancelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseEntered
@@ -353,6 +457,23 @@ public class Search extends javax.swing.JFrame {
     private void btnCheckoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckoutMouseExited
         btnCheckout.setForeground(Color.WHITE);
     }//GEN-LAST:event_btnCheckoutMouseExited
+
+    private void TableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableMouseClicked
+        NameTxt.setText("");
+        RoomTxt.setText("");
+        DepositTxt.setText("");
+        try
+        {
+            NameTxt.setText(Table.getValueAt(Table.getSelectedRow(), 1).toString());
+            RoomTxt.setText(Table.getValueAt(Table.getSelectedRow(), 2).toString());
+            DepositTxt.setText(Table.getValueAt(Table.getSelectedRow(), 5).toString());
+            //StatuseBox.setSelectedItem(Table.getValueAt(Table.getSelectedRow(), 7).toString());     
+            DepartureDate.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(Table.getValueAt(Table.getSelectedRow(), 4).toString()));
+        } 
+        catch (ParseException ex) {
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_TableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -390,11 +511,17 @@ public class Search extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser DepartureDate;
+    private javax.swing.JTextField DepositTxt;
     private javax.swing.JLabel Name;
-    private javax.swing.JTextField NameBox;
-    private javax.swing.JTextField ReservationIDBox;
+    private javax.swing.JLabel Name1;
+    private javax.swing.JLabel Name2;
+    private javax.swing.JLabel Name3;
+    private javax.swing.JTextField NameTxt;
     private javax.swing.JLabel Room;
+    private javax.swing.JTextField RoomTxt;
     private javax.swing.JLabel Search;
+    private javax.swing.JComboBox<String> StatuseBox;
     private javax.swing.JTable Table;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
@@ -412,7 +539,5 @@ public class Search extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

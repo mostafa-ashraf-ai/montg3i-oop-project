@@ -5,6 +5,8 @@
  */
 package montg3i;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author mostafa
@@ -37,8 +39,37 @@ public class HotelRoom {
 
     public void setGuestNo(int GuestNo) {
         this.GuestNo = GuestNo;
+        Database.room.Update("GuestNo", GuestNo, RoomNumber);
+    }
+
+    public String getRoomNumber() {
+        return RoomNumber;
     }
     
+    public static int Search(String room)
+    { 
+        ArrayList<HotelRoom> h = Hotel.getHotelRoomList();
+        for(int i=0; i<h.size(); i++)
+        {
+            if(room.equals(h.get(i).getRoomNumber()))
+            {
+                return h.get(i).getGuestNo();
+            }
+        }
+        return 0;
+    }
     
+    public static String Search(int guestNo)
+    { 
+        ArrayList<HotelRoom> h = Hotel.getHotelRoomList();
+        for(int i=0; i<h.size(); i++)
+        {
+            if(guestNo == h.get(i).getGuestNo())
+            {
+                return h.get(i).getRoomNumber();
+            }
+        }
+        return "";
+    }
     
 }

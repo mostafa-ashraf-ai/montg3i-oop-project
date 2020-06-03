@@ -28,4 +28,20 @@ public class room extends db{
             System.out.println("the update method is wrong");
         }
     }
+    
+    public static void Update(String ColumnName, int value, String RoomNumber)
+    {
+        try
+        {
+            setConnection();
+            stmt = con.createStatement();
+            String str = "UPDATE room SET " + ColumnName + " = " + value + " WHERE RoomNumber = '" + RoomNumber + "'";
+            stmt.executeUpdate(str);
+            con.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("the update method is wrong");
+        }
+    }
 }

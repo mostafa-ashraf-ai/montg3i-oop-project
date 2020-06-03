@@ -69,14 +69,14 @@ public class guest extends db {
         
     }
     
-    public static void Update(String ColumnName, String value, int PassCode)
+    public static void Update(String ColumnName, String value, int guestno)
     {
         try
         {
             setConnection();
             stmt = con.createStatement();
-            String str = "UPDATE guest SET " + ColumnName + " = '" + value + "' WHERE PassCode = " + PassCode;
-            stmt.executeLargeUpdate(str);
+            String str = "UPDATE guest SET " + ColumnName + " = '" + value + "' WHERE GuestNo = " + guestno;
+            stmt.executeUpdate(str);
             con.close();
         }
         catch(SQLException ex)

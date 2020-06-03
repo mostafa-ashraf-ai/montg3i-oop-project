@@ -28,6 +28,11 @@ public class Guest extends javax.swing.JFrame {
         RoomNoBox.setBackground(new Color(0,0,0,0));
         PasscodeBox.setBackground(new Color(0,0,0,0));
         
+        RoomNoBox.setText("");
+        PasscodeBox.setText("");
+        
+        RoomNoBox.requestFocus();
+        
     }
 
     /**
@@ -49,6 +54,7 @@ public class Guest extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -85,7 +91,7 @@ public class Guest extends javax.swing.JFrame {
         PasscodeBox.setForeground(new java.awt.Color(255, 255, 255));
         PasscodeBox.setBorder(null);
         jPanel2.add(PasscodeBox);
-        PasscodeBox.setBounds(190, 270, 120, 20);
+        PasscodeBox.setBounds(190, 270, 120, 30);
 
         RoomNoBox.setForeground(new java.awt.Color(255, 255, 255));
         RoomNoBox.setBorder(null);
@@ -95,7 +101,7 @@ public class Guest extends javax.swing.JFrame {
             }
         });
         jPanel2.add(RoomNoBox);
-        RoomNoBox.setBounds(190, 180, 120, 20);
+        RoomNoBox.setBounds(190, 180, 120, 30);
 
         btnGuestLogin.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         btnGuestLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -137,7 +143,7 @@ public class Guest extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnBack);
-        btnBack.setBounds(0, 600, 120, 35);
+        btnBack.setBounds(0, 600, 120, 34);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1);
@@ -146,6 +152,10 @@ public class Guest extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator2);
         jSeparator2.setBounds(190, 290, 120, 20);
+
+        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel2.add(jLabel10);
+        jLabel10.setBounds(140, 480, 0, 0);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 60, 350, 670);
@@ -219,14 +229,18 @@ public class Guest extends javax.swing.JFrame {
         
        String room=RoomNoBox.getText();
        String passcode=PasscodeBox.getText();
-        if( ( "g".equals(room) ) && ("g".equals(passcode) ) )
+        if(montg3i.Guest.login(room, passcode))
         {
             new GuestProfile().setVisible(true);
             this.setVisible(false);
-           // int x=8,y=9;
-            //new GuestProfile().btnGuestPayment.action(showMessageDialog(null,"Payed: "+x+"\n"+"Rest Amount: "+y), room);
-           
-
+        }
+        else
+        {
+            RoomNoBox.setText("");
+            PasscodeBox.setText("");
+        
+            RoomNoBox.requestFocus();
+            jLabel1.setText("* RoomNo or Passcode is incorrect ! !");
         }
     }//GEN-LAST:event_btnGuestLoginActionPerformed
 
@@ -290,6 +304,7 @@ public class Guest extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnGuestLogin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

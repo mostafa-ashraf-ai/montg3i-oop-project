@@ -7,6 +7,7 @@ package montg3i;
 
 import java.sql.Date;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import javafx.scene.chart.PieChart.Data;
 
 /**
@@ -28,7 +29,33 @@ public class Guest extends Person {
     private double TotalAmount;
     private String Status;
     private static int GuestNextNo;
+    private static int CurrentGuestNo;
 
+    public Guest(int GuestNo, String FirstName, String SecondName, String LastName,String NationalId, int Age, String Phone, String National, int NumbersOfRooms, String Arrival, int Nights, String Departure, double Deposite, double TotalAmount, String Status) {
+        super(FirstName, LastName);
+        this.GuestNo = GuestNo;
+        this.SecondName = SecondName;
+        this.NationalId = NationalId;
+        this.Age = Age;
+        this.Phone = Phone;
+        this.National = National;
+        this.NumbersOfRooms = NumbersOfRooms;
+        this.Arrival = Arrival;
+        this.Nights = Nights;
+        this.Departure = Departure;
+        this.Deposite = Deposite;
+        this.TotalAmount = TotalAmount;
+        this.Status = Status;
+    }
+
+    public static int getCurrentGuestNo() {
+        return CurrentGuestNo;
+    }
+
+    public static void setCurrentGuestNo(int CurrentGuestNo) {
+        Guest.CurrentGuestNo = CurrentGuestNo;
+    }
+    
     public static int getGuestNextNo() {
         return GuestNextNo;
     }
@@ -88,23 +115,45 @@ public class Guest extends Person {
     public String getStatus() {
         return Status;
     }
-
-    public Guest(int GuestNo, String FirstName, String SecondName, String LastName,String NationalId, int Age, String Phone, String National, int NumbersOfRooms, String Arrival, int Nights, String Departure, double Deposite, double TotalAmount, String Status) {
-        super(FirstName, LastName);
-        this.GuestNo = GuestNo;
-        this.SecondName = SecondName;
-        this.NationalId = NationalId;
-        this.Age = Age;
-        this.Phone = Phone;
-        this.National = National;
-        this.NumbersOfRooms = NumbersOfRooms;
-        this.Arrival = Arrival;
-        this.Nights = Nights;
-        this.Departure = Departure;
-        this.Deposite = Deposite;
-        this.TotalAmount = TotalAmount;
-        this.Status = Status;
+    
+    public static int Search(String name)
+    { 
+        ArrayList<Guest> g = Hotel.getGuestList();
+        String Name[] = name.split(" ");
+        for(int i=0; i<g.size(); i++)
+        {
+            if(Name[0].equals(g.get(i).getFirstName()))
+            {
+                return i;
+            }
+        }
+        return -1;
     }
     
+    public static boolean login(String Room ,String passCode)
+    { 
+        ArrayList<HotelRoom> g = Hotel.getHotelRoomList();
+        for(int i=0; i<g.size(); i++)
+        {
+            if(Room.equals(g.get(i).getRoomNumber()))
+            {
+                Guest.setCurrentGuestNo(i);
+                return (passCode.equals(g.get(i).getGuestNo()));
+            }
+        }
+        return false;
+    }
     
+    public void update(String ColumnName, String Value)
+    {
+        Database.guest.Update(ColumnName, Value, getGuestNo());
+        Hotel.getGuestList().clear();
+        Hotel.LoadGuest();
+    }
+    public void update(String ColumnName, double Value)
+    {
+        Database.guest.Update(ColumnName, Value, getGuestNo());
+        Hotel.getGuestList().clear();
+        Hotel.LoadGuest();
+    }
 }
