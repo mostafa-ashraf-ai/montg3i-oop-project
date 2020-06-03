@@ -32,7 +32,7 @@ public class GuestProfile extends javax.swing.JFrame {
         
         ArrayList<montg3i.Guest> g = Hotel.getGuestList();
         
-        NameLabel.setText(g.get(montg3i.Guest.getCurrentGuestNo()).getFirstName() + " " + g.get(montg3i.Guest.getCurrentGuestNo()).getLastName());
+        //NameLabel.setText(g.get(montg3i.Guest.getCurrentGuestNo()).getFirstName() + " " + g.get(montg3i.Guest.getCurrentGuestNo()).getLastName());
         RoomNoLabel.setText(HotelRoom.Search(montg3i.Guest.getCurrentGuestNo()));
         
     }
